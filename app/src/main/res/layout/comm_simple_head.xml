@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:orientation="vertical"
+        android:id="@+id/head_ll"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView android:id="@+id/text_1"
+            android:padding="@dimen/margin_middle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            style="@style/TextNormal.Gray80"
+            xmlns:android="http://schemas.android.com/apk/res/android" />
+
+        <View
+            android:id="@+id/divide_view"
+            style="@style/InsetDividerStyle" />
+    </LinearLayout>
+</FrameLayout>

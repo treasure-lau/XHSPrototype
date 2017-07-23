@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical"
+    android:id="@+id/contentId"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.widget.expandable.ExpandableHeaderLayout
+        android:id="@+id/expandable_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <com.xingin.xhs.widget.expandable.ExpandableLayout
+        android:id="@+id/expandable_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.xingin.xhs.view.rv.LoadMoreRecycleView
+            android:id="@android:id/list"
+            android:background="@color/background"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </com.xingin.xhs.widget.expandable.ExpandableLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_toolbar_wrapper"
+        android:background="@drawable/toolbar_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.xingin.xhs.view.XYToolBar
+            android:layout_gravity="top"
+            android:orientation="vertical"
+            android:id="@+id/actionBar"
+            android:background="@color/transparent"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/common_bar_height"
+            android:layout_marginTop="@dimen/status_bar_size"
+            android:minHeight="0.0dip"
+            app:titleMargins="0.0dip" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_gravity="bottom"
+        android:id="@+id/ll_comment_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/note_detail_goods_poi_layout" />
+    </FrameLayout>
+
+    <com.xingin.xhs.ui.note.CommentView
+        android:layout_gravity="bottom"
+        android:id="@+id/comment_view"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:id="@+id/view_jump_to_board"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65.0dip">
+
+        <include layout="@layout/view_jump_to_board" />
+    </RelativeLayout>
+</FrameLayout>

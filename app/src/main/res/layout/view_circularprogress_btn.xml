@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xingin.xhs.view.progressbtn.CircularProgressBtn android:id="@+id/cp_btn"
+    android:layout_width="fill_parent"
+    android:layout_height="30.0dip"
+    app:pbtn_iconProgress="@drawable/xhsemoji_19"
+    app:pbtn_iconProgressPadding="15.0dip"
+    app:pbtn_colorStroke="@color/white"
+    app:pbtn_colorProgressRotateStroke="@color/base_middle_red"
+    app:pbtn_widthProgressStroke="1.0dip"
+    style="@style/btn_progressfouce"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

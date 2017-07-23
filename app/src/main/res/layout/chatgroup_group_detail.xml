@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:id="@+id/parent_layout"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/ic_header"
+        layout="@layout/ic_header" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/layout_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/ll_tag"
+                android:background="@drawable/bg_top_bottom_line"
+                android:paddingLeft="16.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dip">
+
+                <TextView
+                    android:paddingTop="12.0dip"
+                    android:paddingBottom="12.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看标签:"
+                    style="@style/TextNormal" />
+
+                <View
+                    android:background="@color/line_color"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.39999998dip" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12.0dip"
+                    android:layout_marginBottom="12.0dip">
+
+                    <com.xingin.xhs.widget.AvatarImageView
+                        android:id="@+id/iv_tag_image"
+                        android:layout_width="48.0dip"
+                        android:layout_height="48.0dip" />
+
+                    <TextView
+                        android:id="@+id/tv_tag_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_toRightOf="@id/iv_tag_image"
+                        style="@style/TextNormal" />
+
+                    <TextView
+                        android:id="@+id/tv_tag_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_below="@id/tv_tag_title"
+                        android:layout_alignLeft="@id/tv_tag_title"
+                        style="@style/TextNormal" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center|left|top"
+                android:orientation="horizontal"
+                android:id="@+id/ll_group_desc"
+                android:background="@drawable/bg_top_bottom_line"
+                android:padding="12.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="群简介："
+                    style="@style/TextNormal" />
+
+                <TextView
+                    android:id="@+id/tv_group_desc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:lines="3"
+                    android:lineSpacingExtra="3.0dip"
+                    style="@style/TextNormal.Gray60" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/ll_group_members"
+                android:background="@drawable/bg_top_bottom_line"
+                android:padding="12.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dip">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="群成员："
+                    style="@style/TextNormal" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_group_members"
+                    android:fadingEdge="none"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12.0dip" />
+            </LinearLayout>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/no_disturb_switch"
+                android:background="@drawable/bg_top_bottom_line"
+                android:padding="16.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dip"
+                android:text="@string/message_no_disturb"
+                style="@style/TextNormal" />
+
+            <Button
+                android:textColor="@color/base_red"
+                android:id="@+id/btn_exit"
+                android:background="@drawable/bg_top_bottom_line"
+                android:paddingTop="8.0dip"
+                android:paddingBottom="8.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dip"
+                android:layout_marginBottom="16.0dip"
+                android:text="退出群组"
+                style="@style/TextMedium" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

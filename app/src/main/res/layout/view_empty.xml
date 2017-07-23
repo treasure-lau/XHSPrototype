@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:padding="16.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textSize="@dimen/text_normal"
+        android:textColor="#ffacacac"
+        android:gravity="center_horizontal"
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_message"
+        android:drawableTop="@drawable/common_icon_data_empty"
+        android:drawablePadding="@dimen/margin_nomal"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/buttonEmpty"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/empty_button"
+        android:layout_below="@id/textViewMessage"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

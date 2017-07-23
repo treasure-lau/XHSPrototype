@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rl_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:id="@+id/topbar"
+        android:background="@color/topbar_bg_color"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/status_bar_size"
+        android:layout_alignParentTop="true" />
+
+    <include
+        android:id="@+id/ic_header"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_bar_height"
+        android:layout_below="@id/topbar"
+        layout="@layout/ic_mainframe_header" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ic_header">
+
+        <com.xingin.xhs.view.rv.LoadMoreRecycleView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

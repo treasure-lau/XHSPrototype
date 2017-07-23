@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="@dimen/text_micro"
+            android:textColor="@color/base_black"
+            android:gravity="end|center"
+            android:background="@drawable/intercept_register_style_community_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimension_25"
+            android:text="@string/text_intercept_register_style_community" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimension_20"
+            android:src="@drawable/intercept_register_style_community" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimension_25"
+        android:src="@drawable/intercept_register_click_regist" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimension_20">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/intercept_register_weixin"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/login_with_wechat"
+            android:drawableTop="@drawable/intercept_register_line_weixin"
+            android:drawablePadding="@dimen/dimension_11"
+            android:layout_weight="1.0" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/intercept_register_weibo"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/login_with_sina_weibo"
+            android:drawableTop="@drawable/intercept_register_line_weibo"
+            android:drawablePadding="@dimen/dimension_11"
+            android:layout_weight="1.0" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/intercept_register_qq"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/login_with_qzone"
+            android:drawableTop="@drawable/intercept_register_line_qq"
+            android:drawablePadding="@dimen/dimension_11"
+            android:layout_weight="1.0" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/intercept_register_phone"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/login_with_phone"
+            android:drawableTop="@drawable/intercept_register_line_phone"
+            android:drawablePadding="@dimen/dimension_11"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+
+    <Button
+        android:textSize="@dimen/text_medium"
+        android:textColor="@color/base_gray40"
+        android:id="@+id/intercept_register_cancel"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimension_20"
+        android:text="@string/cancel" />
+</LinearLayout>

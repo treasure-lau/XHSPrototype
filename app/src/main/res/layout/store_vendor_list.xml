@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:id="@+id/rl_container"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/ic_header"
+        layout="@layout/ic_header" />
+
+    <com.xingin.xhs.view.StickyNavLayout
+        android:orientation="vertical"
+        android:id="@+id/sticky_nav_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ic_header">
+
+        <RelativeLayout
+            android:gravity="center"
+            android:id="@+id/id_stickynavlayout_topview"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/shop_icon"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_margin="20.0dip"
+                android:layout_centerHorizontal="true"
+                app:placeholderImage="@color/base_bg_gray"
+                app:failureImage="@color/base_bg_gray" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_vendor_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Adidas"
+                android:layout_below="@id/shop_icon"
+                style="@style/TextNormal" />
+
+            <TextView
+                android:id="@+id/tv_vendor_desc"
+                android:background="@color/white"
+                android:padding="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="sdfsdfasdfiodsfioasduiofdsaoifuadsoifsdf"
+                android:layout_below="@id/tv_vendor_name"
+                style="@style/TextSmall.Gray40" />
+
+            <LinearLayout
+                android:gravity="center|left"
+                android:orientation="vertical"
+                android:padding="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_vendor_desc">
+
+                <TextView
+                    android:textColor="#ff8ca5b5"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_vendor_net"
+                    android:paddingTop="5.0dip"
+                    android:paddingBottom="5.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_vendor_net"
+                    android:drawablePadding="5.0dip"
+                    style="@style/TextSmall" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_vendor_location"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:drawableLeft="@drawable/ic_vendor_location"
+                    android:drawablePadding="5.0dip"
+                    style="@style/TextSmall" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/id_stickynavlayout_indicator"
+            android:background="@drawable/bg_top_bottom_line"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip">
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/price_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/diver"
+                android:layout_alignParentLeft="true">
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_price_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="默认排序"
+                    android:drawableRight="@drawable/icon_filter_down_un_arrow"
+                    android:drawablePadding="5.0dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/diver"
+                android:background="@color/spilt_line"
+                android:layout_width="1.0px"
+                android:layout_height="20.0dip"
+                android:layout_centerInParent="true" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/category_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/diver"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_category_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:text="全部品类"
+                    android:drawableRight="@drawable/icon_filter_down_un_arrow"
+                    android:drawablePadding="5.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.xingin.xhs.view.rv.LoadMoreRecycleView
+            android:id="@+id/id_stickynavlayout_innerscrollview"
+            android:paddingBottom="12.0dip"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </com.xingin.xhs.view.StickyNavLayout>
+
+    <ImageView
+        android:id="@+id/iv_cart"
+        android:background="@drawable/bg_cart_oval"
+        android:padding="10.0dip"
+        android:visibility="gone"
+        android:layout_width="44.0dip"
+        android:layout_height="44.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:src="@drawable/shop_icon_cart"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true" />
+
+    <ImageView
+        android:id="@+id/back_to_top"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:src="@drawable/icon_back_to_top"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

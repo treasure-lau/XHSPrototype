@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2.0"
+    android:divider="@drawable/divider_vertical_line"
+    android:showDividers="middle"
+    android:dividerPadding="0.0px"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/activity_left"
+        android:layout_width="0.0dip"
+        android:layout_height="76.0dip"
+        android:layout_weight="1.0"
+        layout="@layout/shop_channel_card_horizontal" />
+
+    <include
+        android:id="@+id/activity_right"
+        android:layout_width="0.0dip"
+        android:layout_height="76.0dip"
+        android:layout_weight="1.0"
+        layout="@layout/shop_channel_card_horizontal" />
+</LinearLayout>

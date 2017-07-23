@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/item_msg_activities_note_0"
+    android:background="@drawable/common_white_to_gray"
+    android:paddingTop="@dimen/msg_activities_item_padding_top"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.widget.AvatarImageView
+        android:id="@+id/iv_avatar"
+        android:tag="binding_1"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:layout_marginLeft="@dimen/msg_activities_item_padding_left"
+        app:roundAsCircle="true" />
+
+    <TextView
+        android:textSize="@dimen/text_14"
+        android:id="@+id/tv_msg_activities_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/msg_activities_item_icon_body_margin_left"
+        android:layout_marginRight="@dimen/msg_activities_item_padding_right"
+        android:layout_marginBottom="@dimen/dimension_10"
+        android:layout_toRightOf="@id/iv_avatar" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/msg_note_container_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/msg_activities_item_padding_bottom"
+        android:layout_below="@id/tv_msg_activities_title"
+        android:layout_alignLeft="@id/tv_msg_activities_title"
+        android:layout_alignRight="@id/tv_msg_activities_title">
+
+        <com.xingin.xhs.widget.XYImageView
+            android:id="@+id/iv_one"
+            android:tag="binding_2"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/msg_activities_item_note_img_diver"
+            android:layout_weight="1.0"
+            app:viewAspectRatio="1.0"
+            app:placeholderImage="@color/background"
+            app:failureImage="@color/background" />
+
+        <com.xingin.xhs.widget.XYImageView
+            android:id="@+id/iv_two"
+            android:tag="binding_3"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/msg_activities_item_note_img_diver"
+            android:layout_marginRight="@dimen/msg_activities_item_note_img_diver"
+            android:layout_weight="1.0"
+            app:viewAspectRatio="1.0"
+            app:placeholderImage="@color/background"
+            app:failureImage="@color/background" />
+
+        <com.xingin.xhs.widget.XYImageView
+            android:id="@+id/iv_three"
+            android:tag="binding_4"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/msg_activities_item_note_img_diver"
+            android:layout_marginRight="@dimen/msg_activities_item_note_img_diver"
+            android:layout_weight="1.0"
+            app:viewAspectRatio="1.0"
+            app:placeholderImage="@color/background"
+            app:failureImage="@color/background" />
+
+        <com.xingin.xhs.widget.XYImageView
+            android:id="@+id/iv_four"
+            android:tag="binding_5"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/msg_activities_item_note_img_diver"
+            android:layout_marginRight="@dimen/msg_activities_item_note_img_diver"
+            android:layout_weight="1.0"
+            app:viewAspectRatio="1.0"
+            app:placeholderImage="@color/background"
+            app:failureImage="@color/background" />
+
+        <com.xingin.xhs.widget.XYImageView
+            android:id="@+id/iv_five"
+            android:tag="binding_6"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/msg_activities_item_note_img_diver"
+            android:layout_marginRight="@dimen/msg_activities_item_note_img_diver"
+            android:layout_weight="1.0"
+            app:viewAspectRatio="1.0"
+            app:placeholderImage="@color/background"
+            app:failureImage="@color/background" />
+
+        <com.xingin.xhs.widget.XYImageView
+            android:id="@+id/iv_six"
+            android:tag="binding_7"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/msg_activities_item_note_img_diver"
+            android:layout_weight="1.0"
+            app:viewAspectRatio="1.0"
+            app:placeholderImage="@color/background"
+            app:failureImage="@color/background" />
+    </LinearLayout>
+
+    <View
+        android:tag="binding_8"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@id/msg_note_container_layout"
+        android:layout_alignLeft="@id/tv_msg_activities_title"
+        android:layout_alignParentBottom="true" />
+
+    <View
+        android:tag="binding_9"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_below="@id/msg_note_container_layout"
+        android:layout_alignParentBottom="true" />
+
+    <View
+        android:tag="binding_10"
+        android:background="@color/background"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimension_10"
+        android:layout_below="@id/msg_note_container_layout"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

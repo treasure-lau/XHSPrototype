@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:id="@+id/ll_more"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/common_white_to_gray"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/btn_height_nomal">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/btn_height_nomal"
+            android:text="@string/discovery_detail_comment_btn_more"
+            style="@style/TextNormal.ShallowBlack" />
+
+        <ImageView
+            android:id="@+id/iv_more_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4.0dip"
+            android:src="@drawable/xyvg_comment_loadmore" />
+
+        <ProgressBar
+            android:id="@+id/progress_more"
+            android:visibility="gone"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Small.Inverse" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/line_color"
+        android:layout_width="fill_parent"
+        android:layout_height="0.6dip" />
+</LinearLayout>

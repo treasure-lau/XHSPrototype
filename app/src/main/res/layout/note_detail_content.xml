@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textSize="@dimen/text_14"
+        android:textColor="@color/red"
+        android:gravity="bottom"
+        android:id="@+id/illegal_info_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16.0dip"
+        android:drawablePadding="4.0dip"
+        android:drawableStart="@drawable/ic_illegal_info" />
+
+    <TextView
+        android:gravity="left"
+        android:id="@+id/tv_title"
+        android:paddingLeft="@dimen/margin_little_middle"
+        android:paddingTop="@dimen/margin_nomal"
+        android:paddingRight="@dimen/margin_little_middle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextNormal.Bold" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:paddingLeft="@dimen/margin_little_middle"
+        android:paddingTop="@dimen/margin_nomal"
+        android:paddingRight="@dimen/margin_little_middle"
+        android:paddingBottom="@dimen/margin_big_litte"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/text_linespacingextra"
+        style="@style/TextNormal" />
+</LinearLayout>

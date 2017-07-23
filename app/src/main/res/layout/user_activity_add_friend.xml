@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/ic_header"
+        layout="@layout/ic_header" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/background"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <View
+                android:background="@color/line_color"
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginTop="12.0dip" />
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@+id/addfriend_weibo"
+                android:background="@drawable/common_white_to_gray"
+                android:paddingTop="12.0dip"
+                android:paddingBottom="12.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/weibo_icon"
+                    android:src="@drawable/ic_addfriend_weibo"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    style="@style/user_recommend_iv" />
+
+                <TextView
+                    android:text="@string/weibo_friend"
+                    android:layout_toRightOf="@id/weibo_icon"
+                    android:layout_centerVertical="true"
+                    style="@style/profile_func_name" />
+
+                <ImageView
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_marginRight="@dimen/margin_nomal"
+                    android:src="@drawable/common_btn_more"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@+id/addfriend_user"
+                android:background="@drawable/common_white_to_gray"
+                android:paddingTop="12.0dip"
+                android:paddingBottom="12.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/friend_icon"
+                    android:src="@drawable/ic_addfriend_phone"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    style="@style/user_recommend_iv" />
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:text="@string/phone_friend"
+                    android:layout_toRightOf="@id/friend_icon"
+                    android:layout_centerVertical="true"
+                    style="@style/profile_func_name" />
+
+                <ImageView
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_marginRight="@dimen/margin_nomal"
+                    android:src="@drawable/common_btn_more"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <View
+                android:background="@color/line_color"
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/container"
+                android:paddingBottom="12.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

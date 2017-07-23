@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.widget.XYImageView
+        android:id="@+id/tag_detail_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:viewAspectRatio="1.51"
+        app:placeholderImage="@color/base_bg_gray"
+        app:failureImage="@color/base_bg_gray"
+        app:actualImageScaleType="centerCrop" />
+</LinearLayout>

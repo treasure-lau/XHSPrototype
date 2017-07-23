@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,13 +9,39 @@
     tools:context="com.osanwen.xhsprototype.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/ic_header"
+            android:background="@color/base_red"
+            android:paddingTop="@dimen/status_padding"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/new_headbar_size">
+
+            <TextView
+                android:id="@+id/search_textview"
+                android:background="@drawable/bg_transparent_round"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingTop="@dimen/margin_eight"
+                android:paddingBottom="@dimen/margin_eight"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_middle"
+                android:layout_marginRight="@dimen/margin_middle"
+                android:layout_marginBottom="4.0dip"
+                android:text="@string/search_hint"
+                android:drawableLeft="@drawable/ic_home_search"
+                android:drawablePadding="@dimen/margin_litte"
+                style="@style/TextNormal.White" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

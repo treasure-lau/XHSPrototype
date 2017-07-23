@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:background="@color/base_red"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/status_bar_size" />
+
+    <RelativeLayout
+        android:background="@color/base_red"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip">
+
+        <TextView
+            android:textSize="@dimen/text_22"
+            android:textColor="@color/white"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="300.0dip"
+            android:text="@string/tab_message"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/msg_customer_service_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="12.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:textSize="@dimen/text_12"
+                android:textColor="@color/white"
+                android:background="@color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_customer_service" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textAppearance="@style/TextSmall.BaseBlack"
+            android:gravity="center"
+            android:id="@+id/tv_new_chat"
+            android:background="@color/common_bar_yellow"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:text="@string/new_chat_message" />
+    </FrameLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_collapseMode="pin"
+        app:tabTextColor="@color/base_gray60"
+        app:tabSelectedTextColor="@color/base_red" />
+
+    <View
+        android:background="@color/smssdk_lv_item_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>

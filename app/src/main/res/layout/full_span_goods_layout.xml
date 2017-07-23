@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:id="@+id/img_rl"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/bg_transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="64.0dip"
+            android:layout_height="64.0dip">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/iv_img"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true" />
+
+            <com.xingin.xhs.ui.shopping.GoodsCoverView
+                android:id="@+id/iv_img_cover"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="44.0dip"
+                android:src="@drawable/ic_soldout"
+                android:scaleType="centerInside"
+                android:layout_alignLeft="@id/iv_img"
+                android:layout_alignTop="@id/iv_img"
+                android:layout_alignBottom="@id/iv_img" />
+
+            <LinearLayout
+                android:gravity="left"
+                android:orientation="vertical"
+                android:id="@+id/activity_time_layout"
+                android:padding="5.0dip"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/count_down_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距离闪购还有"
+                    style="@style/TextSmall.Gray40" />
+
+                <com.xingin.xhs.widget.WidgetSmallCountTimer
+                    android:id="@+id/countTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3.0dip" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_goods"
+            android:paddingLeft="10.0dip"
+            android:paddingTop="15.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingBottom="15.0dip"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:ellipsize="end"
+                android:id="@+id/top_title"
+                android:paddingTop="6.0dip"
+                android:paddingRight="8.0dip"
+                android:paddingBottom="3.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:lines="1"
+                android:layout_alignParentLeft="true"
+                style="@style/TextSmall" />
+
+            <TextView
+                android:ellipsize="end"
+                android:id="@+id/title"
+                android:paddingTop="3.0dip"
+                android:paddingRight="8.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10.0dip"
+                android:maxLines="2"
+                android:layout_below="@id/top_title"
+                android:layout_alignParentLeft="true"
+                android:lineSpacingExtra="3.0dip"
+                style="@style/TextSmall.Gray60" />
+
+            <TextView
+                android:textSize="@dimen/text_normal"
+                android:textColor="@color/base_shallow_red"
+                android:id="@+id/price"
+                android:paddingRight="4.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:includeFontPadding="false"
+                android:layout_below="@id/title"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:textAppearance="@style/TextSmall.Gray80"
+                android:id="@+id/origin_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:lines="1"
+                android:includeFontPadding="false"
+                android:layout_toRightOf="@id/price"
+                android:layout_alignBottom="@id/price" />
+
+            <TextView
+                android:textAppearance="@style/Text10Size.Gray80"
+                android:id="@+id/tv_extra_info"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip"
+                android:lines="1"
+                android:layout_below="@id/price" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="7.0dip"
+            android:layout_height="12.0dip"
+            android:layout_marginRight="5.0dip"
+            android:src="@drawable/arrow_icon_right"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/background"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip" />
+</LinearLayout>

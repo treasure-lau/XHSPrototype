@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal"
+    android:id="@+id/layout_comment"
+    android:background="@drawable/common_white_to_gray"
+    android:paddingTop="@dimen/margin_nomal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.widget.AvatarImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/image_avatar"
+        android:layout_height="@dimen/image_avatar"
+        android:src="@drawable/common_bg_avatar_loadfail" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimension_2"
+                android:maxWidth="@dimen/dimension_120"
+                android:singleLine="true"
+                style="@style/TextNormal.ShallowBlack" />
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/iv_user_level"
+                android:layout_width="@dimen/dimension_20"
+                android:layout_height="@dimen/dimension_20"
+                app:actualImageScaleType="centerInside" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_marginTop="5.5dip"
+            style="@style/text_common_comment" />
+
+        <TextView
+            android:textSize="@dimen/text_micro"
+            android:textColor="@color/base_gray60"
+            android:id="@+id/comment_tv_friend_like"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimension_10"
+            android:drawablePadding="@dimen/dimension_5"
+            android:drawableStart="@drawable/ic_comment_friend_like" />
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="28.0dip">
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tv_time"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                style="@style/text_comment_time" />
+
+            <LinearLayout
+                android:id="@+id/replay_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/comment_reply_tv"
+                    android:text="@string/comment_second_view_reply"
+                    style="@style/text_comment_like_num" />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimension_5"
+                    android:layout_marginRight="@dimen/dimension_5"
+                    android:text="·"
+                    style="@style/text_comment_like_num" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/comment_ll_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/like_img"
+                    android:layout_width="@dimen/dimension_11"
+                    android:layout_height="@dimen/dimension_12" />
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/tv_like_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/dimension_5"
+                    style="@style/text_comment_like_num" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_second_comment"
+            android:background="@drawable/bg_second_comment"
+            android:paddingLeft="@dimen/dimension_15"
+            android:paddingTop="@dimen/dimension_10"
+            android:paddingRight="@dimen/dimension_15"
+            android:paddingBottom="@dimen/dimension_10"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

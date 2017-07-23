@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:id="@+id/msg_me_layout"
+    android:tag="layout/item_msg_about_me_aggregate_0"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:paddingLeft="@dimen/dimension_15"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.xingin.xhs.widget.AvatarImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="35.0dip"
+            android:layout_height="35.0dip"
+            android:layout_marginTop="@dimen/dimension_15"
+            android:layout_marginBottom="@dimen/dimension_15"
+            android:layout_centerVertical="true"
+            app:roundAsCircle="true" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimension_15"
+            android:src="@drawable/arrow_icon_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimension_15"
+            android:layout_marginTop="2.0dip"
+            android:layout_marginRight="@dimen/dimension_15"
+            android:layout_toLeftOf="@id/iv_arrow"
+            android:layout_toRightOf="@id/iv_avatar"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:textSize="@dimen/dimension_12"
+                android:textStyle="bold"
+                android:textColor="@color/base_black"
+                android:ellipsize="end"
+                android:id="@+id/tv_msg_about_me_user"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:lines="1" />
+
+            <TextView
+                android:textSize="@dimen/dimension_12"
+                android:textColor="@color/base_black"
+                android:id="@+id/tv_msg_about_me_count"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:tag="binding_1"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px" />
+</LinearLayout>

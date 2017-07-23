@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/common_white_to_gray"
+    android:paddingTop="@dimen/margin_nomal"
+    android:paddingBottom="@dimen/margin_nomal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textSize="18.0sp"
+        android:textColor="@color/follow_desc_color"
+        android:id="@+id/order"
+        android:layout_width="20.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <com.xingin.xhs.widget.AvatarImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_toRightOf="@id/order"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/button"
+        android:layout_width="@dimen/btn_width_nomal"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6.0dip"
+        android:layout_marginRight="@dimen/margin_nomal"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/base_shallow_red"
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/base_gray"
+            android:id="@+id/title_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.0dip" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:background="@color/base_bg_gray"
+        android:layout_width="1.0dip"
+        android:layout_height="42.0dip"
+        android:layout_marginLeft="@dimen/margin_big"
+        android:layout_toLeftOf="@id/button"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/base_gray"
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:layout_toRightOf="@id/iv_avatar"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/follow_desc_color"
+        android:id="@+id/tv_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.0dip"
+        android:singleLine="true"
+        android:layout_toLeftOf="@id/view"
+        android:layout_toRightOf="@id/iv_avatar"
+        android:layout_below="@id/tv_name" />
+</RelativeLayout>

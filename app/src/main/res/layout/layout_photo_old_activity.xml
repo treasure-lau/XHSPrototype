@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@+id/coordinatorLY"
+    android:fitsSystemWindows="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:fitsSystemWindows="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/InAppBarLayout">
+
+        <include
+            android:id="@+id/ic_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll"
+            layout="@layout/ic_header" />
+
+        <com.xingin.xhs.view.ScaleLayout
+            android:id="@+id/scaleLayout"
+            android:background="@color/base_black"
+            android:layout_width="fill_parent"
+            android:layout_height="450.0dip"
+            android:minHeight="40.0dip"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            app:scaleProvideX="1.0"
+            app:scaleProvideY="1.0">
+
+            <uk.co.senab.photoview.PhotoView
+                android:id="@+id/photoView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop" />
+
+            <com.soundcloud.android.crop.HighlightLayout
+                android:id="@+id/highlightView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <View
+                android:id="@+id/bgView"
+                android:background="@color/little_transparent_white"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/scaleLayout"
+                android:layout_alignParentTop="true"
+                android:alpha="0.1" />
+
+            <ImageView
+                android:enabled="false"
+                android:id="@+id/switch_btn"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_margin="8.0dip"
+                android:src="@drawable/ic_switch_square"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true" />
+        </com.xingin.xhs.view.ScaleLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.xingin.xhs.view.rv.LoadMoreRecycleView
+        android:id="@+id/rv"
+        android:background="@color/background"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/InNestChild" />
+</android.support.design.widget.CoordinatorLayout>

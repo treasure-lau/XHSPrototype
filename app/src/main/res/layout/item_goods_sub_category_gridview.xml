@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/container_goods_sub_category_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.widget.XYImageView
+        android:id="@+id/iv_goods"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:layout_width="@dimen/goods_category_image_size"
+        android:layout_height="@dimen/goods_category_image_size"
+        android:layout_marginTop="@dimen/dimension_15"
+        fresco:placeholderImage="@color/background"
+        fresco:actualImageScaleType="fitCenter" />
+
+    <TextView
+        android:ellipsize="end"
+        android:id="@+id/goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:singleLine="true"
+        style="@style/TextSmall.Gray60" />
+</LinearLayout>

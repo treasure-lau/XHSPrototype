@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.xingin.xhs.view.SquareFragmentLayout
+        android:background="@color/video_background"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv_cover"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter" />
+    </com.xingin.xhs.view.SquareFragmentLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="47.0dip"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginRight="8.0dip"
+            android:src="@drawable/video_time_line_bg"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true" />
+
+        <RelativeLayout
+            android:id="@+id/timeLineContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/video_time_line_selector_width"
+            android:layout_marginRight="@dimen/video_time_line_selector_width"
+            android:layout_centerVertical="true">
+
+            <com.xingin.xhs.view.MaskFrameLayout
+                android:id="@+id/maskFrameLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <com.xingin.xhs.widget.video.trim.TimeLineScrollView
+                    android:id="@+id/timeLineView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.xingin.xhs.widget.video.trim.VideoCoverLine
+                    android:id="@+id/video_cover_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </com.xingin.xhs.view.MaskFrameLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/video_trim_text_hint_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:text="@string/video_select_cover_on_scroll"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

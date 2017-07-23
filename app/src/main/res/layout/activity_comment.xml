@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xingin.xhs.view.SildingFinishLinearLayout android:orientation="vertical"
+    android:id="@+id/rl_parents_linear"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/ic_header"
+        layout="@layout/ic_header" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ly_top"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ic_header">
+
+        <com.xingin.xhs.ui.post.hashtag.RichEditTextPro
+            android:textColorHint="@color/base_gray80"
+            android:id="@+id/et_content"
+            android:padding="16.0dip"
+            android:focusable="true"
+            style="@style/face_editview" />
+
+        <include layout="@layout/ic_spitview" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/layout_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_keyboard_and_emoji"
+                android:background="@drawable/bg_transparent"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingTop="@dimen/margin_nomal"
+                android:paddingRight="@dimen/margin_middle"
+                android:paddingBottom="@dimen/margin_nomal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xyvg_inputbar_emotion" />
+
+            <ImageView
+                android:id="@+id/iv_keyboard_and_at"
+                android:background="@drawable/bg_transparent"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingTop="@dimen/margin_nomal"
+                android:paddingRight="@dimen/margin_middle"
+                android:paddingBottom="@dimen/margin_nomal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xyvg_inputbar_at" />
+
+            <ImageView
+                android:id="@+id/iv_keyboard_and_hashtag"
+                android:background="@drawable/bg_transparent"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingTop="@dimen/margin_nomal"
+                android:paddingRight="@dimen/margin_middle"
+                android:paddingBottom="@dimen/margin_nomal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xyvg_inputbar_hashtag" />
+        </LinearLayout>
+
+        <include layout="@layout/ic_spitview" />
+    </LinearLayout>
+</com.xingin.xhs.view.SildingFinishLinearLayout>

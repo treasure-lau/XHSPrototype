@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:background="@color/base_light_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="10.0dip" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/filter_tag_layout"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider_horizon_line"
+        android:showDividers="middle">
+
+        <TextView
+            android:paddingLeft="16.0dip"
+            android:paddingTop="15.0dip"
+            android:paddingBottom="16.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/discovery_detail_comment_relatebook"
+            android:drawableLeft="@drawable/explore_label_ic"
+            android:drawablePadding="10.0dip"
+            style="@style/TextSmall" />
+
+        <HorizontalScrollView
+            android:layout_gravity="center_vertical"
+            android:scrollbars="none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/filter_tags"
+                android:paddingRight="16.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_nomal" />
+        </HorizontalScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textSize="18.0sp"
+        android:textColor="@color/base_black"
+        android:id="@+id/import_weibo_top_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32.0dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/contect_hi_red"
+        android:background="@drawable/img_weibo_import_guid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="101.0dip"
+        android:layout_below="@id/import_weibo_top_text"
+        android:layout_centerHorizontal="true" />
+
+    <FrameLayout
+        android:id="@+id/btn_find_friends"
+        android:background="@drawable/bg_weibo_import_guid_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="38.0dip"
+        android:layout_marginTop="60.0dip"
+        android:layout_marginRight="37.0dip"
+        android:layout_below="@id/contect_hi_red">
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/import_guid_button"
+            android:drawableLeft="@drawable/img_weibo_import_guid_button"
+            android:drawablePadding="11.0dip"
+            android:layout_centerInParent="true" />
+    </FrameLayout>
+
+    <TextView
+        android:textSize="14.0dip"
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18.0dip"
+        android:text="@string/skip_title"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

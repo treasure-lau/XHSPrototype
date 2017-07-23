@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00000"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00001"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00002"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00003"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00004"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00017"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00005"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00006"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00007"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00008"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00009"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00010"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00011"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00012"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00013"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00014"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00015"
+            android:clipOrientation="horizontal" />
+    </item>
+    <item android:duration="120">
+        <clip
+            android:gravity="left"
+            android:drawable="@drawable/preloader_1_1_00016"
+            android:clipOrientation="horizontal" />
+    </item>
+</animation-list>

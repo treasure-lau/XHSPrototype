@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@+id/rl_add_img"
+        android:background="@drawable/common_white_to_gray"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="44.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:text="@string/report_img_visual"
+            android:drawableLeft="@drawable/feed_add_pic"
+            android:drawablePadding="10.0dip"
+            android:layout_alignParentLeft="true"
+            style="@style/TextNormal" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="@dimen/common_littel_icon"
+            android:layout_height="@dimen/common_littel_icon"
+            android:layout_marginRight="@dimen/margin_nomal"
+            android:src="@drawable/common_btn_more"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+        <View
+            android:background="@color/line_color"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5px"
+            android:layout_marginLeft="15.0dip"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_horizontal"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:layout_margin="15.0dip" />
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/item_msg_activities_date_0"
+    android:background="@drawable/common_white_to_gray"
+    android:paddingLeft="@dimen/msg_activities_item_padding_left"
+    android:paddingTop="@dimen/msg_activities_item_padding_top"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:tag="binding_1"
+        android:background="@color/transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/CommentHeaderTitleText" />
+</FrameLayout>

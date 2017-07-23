@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:id="@+id/scaleLayout"
+    android:background="@color/white"
+    android:paddingTop="@dimen/dimension_15"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimension_10"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.widget.XYImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iv_vendor"
+        android:layout_width="@dimen/dimension_90"
+        android:layout_height="@dimen/dimension_45"
+        fresco:placeholderImage="@color/background"
+        fresco:actualImageScaleType="fitCenter"
+        fresco:roundedCornerRadius="@dimen/base_radius_round_image" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@android:id/list"
+        android:paddingLeft="@dimen/dimension_15"
+        android:paddingRight="@dimen/dimension_15"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimension_15"
+        android:layout_marginBottom="@dimen/dimension_15" />
+</LinearLayout>

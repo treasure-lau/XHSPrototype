@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ly_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:textSize="@dimen/text_17"
+            android:textColor="@color/base_gray"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_title"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_nomal"
+            android:layout_marginRight="@dimen/margin_nomal"
+            android:singleLine="true" />
+
+        <TextView
+            android:textSize="@dimen/text_normal"
+            android:textColor="@color/base_shallow_black"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_select"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:background="@drawable/headselect_icon_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ly_text"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

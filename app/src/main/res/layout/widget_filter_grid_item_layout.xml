@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textColor="@color/filter_text_selector"
+        android:gravity="center"
+        android:id="@+id/filters_name"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:text="--似懂非懂是"
+        android:layout_toLeftOf="@+id/right_line"
+        android:layout_centerInParent="true" />
+
+    <View
+        android:id="@+id/right_line"
+        android:background="@color/smssdk_lv_item_divider"
+        android:layout_width="1.0px"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@id/filters_name"
+        android:layout_alignBottom="@id/filters_name"
+        android:layout_alignParentRight="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filters_name">
+
+        <View
+            android:id="@+id/chose_line"
+            android:background="@color/red"
+            android:visibility="invisible"
+            android:layout_width="fill_parent"
+            android:layout_height="4.0px" />
+
+        <View
+            android:background="@color/smssdk_lv_item_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px" />
+    </LinearLayout>
+</RelativeLayout>

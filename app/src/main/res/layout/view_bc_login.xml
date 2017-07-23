@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:id="@+id/register_layout"
+    android:background="@drawable/xy_walkthroughs_bg1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/iv_top_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37.0dip"
+            android:src="@drawable/common_head_btn_back"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登陆"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            style="@style/TextLarge" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_privacy"
+        android:layout_below="@id/rl_top_bar">
+
+        <RelativeLayout
+            android:gravity="center_horizontal"
+            android:id="@+id/rl_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip" />
+    </ScrollView>
+
+    <TextView
+        android:textSize="@dimen/text_12"
+        android:textColor="@color/base_gray80"
+        android:id="@+id/tv_policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dip"
+        android:text="@string/welcomanim_title_policy"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:textSize="@dimen/text_12"
+        android:textColor="@color/base_gray80"
+        android:id="@+id/chb_share"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:checked="true"
+        android:button="@null"
+        android:text="@string/welcomanim_title_share"
+        android:drawableLeft="@drawable/ckb_share_back"
+        android:drawablePadding="0.0dip"
+        android:layout_above="@id/tv_policy"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

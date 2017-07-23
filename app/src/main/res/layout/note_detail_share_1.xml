@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical"
+    android:paddingLeft="15.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="48.0dip"
+    android:layout_marginBottom="5.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textSize="@dimen/text_micro"
+        android:textColor="@color/base_gray60"
+        android:gravity="center_vertical"
+        android:layout_gravity="left"
+        android:id="@+id/note_detail_share_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:text="@string/note_detail_share" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/note_detail_share_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/note_detail_share_moments"
+            android:layout_width="56.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/share_icon_moments_small"
+            android:scaleType="center" />
+
+        <View
+            android:background="@color/bg_comment_line"
+            android:layout_width="1.0dip"
+            android:layout_height="15.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip" />
+
+        <ImageView
+            android:id="@+id/note_detail_share_wechat"
+            android:layout_width="56.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/share_icon_wechat_small"
+            android:scaleType="center" />
+
+        <View
+            android:background="@color/bg_comment_line"
+            android:layout_width="1.0dip"
+            android:layout_height="15.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip" />
+
+        <ImageView
+            android:id="@+id/note_detail_share_sina"
+            android:layout_width="56.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/share_icon_weibo_small"
+            android:scaleType="center" />
+
+        <View
+            android:background="@color/bg_comment_line"
+            android:layout_width="1.0dip"
+            android:layout_height="15.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip" />
+
+        <ImageView
+            android:id="@+id/note_detail_share_qq"
+            android:layout_width="56.0dip"
+            android:layout_height="fill_parent"
+            android:src="@drawable/share_icon_qq_small"
+            android:scaleType="center" />
+    </LinearLayout>
+</RelativeLayout>

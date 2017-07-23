@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/ic_header"
+        layout="@layout/ic_mainframe_header" />
+
+    <com.xingin.xhs.view.ScaleLayout
+        android:id="@+id/sl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ic_header"
+        app:scaleProvideX="1.0"
+        app:scaleProvideY="1.0">
+
+        <com.xingin.xhs.widget.CustomScrollableViewPager
+            android:id="@+id/vp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <ImageView
+            android:id="@+id/iv_dot"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dot" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/add_tag"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <View
+            android:id="@+id/tag_anchor"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_marginLeft="60.0dip"
+            android:layout_centerVertical="true" />
+
+        <ViewStub
+            android:id="@+id/vs_guide_flip"
+            android:layout="@layout/layout_flip_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="120.0dip"
+            android:layout_centerInParent="true" />
+    </com.xingin.xhs.view.ScaleLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/toolbar"
+        android:background="@color/background"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_alignParentBottom="true"
+        app:tabIndicatorColor="@color/base_red"
+        app:tabTextAppearance="@style/TextMedium"
+        app:tabTextColor="@color/base_gray40"
+        app:tabSelectedTextColor="@color/base_red" />
+
+    <View
+        android:id="@+id/line_view"
+        android:background="@color/line_color"
+        android:layout_width="fill_parent"
+        android:layout_height="0.6dip"
+        android:layout_above="@id/toolbar" />
+
+    <FrameLayout
+        android:id="@+id/toolFl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/sl" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/ly_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/line_view"
+        android:layout_below="@id/sl">
+
+        <TextView
+            android:textSize="18.0sp"
+            android:textColor="@color/base_white_gray"
+            android:gravity="center"
+            android:id="@+id/tags"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/add_tag_tips" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/imgs"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingTop="14.0dip"
+                android:paddingBottom="14.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="48.0dip">
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="@color/base_white_gray"
+                    android:gravity="center_vertical"
+                    android:id="@+id/sticker_activity"
+                    android:paddingLeft="14.0dip"
+                    android:paddingRight="14.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="@string/activity_sticker" />
+
+                <View
+                    android:background="@color/base_white_gray"
+                    android:layout_width="0.70000005dip"
+                    android:layout_height="fill_parent" />
+
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="@color/base_white_gray"
+                    android:gravity="center_vertical"
+                    android:id="@+id/sticker_mine"
+                    android:paddingLeft="14.0dip"
+                    android:paddingRight="14.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="@string/my_sticker" />
+            </LinearLayout>
+
+            <com.xingin.xhs.view.HorizontalListView
+                android:id="@+id/imgs_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <com.xingin.xhs.view.HorizontalListView
+                android:id="@+id/imgs_contents"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/tag_edit_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ic_header"
+        android:layout_alignParentTop="true" />
+
+    <FrameLayout
+        android:id="@+id/crop_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ic_header" />
+</RelativeLayout>

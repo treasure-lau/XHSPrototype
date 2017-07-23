@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/video_select_cover_border_width" />
+    <stroke
+        android:width="@dimen/video_select_cover_border_width"
+        android:color="@color/video_line_progress_bar" />
+</shape>

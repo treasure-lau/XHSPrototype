@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/ic_header"
+        layout="@layout/ic_header" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:background="@color/background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ic_commentbar"
+        android:layout_below="@id/ic_header">
+
+        <com.xingin.xhs.view.LoadMoreListView
+            android:id="@android:id/list"
+            style="@style/pulltorefreshlistview_divider" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.xingin.xhs.view.CommentBarWithUserView
+        android:id="@id/ic_commentbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

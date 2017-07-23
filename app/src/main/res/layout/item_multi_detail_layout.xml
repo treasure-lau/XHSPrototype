@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/root_view"
+        android:paddingTop="@dimen/dimension_15"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.xingin.xhs.widget.XYImageView
+            android:id="@+id/image"
+            android:background="@color/white"
+            android:layout_width="fill_parent"
+            android:layout_height="345.0dip"
+            fresco:roundedCornerRadius="9.0dip" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dimension_15"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.xingin.xhs.widget.AvatarImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip" />
+
+            <TextView
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/base_gray"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tv_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="22.0dip"
+                android:layout_marginLeft="@dimen/dimension_10"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <TextView
+            android:textSize="@dimen/text_14"
+            android:textStyle="bold"
+            android:textColor="@color/base_gray"
+            android:id="@+id/title"
+            android:paddingTop="@dimen/dimension_15"
+            android:paddingBottom="@dimen/dimension_15"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <com.xingin.xhs.view.TextViewFixTouchConsume
+            android:textColor="@color/base_gray"
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/hour1"
+        android:background="@color/base_black"
+        android:layout_width="17.0dip"
+        android:layout_height="22.0dip"
+        android:layout_marginRight="3.0dip"
+        android:text="0"
+        style="@style/TextMedium.White" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/hour2"
+        android:background="@color/base_black"
+        android:layout_width="17.0dip"
+        android:layout_height="22.0dip"
+        android:text="0"
+        style="@style/TextMedium.White" />
+
+    <TextView
+        android:textStyle="bold"
+        android:paddingLeft="2.0dip"
+        android:paddingRight="2.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/minute1"
+        android:background="@color/base_black"
+        android:layout_width="17.0dip"
+        android:layout_height="22.0dip"
+        android:layout_marginRight="3.0dip"
+        android:text="0"
+        style="@style/TextMedium.White" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/minute2"
+        android:background="@color/base_black"
+        android:layout_width="17.0dip"
+        android:layout_height="22.0dip"
+        android:text="0"
+        style="@style/TextMedium.White" />
+
+    <TextView
+        android:textStyle="bold"
+        android:paddingLeft="2.0dip"
+        android:paddingRight="2.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/seconds1"
+        android:background="@color/base_black"
+        android:layout_width="17.0dip"
+        android:layout_height="22.0dip"
+        android:layout_marginRight="3.0dip"
+        android:text="0"
+        style="@style/TextMedium.White" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/seconds2"
+        android:background="@color/base_black"
+        android:layout_width="17.0dip"
+        android:layout_height="22.0dip"
+        android:text="0"
+        style="@style/TextMedium.White" />
+</LinearLayout>

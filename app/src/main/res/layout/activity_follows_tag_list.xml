@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.view.rv.LoadMoreRecycleView
+        android:id="@android:id/list"
+        android:paddingBottom="20.0dip"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        style="@style/pulltorefreshlistview_parent" />
+
+    <com.xingin.xhs.view.EmptyView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/empty_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100.0dip" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_gravity="bottom|center|right"
+        android:id="@+id/btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:src="@drawable/icon_edit"
+        app:elevation="2.0dip"
+        app:rippleColor="@color/base_gray80"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12.0dip"
+        app:backgroundTint="@color/base_black" />
+</FrameLayout>

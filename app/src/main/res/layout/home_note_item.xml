@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/layout_note"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_all_line"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:foreground="@drawable/bg_transparent"
+        android:divider="@drawable/divider_horizon_line"
+        android:showDividers="middle">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/iv_image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_gravity="center|right|top"
+                android:id="@+id/iv_type"
+                android:visibility="gone"
+                android:layout_width="18.0dip"
+                android:layout_height="18.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:id="@+id/tv_title"
+                android:paddingLeft="@dimen/margin_little_middle"
+                android:paddingTop="@dimen/margin_nomal"
+                android:paddingRight="@dimen/margin_little_middle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                style="@style/TextSmall" />
+
+            <TextView
+                android:textColor="@color/base_gray40"
+                android:ellipsize="end"
+                android:id="@+id/tv_name"
+                android:paddingLeft="10.0dip"
+                android:paddingTop="10.0dip"
+                android:paddingRight="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:lineSpacingExtra="@dimen/text_linespacingextra"
+                style="@style/TextSmall" />
+
+            <RelativeLayout
+                android:paddingLeft="10.0dip"
+                android:paddingTop="12.0dip"
+                android:paddingRight="5.0dip"
+                android:paddingBottom="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip">
+
+                <com.xingin.xhs.widget.AvatarImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:layout_alignParentLeft="true" />
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:id="@+id/layout_user"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_toLeftOf="@id/layout_like_num"
+                    android:layout_toRightOf="@id/iv_avatar">
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:id="@+id/tv_nickname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="明明同学"
+                        android:singleLine="true"
+                        style="@style/Text10Size.Normal" />
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2.0dip"
+                        android:singleLine="true"
+                        style="@style/Text10Size.Gray60" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:id="@+id/layout_like_num"
+                    android:background="@drawable/bg_transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30.0dip"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/iv_like_num"
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:layout_marginLeft="4.0dip" />
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/tv_like_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:singleLine="true"
+                        style="@style/TextSmall.Gray80" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/note_illegal_show"
+        android:background="#4c000000"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:textSize="@dimen/text_normal"
+            android:textColor="@color/white"
+            android:id="@+id/note_illegal_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</FrameLayout>

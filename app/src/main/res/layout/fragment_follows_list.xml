@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.xingin.xhs.view.LoadMoreListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        style="@style/pulltorefreshlistview_parent" />
+
+    <com.xingin.xhs.view.EmptyView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/empty_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100.0dip" />
+</FrameLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/ic_header" />
+
+    <com.xingin.xhs.view.ClearableEditText android:id="@+id/et_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6.0dip"
+        android:layout_centerVertical="true"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+
+    <com.xingin.xhs.view.rv.LoadMoreRecycleView
+        android:id="@+id/rv"
+        android:paddingTop="20.0dip"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>

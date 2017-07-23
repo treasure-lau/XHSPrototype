@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/base_black"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/note_detail_like_layout"
+        style="@style/NoteDetailBottomStyle">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@drawable/bg_transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/note_detail_like_iv"
+                android:src="@drawable/note_bar_like_white"
+                style="@style/NoteDetailBottomImageStyle" />
+
+            <TextView
+                android:id="@+id/note_detail_like_tv"
+                android:text="@string/note_detail_like"
+                style="@style/NoteDetailBottomTextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:background="@color/base_gray60"
+        android:layout_width="1.0dip"
+        android:layout_height="15.0dip" />
+
+    <LinearLayout
+        android:id="@+id/note_detail_comment_layout"
+        style="@style/NoteDetailBottomStyle">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@drawable/bg_transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/note_detail_comment_iv"
+                android:src="@drawable/note_bar_comment_white"
+                style="@style/NoteDetailBottomImageStyle" />
+
+            <TextView
+                android:id="@+id/note_detail_comment_tv"
+                android:text="@string/note_detail_comment"
+                style="@style/NoteDetailBottomTextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:background="@color/base_gray60"
+        android:layout_width="1.0dip"
+        android:layout_height="15.0dip" />
+
+    <LinearLayout
+        android:id="@+id/note_detail_collect_layout"
+        style="@style/NoteDetailBottomStyle">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@drawable/bg_transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:id="@+id/note_detail_collect_iv"
+                android:src="@drawable/note_bar_collect_white"
+                style="@style/NoteDetailBottomImageStyle" />
+
+            <TextView
+                android:id="@+id/note_detail_collect_tv"
+                android:text="@string/board_get"
+                style="@style/NoteDetailBottomTextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:background="@color/base_gray60"
+        android:layout_width="1.0dip"
+        android:layout_height="15.0dip" />
+
+    <LinearLayout
+        android:id="@+id/note_detail_goods_poi_layout"
+        style="@style/NoteDetailBottomStyle.GoodsPoi">
+
+        <TextView
+            android:id="@+id/note_detail_goods_poi_tv"
+            android:paddingTop="13.0dip"
+            android:text="@string/note_detail_goods_poi"
+            style="@style/NoteDetailBottomTextStyle" />
+    </LinearLayout>
+</LinearLayout>

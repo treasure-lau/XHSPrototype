@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textAppearance="@style/TextNormal"
+        android:gravity="left"
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:textColor="@color/base_gray60"
+        android:gravity="center|right"
+        android:layout_gravity="center|right"
+        android:id="@+id/title_tv_english"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/title_tv"
+        android:layout_centerVertical="true"
+        style="@style/TextSmall.Gray40" />
+
+    <TextView
+        android:textColor="@color/base_gray60"
+        android:gravity="center|right"
+        android:id="@+id/more_tv"
+        android:paddingLeft="16.0dip"
+        android:paddingTop="16.0dip"
+        android:paddingRight="16.0dip"
+        android:paddingBottom="16.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/arrow_icon_right"
+        android:drawablePadding="4.0dip"
+        android:layout_alignParentRight="true"
+        style="@style/TextSmall.Gray40" />
+</RelativeLayout>

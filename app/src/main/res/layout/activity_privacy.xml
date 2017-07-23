@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/ic_header" />
+
+    <TextView
+        android:padding="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/comment_setting_title"
+        style="@style/TextNormal.Gray60" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_follow_me_can_comment"
+        android:background="@drawable/bg_top_bottom_line"
+        android:padding="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/only_follow_me_can_comment"
+        style="@style/TextNormal" />
+
+    <TextView
+        android:padding="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/at_notification_setting_title"
+        style="@style/TextNormal.Gray60" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_follow_me_receive_notifi"
+        android:background="@drawable/bg_top_bottom_line"
+        android:padding="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/only_follow_me_receive_notification"
+        style="@style/TextNormal" />
+
+    <TextView
+        android:padding="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/address_book_setting_title"
+        style="@style/TextNormal.Gray60" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_allow_address_book_add_friend"
+        android:background="@drawable/bg_top_bottom_line"
+        android:padding="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/switch_allow_address_book_add_friend"
+        style="@style/TextNormal" />
+
+    <TextView
+        android:padding="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/weibo_setting_title"
+        style="@style/TextNormal.Gray60" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_allow_weibo_add_friend"
+        android:background="@drawable/bg_top_bottom_line"
+        android:padding="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/switch_allow_weibo_add_friend"
+        style="@style/TextNormal" />
+</LinearLayout>

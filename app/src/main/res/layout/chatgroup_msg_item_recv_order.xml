@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:paddingTop="13.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/chat_text_date_style" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity">
+
+        <com.xingin.xhs.widget.AvatarImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:src="@drawable/common_bg_avatar_loadfail"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ll_chatcontent"
+            android:background="@drawable/chatgroup_bg_recv_obj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:layout_alignTop="@id/iv_userhead">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:text="分享订单"
+                style="@style/TextNormal" />
+
+            <View
+                android:background="@color/line_color"
+                android:layout_width="fill_parent"
+                android:layout_height="0.39999998dip" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8.0dip">
+
+                <com.xingin.xhs.widget.AvatarImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="48.0dip"
+                    android:layout_height="48.0dip"
+                    android:layout_marginLeft="@dimen/margin_little_middle"
+                    android:layout_marginTop="12.0dip"
+                    android:layout_marginBottom="12.0dip"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_marginLeft="6.0dip"
+                    android:layout_marginTop="2.0dip"
+                    android:maxLines="2"
+                    android:layout_toRightOf="@id/iv_avatar"
+                    android:layout_alignTop="@id/iv_avatar"
+                    style="@style/text_selection_tag_likes_comment_grey" />
+
+                <TextView
+                    android:textSize="14.0sp"
+                    android:id="@+id/tv_addr"
+                    android:layout_width="160.0dip"
+                    android:layout_marginTop="4.0dip"
+                    android:layout_marginBottom="6.0dip"
+                    android:maxLines="2"
+                    android:layout_below="@id/tv_name"
+                    android:layout_alignLeft="@id/tv_name"
+                    style="@style/text_selection_name" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

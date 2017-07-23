@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/ic_header"
+        layout="@layout/ic_header" />
+
+    <com.xingin.xhs.view.LoadMoreListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/transparent"
+        android:dividerHeight="0.6dip"
+        android:layout_below="@id/ic_header" />
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@+id/weibo_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60.0dip"
+        android:layout_below="@id/ic_header">
+
+        <ImageView
+            android:background="@drawable/weibo_recommend_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/follow_desc_color"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/weibo_bind_tip_one" />
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/follow_desc_color"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip"
+            android:text="@string/weibo_bind_tip_two" />
+
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:id="@+id/btn_weibo_bind"
+            android:background="@drawable/quick_follow_bg"
+            android:paddingLeft="20.0dip"
+            android:paddingTop="6.0dip"
+            android:paddingRight="20.0dip"
+            android:paddingBottom="6.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/weibo_bind" />
+    </LinearLayout>
+</RelativeLayout>

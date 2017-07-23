@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/dotView"
+    android:layout_width="88.0dip"
+    android:layout_height="88.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/inner_goods"
+        android:visibility="invisible"
+        android:layout_width="26.0dip"
+        android:layout_height="26.0dip"
+        android:src="@drawable/ic_guide_like_inner"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/out_goods"
+        android:visibility="invisible"
+        android:layout_width="34.0dip"
+        android:layout_height="34.0dip"
+        android:src="@drawable/ic_guide_like_out"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

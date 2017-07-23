@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/common_bg_round_white"
+        android:layout_width="fill_parent"
+        android:layout_height="180.0dip"
+        android:layout_marginTop="40.0dip"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="50.0dip"
+            android:layout_marginBottom="15.0dip"
+            android:text="@string/see_all_contact_friend"
+            android:layout_above="@+id/hor_diver"
+            style="@style/TextNormal" />
+
+        <View
+            android:id="@+id/hor_diver"
+            android:background="@color/line_color"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5px"
+            android:layout_above="@+id/back_finish_layout" />
+
+        <RelativeLayout
+            android:id="@+id/back_finish_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_dialog_left"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="放弃"
+                android:layout_toLeftOf="@+id/vertical_line"
+                android:layout_alignParentLeft="true"
+                style="@style/TextNormal.Gray40" />
+
+            <View
+                android:id="@+id/vertical_line"
+                android:background="@color/line_color"
+                android:layout_width="0.5px"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_dialog_right"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="立即出发"
+                android:layout_toRightOf="@id/vertical_line"
+                android:layout_alignParentRight="true"
+                style="@style/TextNormal.ShallowRed" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_gravity="center|top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_see_friend" />
+</FrameLayout>

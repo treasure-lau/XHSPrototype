@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:id="@+id/iv_driver"
+        android:background="@color/background"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/margin_nomal" />
+</merge>

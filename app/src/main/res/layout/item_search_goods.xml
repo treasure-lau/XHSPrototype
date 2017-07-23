@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="0.0dip"
+    android:paddingBottom="0.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/search_goods"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textAppearance="@style/TextNormal"
+            android:layout_gravity="left"
+            android:id="@+id/tv_sort_key"
+            android:paddingLeft="20.0dip"
+            android:paddingTop="16.0dip"
+            android:paddingRight="16.0dip"
+            android:paddingBottom="16.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/icon_filter_down_un_arrow"
+            android:drawablePadding="4.0dip" />
+
+        <TextView
+            android:textAppearance="@style/TextNormal.Gray40"
+            android:layout_gravity="center|right"
+            android:id="@+id/tv_search_goods"
+            android:padding="16.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/arrow_icon_right"
+            android:drawablePadding="6.0dip" />
+
+        <View
+            android:layout_gravity="top"
+            android:id="@+id/line"
+            android:background="@color/base_gray90"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip" />
+    </FrameLayout>
+</FrameLayout>

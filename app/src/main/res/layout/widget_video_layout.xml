@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/black"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.widget.CustomVideoView
+        android:id="@+id/videoView"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.xingin.xhs.widget.XYImageView
+        android:id="@+id/iv_img"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:placeholderImage="@color/base_bg_gray"
+        app:failureImage="@color/base_bg_gray" />
+
+    <ProgressBar
+        android:id="@+id/load_progressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/progress_load_rotate"
+        android:indeterminateBehavior="repeat"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

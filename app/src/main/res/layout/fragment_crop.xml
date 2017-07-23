@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/base_black"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.view.ScaleLayout
+        android:layout_gravity="center"
+        android:id="@+id/scaleLayout"
+        android:background="@color/base_black"
+        android:layout_width="fill_parent"
+        android:layout_height="450.0dip"
+        android:minHeight="40.0dip"
+        app:layout_scrollFlags="exitUntilCollapsed|scroll"
+        app:scaleProvideX="1.0"
+        app:scaleProvideY="1.0">
+
+        <FrameLayout
+            android:id="@+id/crop_viewgroup"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true">
+
+            <uk.co.senab.photoview.PhotoView
+                android:id="@+id/photoView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop" />
+
+            <com.soundcloud.android.crop.HighlightLayout
+                android:id="@+id/highlightView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <View
+                android:id="@+id/bgView"
+                android:background="@color/little_transparent_white"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/scaleLayout"
+                android:layout_alignParentTop="true"
+                android:alpha="0.1" />
+        </FrameLayout>
+    </com.xingin.xhs.view.ScaleLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/ratio4_3"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_centerInParent="true">
+
+            <com.xingin.xhs.view.ScaleLayout
+                android:layout_gravity="center"
+                android:background="@drawable/bg_radio_bound"
+                android:duplicateParentState="true"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                app:scaleProvideX="4.0"
+                app:scaleProvideY="3.0" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip"
+                android:text="4:3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/ratio5_4"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <com.xingin.xhs.view.ScaleLayout
+                android:layout_gravity="center"
+                android:background="@drawable/bg_radio_bound"
+                android:duplicateParentState="true"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                app:scaleProvideX="5.0"
+                app:scaleProvideY="4.0" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5:4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/ratio1_1"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <com.xingin.xhs.view.ScaleLayout
+                android:layout_gravity="center"
+                android:background="@drawable/bg_radio_bound"
+                android:duplicateParentState="true"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                app:scaleProvideX="4.0"
+                app:scaleProvideY="4.0" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1:1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/ratio4_5"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <com.xingin.xhs.view.ScaleLayout
+                android:layout_gravity="center"
+                android:background="@drawable/bg_radio_bound"
+                android:duplicateParentState="true"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                app:scaleProvideX="4.0"
+                app:scaleProvideY="5.0" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4:5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/ratio3_4"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <com.xingin.xhs.view.ScaleLayout
+                android:layout_gravity="center"
+                android:background="@drawable/bg_radio_bound"
+                android:duplicateParentState="true"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                app:scaleProvideX="3.0"
+                app:scaleProvideY="4.0" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3:4" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:id="@+id/ll"
+        android:background="@color/background"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="44.0dip"
+            android:layout_height="44.0dip"
+            android:src="@drawable/ic_close"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/titleTV"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:text="@string/crop"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:id="@+id/done"
+            android:layout_width="44.0dip"
+            android:layout_height="44.0dip"
+            android:src="@drawable/ic_done"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+</LinearLayout>

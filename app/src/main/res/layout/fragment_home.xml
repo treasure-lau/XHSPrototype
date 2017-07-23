@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:id="@+id/content_rl"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/ic_header"
+        android:background="@color/base_red"
+        android:paddingTop="@dimen/status_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/headbar_size"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/logo_title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@+id/logo_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/tv_selected">
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/index_icon_logo"
+                    android:layout_alignParentTop="true" />
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/iv_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:src="@drawable/icon_arrow_down"
+                    android:layout_toRightOf="@id/iv_logo" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_selected"
+                android:paddingRight="10.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2.0dip"
+                android:text="关注的人"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                style="@style/Text10Size" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_gravity="center|right"
+            android:id="@+id/photo_button"
+            android:background="@drawable/bg_transparent"
+            android:padding="6.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12.0dip"
+            android:src="@drawable/index_icon_camera"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:layout_gravity="center|left"
+            android:id="@+id/search_button"
+            android:background="@drawable/bg_transparent"
+            android:padding="6.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:src="@drawable/ic_home_search"
+            android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ic_header">
+
+        <com.xingin.xhs.view.LoadMoreStickyListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            style="@style/pulltorefreshlistview_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include
+        android:orientation="horizontal"
+        android:id="@+id/failed_push_ll"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_alignTop="@id/refresh_layout"
+        layout="@layout/layout_failed_push" />
+
+    <ViewStub
+        android:id="@+id/stub_navigateToSearch"
+        android:layout="@layout/view_navigate_search"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25.0dip"
+        android:layout_below="@id/ic_header">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tip_text"
+            android:background="@color/transparent_red"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="25.0dip"
+            style="@style/TextSmall.White" />
+    </FrameLayout>
+</RelativeLayout>

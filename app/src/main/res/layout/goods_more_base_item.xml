@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/container_see_more"
+    android:background="@drawable/rect_border_e6e6e6"
+    android:layout_width="@dimen/horizontal_scroll_goods_size"
+    android:layout_height="@dimen/horizontal_scroll_goods_size"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:id="@+id/divider"
+        android:background="@color/base_gray90"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginLeft="22.0dip"
+        android:layout_marginTop="1.0dip"
+        android:layout_marginRight="22.0dip"
+        android:layout_marginBottom="1.0dip"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/tv_goods_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/load_more"
+        android:layout_above="@id/divider"
+        android:layout_centerHorizontal="true"
+        style="@style/TextNormal.Gray40" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_see_more"
+        android:layout_below="@id/divider"
+        android:layout_centerHorizontal="true"
+        style="@style/TextNormal.Gray60" />
+</RelativeLayout>

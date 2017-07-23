@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:gravity="center"
+    android:tag="layout/item_msg_about_me_more_0"
+    android:background="@color/white"
+    android:padding="@dimen/dimension_20"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/msg_you_view_more"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

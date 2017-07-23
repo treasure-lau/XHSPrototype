@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/ic_header"
+        layout="@layout/ic_header" />
+
+    <FrameLayout
+        android:id="@+id/btn_finish"
+        android:background="@color/base_red"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:padding="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/feedback_send_btn"
+            android:drawableRight="@drawable/icon_right_ok"
+            android:drawablePadding="8.0dip"
+            style="@style/TextMedium" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/btn_finish"
+        android:layout_below="@id/ic_header">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/choice_layout"
+                android:background="@color/white"
+                android:paddingLeft="15.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dip"
+                android:divider="@drawable/divider_horizon_line"
+                android:showDividers="middle">
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/poi_error_pos"
+                    android:paddingRight="15.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:text="@string/poi_error_pos"
+                    android:drawableRight="@drawable/radio_choice_selector"
+                    style="@style/TextNormal" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/poi_error_info"
+                    android:paddingRight="15.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:text="@string/poi_error_info"
+                    android:drawableRight="@drawable/radio_choice_selector"
+                    style="@style/TextNormal" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/poi_error_multi_poi"
+                    android:paddingRight="15.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:text="@string/poi_error_multi_poi"
+                    android:drawableRight="@drawable/radio_choice_selector"
+                    style="@style/TextNormal" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/poi_error_other"
+                    android:paddingRight="15.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:text="@string/report_others"
+                    android:drawableRight="@drawable/radio_choice_selector"
+                    style="@style/TextNormal" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/poi_content_layout"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="142.0dip"
+                android:layout_below="@id/choice_layout">
+
+                <EditText
+                    android:textColorHint="@color/base_gray80"
+                    android:gravity="top"
+                    android:id="@+id/edittext"
+                    android:background="@color/white"
+                    android:padding="8.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="15.0dip"
+                    android:hint="@string/report_hint"
+                    style="@style/TextNormal" />
+
+                <TextView
+                    android:id="@+id/tv_input_num"
+                    android:background="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15.0dip"
+                    android:text="0/100"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    style="@style/TextNormal.Gray60" />
+            </RelativeLayout>
+
+            <com.xingin.xhs.widget.uploadpic.XhsAddImgsUploadView
+                android:id="@+id/add_imgs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dip"
+                android:layout_below="@id/poi_content_layout" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

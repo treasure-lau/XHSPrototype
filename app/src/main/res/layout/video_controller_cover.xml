@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.widget.XYImageView
+        android:layout_gravity="center"
+        android:id="@+id/iv_cover"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:actualImageScaleType="centerCrop" />
+
+    <FrameLayout
+        android:id="@+id/layout_center_play"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/center_play_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/video_play"
+            android:scaleType="fitXY"
+            android:contentDescription="@null" />
+    </FrameLayout>
+
+    <ImageView
+        android:layout_gravity="right"
+        android:id="@+id/collapse_play_btn"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dimension_15"
+        android:src="@drawable/video_play_small"
+        android:scaleType="fitXY"
+        android:contentDescription="@null" />
+</FrameLayout>

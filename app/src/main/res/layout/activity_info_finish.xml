@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/ic_header"
+        layout="@layout/ic_header" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50.0dip"
+        android:layout_marginTop="50.0dip"
+        android:layout_marginRight="50.0dip"
+        android:divider="@drawable/divider_horizon_line"
+        android:showDividers="end|middle">
+
+        <EditText
+            android:textColorHint="@color/base_gray80"
+            android:gravity="center_vertical"
+            android:id="@+id/et_name"
+            android:background="@null"
+            android:clickable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:hint="@string/add_name"
+            android:singleLine="true"
+            style="@style/TextNormal" />
+
+        <EditText
+            android:textColorHint="@color/base_gray80"
+            android:gravity="center_vertical"
+            android:id="@+id/et_password"
+            android:background="@null"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:hint="@string/add_password"
+            android:password="true"
+            android:singleLine="true"
+            style="@style/TextNormal" />
+
+        <EditText
+            android:textColorHint="@color/base_gray80"
+            android:gravity="center_vertical"
+            android:id="@+id/et_re_password"
+            android:background="@null"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:hint="@string/repeat_password"
+            android:password="true"
+            android:singleLine="true"
+            style="@style/TextNormal" />
+    </LinearLayout>
+
+    <Button
+        android:textSize="18.0sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/btn_submit"
+        android:background="@drawable/btn_ic_finish"
+        android:padding="12.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50.0dip"
+        android:layout_marginTop="26.0dip"
+        android:layout_marginRight="50.0dip"
+        android:text="@string/finish" />
+</LinearLayout>

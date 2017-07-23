@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout_multi_note"
+    android:background="@drawable/bg_all_line"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/bg_transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.widget.XYImageView
+        android:id="@+id/iv_img"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:placeholderImage="@color/white"
+        app:failureImage="@color/white"
+        app:actualImageScaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/iv_type"
+        android:visibility="visible"
+        android:layout_width="18.0dip"
+        android:layout_height="18.0dip"
+        android:layout_marginTop="6.0dip"
+        android:layout_marginRight="6.0dip"
+        android:src="@drawable/ic_note_type_article"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:textAppearance="@style/TextSmall.White"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        android:gravity="bottom"
+        android:id="@+id/tv_title"
+        android:background="@drawable/bg_banner_multi_note"
+        android:padding="8.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="52.0dip"
+        android:maxLines="3"
+        android:layout_alignBottom="@id/iv_img" />
+</RelativeLayout>

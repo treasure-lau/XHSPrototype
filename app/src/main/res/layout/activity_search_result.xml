@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/rl_container"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.xingin.xhs.view.rv.LoadMoreRecycleView
+        android:id="@+id/rv"
+        android:paddingTop="49.0dip"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <include
+        android:id="@+id/toolFl"
+        android:layout_width="fill_parent"
+        android:layout_height="49.0dip"
+        layout="@layout/ic_header" />
+</FrameLayout>

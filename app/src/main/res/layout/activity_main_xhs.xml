@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical"
+    android:id="@+id/main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_gravity="top"
+        android:id="@+id/fl_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/common_bar_height" />
+
+    <RelativeLayout
+        android:layout_gravity="bottom"
+        android:id="@+id/rlTab"
+        android:clipChildren="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/tab_layout_bg"
+            android:background="@color/white"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/common_bar_height"
+            android:layout_alignParentBottom="true" />
+
+        <include
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_above="@id/tab_layout_bg"
+            layout="@layout/ic_spitview" />
+
+        <LinearLayout
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:id="@+id/tab_bar_layout"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="5.0dip"
+            android:clipChildren="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5.0"
+            android:layout_alignParentBottom="true">
+
+            <FrameLayout
+                android:id="@+id/btnTabHome"
+                style="@style/MainFrameActivityBottomTabItem">
+
+                <TextView
+                    android:layout_gravity="bottom|center"
+                    android:id="@+id/text_1"
+                    android:background="@null"
+                    android:layout_width="fill_parent"
+                    android:layout_height="16.0dip"
+                    android:layout_marginBottom="4.0dip"
+                    android:text="@string/tab_home"
+                    style="@style/tab_text" />
+
+                <ImageView
+                    android:layout_gravity="bottom|center"
+                    android:id="@+id/image_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="21.0dip"
+                    android:src="@drawable/tab_main_home" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/btnTabSearch"
+                style="@style/MainFrameActivityBottomTabItem">
+
+                <TextView
+                    android:layout_gravity="bottom|center"
+                    android:id="@+id/text_1"
+                    android:background="@null"
+                    android:layout_width="fill_parent"
+                    android:layout_height="16.0dip"
+                    android:layout_marginBottom="4.0dip"
+                    android:text="@string/tab_search"
+                    style="@style/tab_text" />
+
+                <ImageView
+                    android:layout_gravity="bottom|center"
+                    android:id="@+id/image_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="21.0dip"
+                    android:src="@drawable/tab_main_search" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/btnTabShop"
+                style="@style/MainFrameActivityBottomTabItem">
+
+                <TextView
+                    android:layout_gravity="bottom|center"
+                    android:id="@+id/text_1"
+                    android:background="@null"
+                    android:layout_width="fill_parent"
+                    android:layout_height="16.0dip"
+                    android:layout_marginBottom="4.0dip"
+                    android:text="@string/tab_store"
+                    style="@style/tab_text" />
+
+                <ImageView
+                    android:layout_gravity="bottom|center"
+                    android:id="@+id/image_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="21.0dip"
+                    android:src="@drawable/tab_main_store" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/btnTabMsg"
+                style="@style/MainFrameActivityBottomTabItem">
+
+                <TextView
+                    android:layout_gravity="bottom|center"
+                    android:id="@+id/text_1"
+                    android:background="@null"
+                    android:layout_width="fill_parent"
+                    android:layout_height="16.0dip"
+                    android:layout_marginBottom="4.0dip"
+                    android:text="@string/tab_message"
+                    style="@style/tab_text" />
+
+                <ImageView
+                    android:layout_gravity="bottom|center"
+                    android:id="@+id/image_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="21.0dip"
+                    android:src="@drawable/tab_main_msg" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/btnTabProfile"
+                style="@style/MainFrameActivityBottomTabItem">
+
+                <TextView
+                    android:layout_gravity="bottom|center"
+                    android:id="@+id/text_1"
+                    android:background="@null"
+                    android:layout_width="fill_parent"
+                    android:layout_height="16.0dip"
+                    android:layout_marginBottom="4.0dip"
+                    android:text="@string/tab_mine"
+                    style="@style/tab_text" />
+
+                <ImageView
+                    android:layout_gravity="bottom|center"
+                    android:id="@+id/image_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="21.0dip"
+                    android:src="@drawable/tab_main_me" />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

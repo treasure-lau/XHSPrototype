@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/content_rl"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/ic_header"
+        layout="@layout/ic_header" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.xingin.xhs.view.rv.LoadMoreRecycleView
+            android:id="@android:id/list"
+            android:background="@color/background"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <FrameLayout
+        android:layout_gravity="top"
+        android:layout_width="fill_parent"
+        android:layout_height="25.0dip">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tip_text"
+            android:background="@color/transparent_red"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="25.0dip"
+            style="@style/TextSmall.White" />
+    </FrameLayout>
+
+    <include
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:id="@+id/failed_push_ll"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        layout="@layout/layout_failed_push" />
+</FrameLayout>

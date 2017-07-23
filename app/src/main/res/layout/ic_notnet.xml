@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:background="#fffff3bb"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/common_bar_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_nomal"
+        android:src="@drawable/common_icon_warning"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:textSize="@dimen/text_normal"
+        android:textColor="@color/black"
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_nomal"
+        android:text="@string/net_connect_error_tip"
+        android:layout_toRightOf="@id/iv_icon"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:layout_width="@dimen/common_littel_icon"
+        android:layout_height="@dimen/common_littel_icon"
+        android:layout_marginRight="@dimen/margin_nomal"
+        android:src="@drawable/common_btn_more_black"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+    <View
+        android:background="@color/base_white_gray"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

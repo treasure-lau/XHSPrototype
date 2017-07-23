@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView android:background="@color/white"
+    android:paddingLeft="15.0dip"
+    android:paddingRight="15.0dip"
+    android:paddingBottom="15.0dip"
+    android:scrollbars="none"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/banners_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/image_1"
+                android:visibility="invisible"
+                android:layout_width="100.0dip"
+                android:layout_height="100.0dip"
+                app:placeholderImage="@color/base_bg_gray"
+                app:failureImage="@color/base_bg_gray"
+                app:roundedCornerRadius="1.0dip" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_title_1"
+                android:visibility="invisible"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10.0dip"
+                android:text="1111"
+                style="@style/TextSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/image_2"
+                android:visibility="invisible"
+                android:layout_width="100.0dip"
+                android:layout_height="100.0dip"
+                app:placeholderImage="@color/base_bg_gray"
+                app:failureImage="@color/base_bg_gray"
+                app:roundedCornerRadius="1.0dip" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_title_2"
+                android:visibility="invisible"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10.0dip"
+                android:text="1111"
+                style="@style/TextSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/image_3"
+                android:visibility="invisible"
+                android:layout_width="100.0dip"
+                android:layout_height="100.0dip"
+                app:placeholderImage="@color/base_bg_gray"
+                app:failureImage="@color/base_bg_gray"
+                app:roundedCornerRadius="1.0dip" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_title_3"
+                android:visibility="invisible"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10.0dip"
+                android:text="1111"
+                style="@style/TextSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/image_4"
+                android:visibility="invisible"
+                android:layout_width="100.0dip"
+                android:layout_height="100.0dip"
+                app:placeholderImage="@color/base_bg_gray"
+                app:failureImage="@color/base_bg_gray"
+                app:roundedCornerRadius="1.0dip" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_title_4"
+                android:visibility="invisible"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10.0dip"
+                android:text="1111"
+                style="@style/TextSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/image_5"
+                android:visibility="invisible"
+                android:layout_width="100.0dip"
+                android:layout_height="100.0dip"
+                app:placeholderImage="@color/base_bg_gray"
+                app:failureImage="@color/base_bg_gray"
+                app:roundedCornerRadius="1.0dip" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_title_5"
+                android:visibility="invisible"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10.0dip"
+                android:text="1111"
+                style="@style/TextSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/image_6"
+                android:visibility="invisible"
+                android:layout_width="100.0dip"
+                android:layout_height="100.0dip"
+                app:placeholderImage="@color/base_bg_gray"
+                app:failureImage="@color/base_bg_gray"
+                app:roundedCornerRadius="1.0dip" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_title_6"
+                android:visibility="invisible"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10.0dip"
+                android:text="1111"
+                style="@style/TextSmall" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_see_all"
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:layout_marginLeft="15.0dip" />
+    </LinearLayout>
+</HorizontalScrollView>

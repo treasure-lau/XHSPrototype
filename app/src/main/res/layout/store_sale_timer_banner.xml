@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.xingin.xhs.widget.XYImageView
+            android:id="@+id/timer_bg_image"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:id="@+id/activity_time_layout"
+            android:padding="5.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30.0dip">
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/sale_timer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距离大促还有"
+                style="@style/text_selection_name" />
+
+            <com.xingin.xhs.widget.SaleCountDownTimer
+                android:id="@+id/store_sale_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.xingin.xhs.widget.DividerView
+        android:id="@+id/sale_timer_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

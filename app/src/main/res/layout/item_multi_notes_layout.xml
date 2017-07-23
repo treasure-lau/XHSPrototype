@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:id="@+id/note"
+    android:background="@color/white"
+    android:paddingLeft="15.0dip"
+    android:paddingTop="20.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.xingin.xhs.widget.XYImageView
+            android:id="@+id/iv_note_ic"
+            android:layout_width="128.0dip"
+            android:layout_height="96.0dip"
+            app:placeholderImage="@color/base_bg_gray"
+            app:failureImage="@color/base_bg_gray"
+            app:roundedCornerRadius="5.0dip" />
+
+        <ImageView
+            android:id="@+id/iv_note_type"
+            android:layout_width="14.0dip"
+            android:layout_height="14.0dip"
+            android:layout_marginTop="7.0dip"
+            android:layout_marginRight="7.0dip"
+            android:src="@drawable/ic_note_type_article"
+            android:layout_alignRight="@id/iv_note_ic" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="15.0dip"
+            android:layout_toRightOf="@id/iv_note_ic"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="@color/base_black"
+                android:ellipsize="none"
+                android:id="@+id/tv_note_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="你们要的INS吸赞狂人美照技巧来了!"
+                android:maxLines="2"
+                android:lineSpacingExtra="3.0dip" />
+
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="@color/base_gray40"
+                android:ellipsize="end"
+                android:id="@+id/tv_note_desc"
+                android:paddingTop="5.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="我实在是个太爱拍照的人,今天就给大家介绍几款好用的摄影App,让大..."
+                android:lines="2"
+                android:lineSpacingExtra="3.0dip" />
+
+            <TextView
+                android:textSize="10.0sp"
+                android:textColor="@color/tag_link_blue_color"
+                android:ellipsize="end"
+                android:id="@+id/tv_note_tag"
+                android:paddingTop="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\#照片怎么拍 #日本 #摄影 "
+                android:lines="1"
+                android:includeFontPadding="false" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_item_diver"
+        android:background="@color/base_gray90"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginTop="20.0dip" />
+</LinearLayout>

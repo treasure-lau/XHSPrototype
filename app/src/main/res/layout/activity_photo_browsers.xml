@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/ic_header" />
+
+    <com.xingin.xhs.view.HackyViewPager
+        android:id="@+id/vp"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.widget.Space
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" />
+
+        <TextView
+            android:textSize="10.0sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/select_num_tv"
+            android:background="@drawable/bg_red_dot"
+            android:visibility="gone"
+            android:layout_width="18.0dip"
+            android:layout_height="18.0dip" />
+
+        <TextView
+            android:textAppearance="@style/TextMedium.Red"
+            android:textColor="@color/done_text_color"
+            android:layout_gravity="right"
+            android:id="@+id/done_btn"
+            android:background="@drawable/bg_transparent"
+            android:paddingLeft="8.0dip"
+            android:paddingTop="12.0dip"
+            android:paddingRight="26.0dip"
+            android:paddingBottom="12.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/finish" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical"
+    android:id="@+id/control_layout"
+    android:background="@drawable/video_controller_progress_background"
+    android:layout_width="fill_parent"
+    android:layout_height="50.0dip"
+    android:layout_alignParentBottom="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageButton
+        android:id="@+id/scale_button"
+        android:background="#00000000"
+        android:padding="10.0dip"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="3.0dip"
+        android:src="@drawable/video_controller_scale"
+        android:scaleType="fitCenter"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@id/scale_button">
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/has_played"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:text="00:00" />
+
+        <SeekBar
+            android:layout_gravity="center"
+            android:id="@+id/seekbar"
+            android:paddingLeft="@dimen/video_controller_progressbar_padding"
+            android:paddingRight="@dimen/video_controller_progressbar_padding"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:maxHeight="@dimen/video_controller_progressbar_max_height"
+            android:minHeight="@dimen/video_controller_progressbar_min_height"
+            android:thumbOffset="10.0dip"
+            android:layout_weight="1.0"
+            style="@style/VideoProgressBar" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10.0dip"
+            android:text="00:00" />
+    </LinearLayout>
+</RelativeLayout>

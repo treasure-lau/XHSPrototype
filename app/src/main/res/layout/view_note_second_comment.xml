@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="5.0dip">
+
+        <com.xingin.xhs.widget.AvatarImageView
+            android:id="@+id/second_comment_iv_user_icon"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:src="@drawable/ic_launcher" />
+
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:id="@+id/second_comment_rl_head"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimension_5">
+
+            <TextView
+                android:ellipsize="end"
+                android:id="@+id/second_comment_tv_reply_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                style="@style/TextSmall.Gray40" />
+
+            <TextView
+                android:textSize="12.0sp"
+                android:ellipsize="end"
+                android:id="@+id/second_comment_tv_target_person"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:maxLines="1"
+                android:layout_toRightOf="@id/second_comment_tv_reply_person"
+                android:layout_centerVertical="true" />
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/second_comment_iv_user_rank"
+                android:visibility="invisible"
+                android:layout_width="16.0dip"
+                android:layout_height="16.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@id/second_comment_tv_target_person" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="5.0dip">
+
+        <TextView
+            android:id="@+id/second_comment_tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextSmall" />
+
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/base_gray60"
+            android:id="@+id/second_comment_tv_friend_like"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:drawableLeft="@drawable/ic_comment_friend_like"
+            android:drawablePadding="5.0dip" />
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:id="@+id/second_comment_ll_reply"
+            android:layout_width="fill_parent"
+            android:layout_height="28.0dip">
+
+            <TextView
+                android:id="@+id/second_comment_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05-17 11:59"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                style="@style/Text10Size.Gray60" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/second_comment_ll_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/second_comment_iv_praise"
+                    android:layout_width="11.0dip"
+                    android:layout_height="12.0dip"
+                    android:layout_marginLeft="@dimen/dimension_5"
+                    android:layout_marginRight="@dimen/dimension_5" />
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/second_comment_tv_praise_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100K"
+                    style="@style/text_comment_like_num" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/ll_comment_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/second_comment_ll_praise"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/second_comment_tv_reply_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/dimension_5"
+                    android:layout_marginRight="@dimen/dimension_5"
+                    android:text="@string/comment_second_view_reply"
+                    style="@style/text_comment_like_num" />
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="6.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="·"
+                    style="@style/text_comment_like_num" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

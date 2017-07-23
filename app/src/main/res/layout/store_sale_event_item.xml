@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.widget.XYImageView
+        android:id="@+id/iv_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:viewAspectRatio="1.56" />
+
+    <TextView
+        android:id="@+id/discount_info_view"
+        android:background="@color/discount_transparent_black"
+        android:padding="8.0dip"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_image"
+        style="@style/TextSmall.White" />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/xyvg_triangle_white"
+        android:layout_alignBottom="@id/iv_image"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:paddingLeft="@dimen/dimension_15"
+        android:paddingRight="@dimen/dimension_15"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimension_15"
+        android:layout_marginBottom="10.0dip"
+        android:layout_below="@id/iv_image" />
+
+    <com.xingin.xhs.widget.DividerView
+        android:id="@+id/sale_event_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rv_list" />
+</RelativeLayout>

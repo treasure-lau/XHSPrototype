@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+        android:id="@+id/seekBar"
+        android:paddingTop="4.0dip"
+        android:paddingBottom="34.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_marginLeft="@dimen/dimension_20"
+        android:layout_marginRight="@dimen/dimension_20"
+        android:layout_centerInParent="true"
+        app:dsb_min="0"
+        app:dsb_max="100"
+        app:dsb_allowTrackClickToDrag="@color/base_red"
+        app:dsb_progressColor="@color/base_red"
+        app:dsb_trackColor="@color/base_red"
+        app:dsb_indicatorColor="@color/base_red"
+        app:dsb_indicatorPopupEnabled="false" />
+
+    <TextView
+        android:textColor="@color/base_red"
+        android:gravity="center"
+        android:id="@+id/progressTV"
+        android:paddingLeft="2.0dip"
+        android:paddingTop="2.0dip"
+        android:paddingRight="2.0dip"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimension_12"
+        android:minWidth="24.0dip"
+        android:layout_above="@id/seekBar"
+        android:layout_alignLeft="@id/seekBar" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="0.30000007dip"
+        android:layout_below="@id/ll"
+        layout="@layout/ic_simple_line" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/ll"
+        android:background="@color/background"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="44.0dip"
+            android:layout_height="44.0dip"
+            android:src="@drawable/ic_close"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/titleTV"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:id="@+id/done"
+            android:layout_width="44.0dip"
+            android:layout_height="44.0dip"
+            android:src="@drawable/ic_done"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+</RelativeLayout>

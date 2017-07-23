@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/common_bar_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.xingin.xhs.widget.AvatarImageView
+        android:id="@+id/iv_myavatar"
+        android:layout_width="@dimen/image_avatar"
+        android:layout_height="@dimen/image_avatar"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:textSize="@dimen/text_micro"
+        android:textColor="@color/base_gray40"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_comment"
+        android:background="@drawable/bg_second_comment"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimension_35"
+        android:text="@string/discovery_detail_commnet"
+        android:layout_centerVertical="true"
+        android:imeOptions="actionSend" />
+</RelativeLayout>

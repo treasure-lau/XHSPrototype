@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:id="@+id/ll_tag_info"
+    android:fitsSystemWindows="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimension_15"
+    android:layout_marginTop="@dimen/dimension_15"
+    android:layout_marginRight="@dimen/dimension_15"
+    android:layout_marginBottom="@dimen/dimension_15"
+    fresco:layout_scrollFlags="enterAlwaysCollapsed|scroll"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/layout_tag"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.xingin.xhs.widget.XYImageView
+            android:id="@+id/iv_image"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:layout_width="@dimen/tag_header_icon_size"
+            android:layout_height="@dimen/tag_header_icon_size" />
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:id="@+id/layout_title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimension_15"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textAppearance="@style/TextMedium.White"
+                android:textSize="14.0sp"
+                android:textColor="@color/base_black"
+                android:ellipsize="end"
+                android:id="@+id/tag_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="16"
+                android:singleLine="true"
+                android:drawableLeft="@drawable/hashtag_black"
+                android:drawablePadding="2.0dip" />
+
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="@color/base_gray40"
+                android:id="@+id/tv_total_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimension_10" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/iv_load_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_arrow_small" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@+id/layout_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimension_15"
+        android:layout_below="@id/layout_tag">
+
+        <TextView
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/base_gray40"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:id="@+id/tv_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:lineSpacingExtra="3.0dip"
+            style="@style/TextSmall.White" />
+
+        <com.xingin.xhs.widget.AvatarImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="16.0dip"
+            android:layout_height="16.0dip"
+            android:layout_marginLeft="1.0dip"
+            android:layout_marginTop="1.0dip" />
+    </FrameLayout>
+</RelativeLayout>

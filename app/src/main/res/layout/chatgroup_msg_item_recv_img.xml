@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:paddingTop="13.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/chat_text_date_style" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity">
+
+        <com.xingin.xhs.widget.AvatarImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:src="@drawable/common_bg_avatar_loadfail"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/tv_userid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginTop="3.0dip"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:layout_alignTop="@id/iv_userhead"
+            style="@style/chat_text_name_style" />
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:maxWidth="225.0dip"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:layout_below="@id/tv_userid">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/iv_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="225.0dip" />
+
+            <View
+                android:orientation="vertical"
+                android:background="@drawable/chat_from_bg_normal_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/iv_image"
+                android:layout_alignTop="@id/iv_image"
+                android:layout_alignRight="@id/iv_image"
+                android:layout_alignBottom="@id/iv_image" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

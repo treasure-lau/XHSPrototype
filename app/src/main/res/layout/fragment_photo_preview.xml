@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/center_mask"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <uk.co.senab.photoview.PhotoView
+                android:id="@+id/image"
+                android:background="@color/black"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/bg_card_frame" />
+
+            <ImageView
+                android:layout_gravity="bottom|center|right"
+                android:padding="20.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stamp" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/top_mask"
+            android:background="@color/black"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/center_mask"
+            android:layout_alignParentTop="true" />
+
+        <View
+            android:id="@+id/bottom_mask"
+            android:background="@color/black"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/center_mask"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/black"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/btn_retake"
+            android:paddingLeft="16.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-12.0dip"
+            android:text="@string/btn_retake"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            style="@style/TextMedium.White" />
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/btn_ok"
+            android:paddingLeft="16.0dip"
+            android:paddingRight="16.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-12.0dip"
+            android:text="@string/common_btn_enter"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            style="@style/TextMedium.White" />
+    </RelativeLayout>
+</LinearLayout>

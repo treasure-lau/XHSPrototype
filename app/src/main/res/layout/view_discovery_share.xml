@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingLeft="40.0px"
+    android:paddingTop="48.0px"
+    android:paddingRight="40.0px"
+    android:layout_width="640.0px"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="560.0px"
+        android:layout_height="56.0px"
+        android:src="@drawable/xyvg_share_title"
+        android:scaleType="fitXY" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="88.0px"
+        android:layout_marginTop="64.0px">
+
+        <FrameLayout
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:layout_width="264.0px"
+            android:layout_height="fill_parent">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:layout_gravity="center"
+                android:id="@+id/iv_avatar"
+                android:layout_width="88.0px"
+                android:layout_height="88.0px"
+                fresco:roundAsCircle="true" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24.0px">
+
+        <TextView
+            android:textSize="26.0px"
+            android:textColor="@color/base_white_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="by" />
+
+        <TextView
+            android:textSize="26.0px"
+            android:textColor="@color/base_gray"
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0px"
+            android:layout_marginRight="12.0px"
+            android:text="码农明明桑" />
+
+        <TextView
+            android:textSize="26.0px"
+            android:textColor="@color/base_white_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="from小红书" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/img_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll_desc_layout"
+        android:layout_width="560.0px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48.0px">
+
+        <TextView
+            android:textSize="26.0px"
+            android:textColor="@color/base_gray"
+            android:id="@+id/desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3.0px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="36.0px"
+        android:layout_marginTop="48.0px">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:minWidth="200.0px">
+
+            <ImageView
+                android:layout_width="36.0px"
+                android:layout_height="36.0px"
+                android:src="@drawable/xyvg_share_like"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:textSize="26.0px"
+                android:textColor="@color/base_shallow_black"
+                android:id="@+id/tv_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12.0px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:minWidth="200.0px">
+
+            <ImageView
+                android:layout_width="36.0px"
+                android:layout_height="36.0px"
+                android:src="@drawable/xyvg_share_cmt"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:textSize="26.0px"
+                android:textColor="@color/base_shallow_black"
+                android:id="@+id/tv_cmt_count"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="12.0px" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/iv_qrcode"
+        android:layout_width="280.0px"
+        android:layout_height="280.0px"
+        android:layout_marginTop="48.0px" />
+
+    <TextView
+        android:textSize="22.0px"
+        android:textColor="@color/base_shallow_black"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32.0px"
+        android:text="长按图片，识别二维码，查看好物详情" />
+
+    <TextView
+        android:textSize="26.0px"
+        android:textColor="@color/base_gray"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="108.0px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0px"
+        android:text="如无法识别可下载小红书了解更多" />
+</LinearLayout>

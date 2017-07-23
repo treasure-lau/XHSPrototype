@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/container_title_sub_category"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimension_15"
+        android:layout_marginTop="@dimen/dimension_15"
+        android:layout_marginRight="@dimen/dimension_15">
+
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/tv_second_title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_weight="1.0"
+            style="@style/TextNormal" />
+
+        <TextView
+            android:id="@+id/tv_load_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/load_more"
+            android:drawableRight="@drawable/arrow_icon_right"
+            android:drawablePadding="5.0dip"
+            style="@style/TextSmall.Gray60" />
+    </LinearLayout>
+
+    <com.xingin.xhs.widget.XhsGridView
+        android:id="@+id/gridview_sub_category"
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimension_15"
+        android:layout_marginRight="@dimen/dimension_15"
+        android:horizontalSpacing="@dimen/dimension_10"
+        android:numColumns="3" />
+
+    <View
+        android:id="@+id/divider"
+        android:background="@drawable/divider_horizon_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:layout_marginLeft="@dimen/dimension_15"
+        android:layout_marginTop="@dimen/dimension_15" />
+</LinearLayout>

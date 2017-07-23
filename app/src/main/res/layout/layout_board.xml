@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/layout_board"
+    android:background="@color/white"
+    android:paddingLeft="16.0dip"
+    android:paddingTop="16.0dip"
+    android:paddingRight="16.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_round_gray80_border"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center|right|top"
+                android:id="@+id/iv_privacy"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dip"
+                android:layout_marginRight="12.0dip"
+                android:src="@drawable/ic_board_privacy" />
+
+            <TextView
+                android:textAppearance="@style/TextNormal"
+                android:layout_gravity="center|left|top"
+                android:id="@+id/tv_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginTop="16.0dip"
+                android:layout_marginRight="16.0dip"
+                android:text="dfdf:dfdf" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginTop="4.0dip"
+            android:layout_marginRight="16.0dip">
+
+            <TextView
+                android:textAppearance="@style/Text10Size.Gray80"
+                android:textColor="@color/base_gray60"
+                android:id="@+id/note_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip" />
+
+            <TextView
+                android:textAppearance="@style/Text10Size.Gray80"
+                android:textColor="@color/base_gray60"
+                android:id="@+id/fan_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="瘦身瘦" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/iv_one_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginRight="8.0dip"
+                android:layout_weight="1.0"
+                app:viewAspectRatio="1.0"
+                app:placeholderImage="@color/background"
+                app:failureImage="@color/background" />
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/iv_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginRight="8.0dip"
+                android:layout_weight="1.0"
+                app:viewAspectRatio="1.0"
+                app:placeholderImage="@color/background"
+                app:failureImage="@color/background" />
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/iv_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginRight="8.0dip"
+                android:layout_weight="1.0"
+                app:viewAspectRatio="1.0"
+                app:placeholderImage="@color/background"
+                app:failureImage="@color/background" />
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/iv_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginRight="16.0dip"
+                android:layout_weight="1.0"
+                app:viewAspectRatio="1.0"
+                app:placeholderImage="@color/background"
+                app:failureImage="@color/background" />
+        </LinearLayout>
+
+        <View
+            android:background="@color/spilt_line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.39999998dip"
+            android:layout_marginTop="16.0dip" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/user_icon"
+                android:padding="4.0dip"
+                android:layout_width="36.0dip"
+                android:layout_height="36.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:src="@color/red"
+                app:placeholderImage="@drawable/user_default_ic"
+                app:failureImage="@drawable/user_default_ic"
+                app:roundAsCircle="true" />
+
+            <TextView
+                android:textSize="@dimen/text_micro"
+                android:gravity="center_vertical"
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10.0dip"
+                android:layout_weight="1.0" />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/more"
+                android:padding="16.0dip"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_note_hide_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/board_illegal"
+        android:background="@drawable/bg_round_border_disable"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/board_illegal_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/TextNormal.White" />
+    </RelativeLayout>
+</FrameLayout>

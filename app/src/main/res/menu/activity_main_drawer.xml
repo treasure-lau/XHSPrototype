@@ -1,36 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
-    </group>
+    <item android:title="@string/setting_subtitle_account">
+        <menu>
+            <item
+                android:id="@+id/nav_my_notebook"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/myprofile_text_book" />
+            <item
+                android:id="@+id/nav_my_star"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/myprofile_text_star" />
+            <item
+                android:id="@+id/nav_account_info"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/setting_account_info" />
+            <item
+                android:id="@+id/nav_account_bind"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/setting_account_bind" />
+            <item
+                android:id="@+id/nav_modify_password"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/setting_modify_password" />
+        </menu>
+    </item>
 
-    <item android:title="Communicate">
+    <item android:title="@string/setting_subtitle_support">
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/share_subject" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/setting_about" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/setting_feedback" />
         </menu>
     </item>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/setting_logout" />
+    </group>
 
 </menu>

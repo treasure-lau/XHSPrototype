@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bigimg_func">
+        <item>发送</item>
+        <item>保存到手机</item>
+        <item>查看本地</item>
+        <item>查看缓存</item>
+    </string-array>
+    <string-array name="bind_type_names">
+        <item>手机号</item>
+        <item>微信帐号</item>
+        <item>新浪微博</item>
+        <item>QQ帐号</item>
+    </string-array>
+    <string-array name="choose_tab_title">
+        <item>\#添加话题#</item>
+        <item>我的关注</item>
+    </string-array>
+    <string-array name="default_sorts">
+        <item>综合排序</item>
+    </string-array>
+    <string-array name="default_sorts_title">
+        <item>综合排序</item>
+    </string-array>
+    <string-array name="discoverydetail_func">
+        <item>分享</item>
+        <item>编辑</item>
+        <item>删除</item>
+    </string-array>
+    <string-array name="edit_tab_content">
+        <item>美化</item>
+        <item>标签</item>
+        <item>贴纸</item>
+    </string-array>
+    <string-array name="edit_tab_content_old">
+        <item>标签</item>
+        <item>美化</item>
+        <item>贴纸</item>
+    </string-array>
+    <string-array name="empty_text_comment">
+        <item>沙发,为你留的哦!</item>
+        <item>没看错,是沙发!</item>
+        <item>三七二一,回复第一</item>
+        <item>最幸福的事,就是我发的贴有你留的言!</item>
+        <item>暂时没有评论，去给小红薯们留个言吧!</item>
+    </string-array>
+    <string-array name="filter_names">
+        <item>Normal</item>
+        <item>Paris</item>
+        <item>Barcelona</item>
+        <item>Santorini</item>
+        <item>Rome</item>
+        <item>Tokyo</item>
+        <item>New York</item>
+        <item>Prague</item>
+        <item>Rio</item>
+        <item>Tel Aviv</item>
+        <item>Bangkok</item>
+        <item>Istanbul</item>
+        <item>Beijing</item>
+    </string-array>
+    <string-array name="goods_sorts_title">
+        <item>综合排序</item>
+        <item>价格从低到高</item>
+        <item>价格从高到低</item>
+    </string-array>
+    <string-array name="home_tab_title">
+        <item>每日精选</item>
+        <item>我的关注</item>
+    </string-array>
+    <string-array name="home_tab_title_simple">
+        <item>每日精选</item>
+    </string-array>
+    <string-array name="note_filter">
+        <item>全部</item>
+        <item>关注的人</item>
+    </string-array>
+    <string-array name="note_sorts_title">
+        <item>综合排序</item>
+        <item>按时间排序</item>
+        <item>按热度排序</item>
+    </string-array>
+    <string-array name="price_sorts">
+        <item>综合排序</item>
+        <item>价格从低到高</item>
+        <item>价格从高到低</item>
+    </string-array>
+    <string-array name="profile_tab_title">
+        <item>我的粉丝</item>
+        <item>我的关注</item>
+    </string-array>
+    <string-array name="search_result_title">
+        <item>笔记</item>
+        <item>商品</item>
+        <item>用户</item>
+    </string-array>
+    <string-array name="setting_func_commonsetting">
+        <item>开启快速拖动</item>
+    </string-array>
+    <string-array name="setting_func_commonsetting_meizu">
+        <item>开启快速拖动</item>
+        <item>开启魅族SmartBar功能</item>
+    </string-array>
+    <string-array name="setting_func_debug">
+        <item>开发者功能</item>
+        <item>退出开发者模式</item>
+    </string-array>
+    <string-array name="setting_func_dev">
+        <item>总是显示新手引导</item>
+    </string-array>
+    <string-array name="setting_func_notificationsetting">
+        <item>勿扰模式</item>
+    </string-array>
+    <string-array name="setting_func_system">
+        <item>清除缓存</item>
+        <item>意见反馈</item>
+        <item>关于小红书</item>
+        <item>登出</item>
+    </string-array>
+    <string-array name="setting_func_web">
+        <item>我赞过的</item>
+        <item>个人资料</item>
+        <item>账号绑定</item>
+        <item>消息通知</item>
+        <item>隐私设置</item>
+    </string-array>
+    <string-array name="sexs">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="smssdk_country_group_a">
+        <item>阿尔巴尼亚,355,108,276</item>
+        <item>阿尔及利亚,213,50,603</item>
+        <item>阿富汗,93,45,412</item>
+        <item>阿根廷,54,27,722</item>
+        <item>阿拉伯联合酋长国,971,180,424|430|431</item>
+        <item>阿鲁巴岛,297,100,363</item>
+        <item>阿曼,968,178,422</item>
+        <item>阿塞拜疆,994,189,400</item>
+        <item>埃及,20,5,602</item>
+        <item>埃塞俄比亚,251,82,636</item>
+        <item>爱尔兰,353,106,272</item>
+        <item>爱沙尼亚,372,115,248</item>
+        <item>安道尔,376,119,213</item>
+        <item>安哥拉,244,77,631</item>
+        <item>安圭拉岛,1264,195,365</item>
+        <item>安提瓜和巴布达,1268,196,344</item>
+        <item>奥地利,43,16,232</item>
+        <item>澳大利亚,61,33,505</item>
+        <item>澳门,853,165,455</item>
+    </string-array>
+    <string-array name="smssdk_country_group_b">
+        <item>巴巴多斯,1246,194,342</item>
+        <item>巴布亚新几内亚,675,153,537</item>
+        <item>巴哈马群岛,1242,193,364</item>
+        <item>巴拉圭,595,146,744</item>
+        <item>巴勒斯坦领土,970,179,425</item>
+        <item>巴林,973,182,426</item>
+        <item>巴拿马,507,138,714</item>
+        <item>巴西,55,28,724</item>
+        <item>白俄罗斯,375,118,257</item>
+        <item>百慕大群岛,1441,200,350</item>
+        <item>保加利亚,359,112,284</item>
+        <item>贝宁,229,62,616</item>
+        <item>比利时,32,9,206</item>
+        <item>冰岛,354,107,274</item>
+        <item>波多黎各,1787,208,330</item>
+        <item>波兰,48,22,260</item>
+        <item>波斯尼亚和黑塞哥维那,387,127,218</item>
+        <item>玻利维亚,591,142,736</item>
+        <item>伯利兹,501,132,702</item>
+        <item>博茨瓦纳,267,97,652</item>
+        <item>不丹,975,184,402</item>
+        <item>布基纳法索,226,59,613</item>
+        <item>布隆迪,257,88,642</item>
+    </string-array>
+    <string-array name="smssdk_country_group_c">
+        <item>朝鲜,850,163,467</item>
+        <item>赤道几内亚,240,73,627</item>
+    </string-array>
+    <string-array name="smssdk_country_group_d">
+        <item>丹麦,45,19,238</item>
+        <item>德国,49,23,262</item>
+        <item>东帝汶,670,151,514</item>
+        <item>多哥,228,61,615</item>
+        <item>多米尼加共和国,1809,209,370</item>
+        <item>多米尼克,1767,206,366</item>
+    </string-array>
+    <string-array name="smssdk_country_group_e">
+        <item>俄罗斯,7,4,250</item>
+        <item>厄瓜多尔,593,144,740</item>
+    </string-array>
+    <string-array name="smssdk_country_group_f">
+        <item>法国,33,10,208</item>
+        <item>法罗群岛,298,101,288</item>
+        <item>法属波利尼西亚,689,161,547</item>
+        <item>法属圭亚那,594,145,742</item>
+        <item>菲律宾,63,35,515</item>
+        <item>斐济,679,156,542</item>
+        <item>芬兰,358,111,244</item>
+        <item>佛得角,238,71,625</item>
+    </string-array>
+    <string-array name="smssdk_country_group_g">
+        <item>冈比亚,220,53,607</item>
+        <item>刚果共和国,242,75,629</item>
+        <item>刚果民主共和国,243,76,630</item>
+        <item>哥伦比亚,57,30,732</item>
+        <item>哥斯达黎加,506,137,712</item>
+        <item>格林纳达,1473,201,352</item>
+        <item>格陵兰岛,299,102,290</item>
+        <item>格鲁吉亚,995,190,282</item>
+        <item>古巴,53,26,368</item>
+        <item>瓜德罗普岛,590,141,340</item>
+        <item>关岛,1671,204,535</item>
+        <item>圭亚那,592,143,738</item>
+    </string-array>
+    <string-array name="smssdk_country_group_h">
+        <item>哈萨克斯坦,7,3,401</item>
+        <item>海地,509,140,372</item>
+        <item>韩国,82,40,450</item>
+        <item>荷兰,31,8,204</item>
+        <item>荷属安的列斯群岛,599,150,362</item>
+        <item>黑山共和国,382,124,297</item>
+        <item>洪都拉斯,504,135,708</item>
+    </string-array>
+    <string-array name="smssdk_country_group_hot">
+        <item>中国,86,42,460|461</item>
+        <item>美国,1,2,310|311|312|313|314|315|316</item>
+        <item>香港,852,164,454</item>
+        <item>日本,81,39,441|440</item>
+        <item>台湾,886,169,466</item>
+        <item>澳大利亚,61,33,505</item>
+        <item>加拿大,1,1,302</item>
+        <item>英国,44,18,234|235</item>
+        <item>韩国,82,40,450</item>
+        <item>新加坡,65,37,525</item>
+        <item>法国,33,10,208</item>
+        <item>德国,49,23,262</item>
+    </string-array>
+    <array name="smssdk_country_group_i" />
+    <string-array name="smssdk_country_group_j">
+        <item>基里巴斯,686,159,545</item>
+        <item>吉布提,253,84,638</item>
+        <item>吉尔吉斯斯坦,996,191,437</item>
+        <item>几内亚,224,57,611</item>
+        <item>几内亚-比绍,245,78,632</item>
+        <item>加拿大,1,1,302</item>
+        <item>加纳,233,66,620</item>
+        <item>加蓬,241,74,628</item>
+        <item>柬埔寨,855,166,456</item>
+        <item>捷克共和国,420,129,230</item>
+        <item>津巴布韦,263,93,648</item>
+    </string-array>
+    <string-array name="smssdk_country_group_k">
+        <item>喀麦隆,237,70,624</item>
+        <item>卡塔尔,974,183,427</item>
+        <item>开曼群岛,1345,199,346</item>
+        <item>科摩罗,269,99,654</item>
+        <item>科特迪瓦,225,58,612</item>
+        <item>科威特,965,175,419</item>
+        <item>克罗地亚,385,125,219</item>
+        <item>肯尼亚,254,85,639</item>
+        <item>库克群岛,682,157,548</item>
+    </string-array>
+    <string-array name="smssdk_country_group_l">
+        <item>拉脱维亚,371,114,247</item>
+        <item>莱索托,266,96,651</item>
+        <item>老挝,856,167,457</item>
+        <item>黎巴嫩,961,171,415</item>
+        <item>立陶宛,370,113,246</item>
+        <item>利比里亚,231,64,618</item>
+        <item>利比亚,218,52,606</item>
+        <item>列支敦士登,423,131,295</item>
+        <item>留尼汪岛，法国,262,92,647</item>
+        <item>卢森堡,352,105,270|294</item>
+        <item>卢旺达,250,81,635</item>
+        <item>罗马尼亚,40,14,226</item>
+    </string-array>
+    <string-array name="smssdk_country_group_m">
+        <item>马达加斯加,261,91,646</item>
+        <item>马尔代夫,960,170,472</item>
+        <item>马耳他,356,109,278</item>
+        <item>马拉维,265,95,650</item>
+        <item>马来西亚,60,32,502</item>
+        <item>马里,223,56,610</item>
+        <item>马其顿,389,128,294</item>
+        <item>马提尼克,596,147,340</item>
+        <item>毛里求斯,230,63,617</item>
+        <item>毛里塔尼亚,222,55,609</item>
+        <item>美国,1,2,310|311|312|313|314|315|316</item>
+        <item>蒙古,976,185,428</item>
+        <item>蒙特塞拉特岛,1664,203,354</item>
+        <item>孟加拉国,880,168,470</item>
+        <item>秘鲁,51,24,716</item>
+        <item>密克罗尼西亚,691,162,550</item>
+        <item>摩尔多瓦,373,116,259</item>
+        <item>摩洛哥,212,49,604</item>
+        <item>摩纳哥,377,120,212</item>
+        <item>莫桑比克,258,89,643</item>
+        <item>墨西哥,52,25,334</item>
+    </string-array>
+    <string-array name="smssdk_country_group_n">
+        <item>纳米比亚,264,94,649</item>
+        <item>南非,27,6,655</item>
+        <item>南苏丹,211,48,659</item>
+        <item>尼泊尔,977,186,429</item>
+        <item>尼加拉瓜,505,136,710</item>
+        <item>尼日尔,227,60,614</item>
+        <item>尼日利亚,234,67,621</item>
+        <item>挪威,47,21,242</item>
+    </string-array>
+    <array name="smssdk_country_group_o" />
+    <string-array name="smssdk_country_group_p">
+        <item>葡萄牙,351,104,268</item>
+    </string-array>
+    <array name="smssdk_country_group_q" />
+    <string-array name="smssdk_country_group_r">
+        <item>日本,81,39,441|440</item>
+        <item>瑞典,46,20,240</item>
+        <item>瑞士,41,15,228</item>
+    </string-array>
+    <string-array name="smssdk_country_group_s">
+        <item>萨尔瓦多,503,134,706</item>
+        <item>萨摩亚,685,158,549</item>
+        <item>塞尔维亚,381,123,220</item>
+        <item>塞拉利昂,232,65,619</item>
+        <item>塞内加尔,221,54,608</item>
+        <item>塞浦路斯,357,110,280</item>
+        <item>塞舌尔,248,79,633</item>
+        <item>沙特阿拉伯,966,176,420</item>
+        <item>圣多美和普林西比,239,72,626</item>
+        <item>圣基茨和尼维斯,1869,211,356</item>
+        <item>圣卢西亚,1758,205,358</item>
+        <item>圣马力诺,378,121,292</item>
+        <item>圣皮埃尔和密克隆岛,508,139,308</item>
+        <item>圣文森特和格林纳丁斯,1784,207,360</item>
+        <item>斯里兰卡,94,46,413</item>
+        <item>斯洛伐克,421,130,231</item>
+        <item>斯洛文尼亚,386,126,293</item>
+        <item>斯威士兰,268,98,653</item>
+        <item>苏丹,249,80,634</item>
+        <item>苏里南,597,148,746</item>
+        <item>索马里,252,83,637</item>
+    </string-array>
+    <string-array name="smssdk_country_group_t">
+        <item>塔吉克斯坦,992,187,436</item>
+        <item>台湾,886,169,466</item>
+        <item>泰国,66,38,520</item>
+        <item>坦桑尼亚,255,86,640</item>
+        <item>汤加,676,154,539</item>
+        <item>特克斯和凯科斯群岛,1649,202,376</item>
+        <item>特立尼达，多巴哥,1868,210,374</item>
+        <item>突尼斯,216,51,605</item>
+        <item>土耳其,90,43,286</item>
+        <item>土库曼斯坦,993,188,438</item>
+    </string-array>
+    <array name="smssdk_country_group_u" />
+    <array name="smssdk_country_group_v" />
+    <string-array name="smssdk_country_group_w">
+        <item>瓦努阿图,678,155,541</item>
+        <item>危地马拉,502,133,704</item>
+        <item>维尔京群岛，美国,1284,197,332</item>
+        <item>维尔京群岛，英国,1340,198,348</item>
+        <item>委内瑞拉,58,31,734</item>
+        <item>文莱,673,152,528</item>
+        <item>乌干达,256,87,641</item>
+        <item>乌克兰,380,122,255</item>
+        <item>乌拉圭,598,149,748</item>
+        <item>乌兹别克斯坦,998,192,434</item>
+    </string-array>
+    <string-array name="smssdk_country_group_x">
+        <item>西班牙,34,11,214</item>
+        <item>希腊,30,7,202</item>
+        <item>香港,852,164,454</item>
+        <item>新加坡,65,37,525</item>
+        <item>新喀里多尼亚,687,160,546</item>
+        <item>新西兰,64,36,530</item>
+        <item>匈牙利,36,12,216</item>
+        <item>叙利亚,963,173,417</item>
+    </string-array>
+    <string-array name="smssdk_country_group_y">
+        <item>牙买加,1876,212,338</item>
+        <item>亚美尼亚,374,117,283</item>
+        <item>也门,967,177,421</item>
+        <item>伊拉克,964,174,418</item>
+        <item>伊朗,98,47,432</item>
+        <item>以色列,972,181,425</item>
+        <item>意大利,39,13,222</item>
+        <item>印度,91,44,404|405|406</item>
+        <item>印度尼西亚,62,34,510</item>
+        <item>英国,44,18,234|235</item>
+        <item>约旦,962,172,416</item>
+        <item>越南,84,41,452</item>
+    </string-array>
+    <string-array name="smssdk_country_group_z">
+        <item>赞比亚,260,90,645</item>
+        <item>泽西,44,17,234</item>
+        <item>乍得,235,68,622</item>
+        <item>直布罗陀,350,103,266</item>
+        <item>智利,56,29,730</item>
+        <item>中非共和国,236,69,623</item>
+        <item>中国,86,42,460|461</item>
+    </string-array>
+    <string-array name="sort_headselect">
+        <item>精选笔记</item>
+        <item>全部笔记</item>
+    </string-array>
+    <string-array name="tags_content_type">
+        <item>全部</item>
+        <item>商品</item>
+        <item>用户</item>
+    </string-array>
+    <string-array name="time_hot_sorts">
+        <item>综合排序</item>
+        <item>按时间排序</item>
+        <item>按热度排序</item>
+    </string-array>
+    <string-array name="apps_func_icon_order">
+        <item>icon_photo</item>
+        <item>icon_camera</item>
+        <item>icon_order</item>
+    </string-array>
+    <string-array name="apps_func_order">
+        <item>图片</item>
+        <item>拍照</item>
+        <item>订单</item>
+    </string-array>
+    <string-array name="captain_evaluate_level">
+        <item>请评分</item>
+        <item>非常不满意</item>
+        <item>不满意</item>
+        <item>一般般</item>
+        <item>基本满意</item>
+        <item>非常满意</item>
+    </string-array>
+    <string-array name="choose_tab_title_at">
+        <item>我的关注</item>
+        <item>\#添加话题#</item>
+    </string-array>
+    <string-array name="clear_config_array">
+        <item>config配置清除</item>
+        <item>启动页广告清除</item>
+        <item>引导记录清除</item>
+    </string-array>
+    <string-array name="discovery_string_array">
+        <item>笔记</item>
+        <item>商品</item>
+    </string-array>
+    <string-array name="follow_type">
+        <item>用户</item>
+        <item>专辑</item>
+        <item>标签</item>
+        <item>商家</item>
+    </string-array>
+    <string-array name="goods_sort_filter">
+        <item>综合排序</item>
+        <item>价格从低到高</item>
+        <item>价格从高到低</item>
+    </string-array>
+    <string-array name="mom_infos">
+        <item>@string/profile_baby_is_prepare</item>
+        <item>@string/profile_baby_pregnancy_data</item>
+        <item>@string/profile_baby_birth_data</item>
+    </string-array>
+    <string-array name="msg_type">
+        <item>@string/msg_activity</item>
+        <item>@string/msg_about_me</item>
+        <item>@string/msg_notification</item>
+    </string-array>
+    <string-array name="profile_tab_title_follow">
+        <item>我的粉丝</item>
+        <item>我的关注</item>
+    </string-array>
+    <string-array name="rank_user_headselect">
+        <item>活跃榜</item>
+        <item>话题榜</item>
+        <item>积分榜</item>
+    </string-array>
+    <string-array name="setting_func_web_2">
+        <item>个人资料</item>
+        <item>我赞过的</item>
+        <item>积分等级</item>
+        <item>社区规范</item>
+        <item>服务条款</item>
+        <item>评价小红书</item>
+    </string-array>
+    <string-array name="skin_info_types">
+        <item>敏感肌</item>
+        <item>痘痘肌</item>
+        <item>干皮</item>
+        <item>油皮</item>
+        <item>混干皮</item>
+        <item>混油皮</item>
+        <item>中性皮肤</item>
+    </string-array>
+    <string-array name="sort_filter">
+        <item>综合排序</item>
+        <item>按时间排序</item>
+        <item>按热度排序</item>
+    </string-array>
+    <string-array name="sort_headselect_tag">
+        <item>国家</item>
+        <item>类别</item>
+        <item>品牌</item>
+    </string-array>
+    <string-array name="sort_value">
+        <item>general</item>
+        <item>likes</item>
+        <item>collections</item>
+        <item>time</item>
+    </string-array>
+    <string-array name="tag_edit_hints">
+        <item>品牌</item>
+        <item>名称</item>
+        <item>币种</item>
+        <item>价格</item>
+        <item>国家</item>
+        <item>具体地点</item>
+    </string-array>
+    <string-array name="user_tab_string_array">
+        <item>笔记</item>
+        <item>专辑</item>
+    </string-array>
+    <string-array name="welcome_titles">
+        <item>1800万妹纸帮你提高生活品质</item>
+        <item>海量精选数据让你随心搜</item>
+        <item>全球靠谱商品供你任性选</item>
+    </string-array>
+    <string-array name="xhs_emoji_name">
+        <item>[无语]</item>
+        <item>[白眼]</item>
+        <item>[瞎]</item>
+        <item>[酷]</item>
+        <item>[哭]</item>
+        <item>[萌]</item>
+        <item>[挖鼻孔]</item>
+        <item>[晕]</item>
+        <item>[好冷]</item>
+        <item>[哈哈]</item>
+        <item>[汗]</item>
+        <item>[么么哒]</item>
+        <item>[口水]</item>
+        <item>[好雷]</item>
+        <item>[啊？]</item>
+        <item>[土豪]</item>
+        <item>[震惊]</item>
+        <item>[嘘]</item>
+        <item>[害羞]</item>
+        <item>[嘿嘿]</item>
+        <item>[嘻嘻]</item>
+        <item>[吧唧R]</item>
+        <item>[鄙视R]</item>
+        <item>[得意R]</item>
+        <item>[飞吻R]</item>
+        <item>[扶墙R]</item>
+        <item>[害羞R]</item>
+        <item>[汗颜R]</item>
+        <item>[惊恐R]</item>
+        <item>[哭惹R]</item>
+        <item>[萌萌哒R]</item>
+        <item>[色色R]</item>
+        <item>[生气R]</item>
+        <item>[叹气R]</item>
+        <item>[偷笑R]</item>
+        <item>[笑哭R]</item>
+        <item>[再见R]</item>
+        <item>[赞R]</item>
+        <item>[抓狂R]</item>
+        <item>[瞌睡]</item>
+        <item>[委屈]</item>
+        <item>[腹黑]</item>
+        <item>[发怒]</item>
+        <item>[哭哭]</item>
+        <item>[害怕]</item>
+        <item>[石化]</item>
+        <item>[震惊L]</item>
+        <item>[装酷]</item>
+        <item>[抠鼻]</item>
+        <item>[生气]</item>
+        <item>[无语L]</item>
+        <item>[讨厌]</item>
+        <item>[不满]</item>
+        <item>[少女心]</item>
+        <item>[喜欢]</item>
+        <item>[得意]</item>
+        <item>[活力]</item>
+    </string-array>
+    <array name="xhs_emoji_res">
+        <item>@drawable/xhsemoji_1</item>
+        <item>@drawable/xhsemoji_2</item>
+        <item>@drawable/xhsemoji_3</item>
+        <item>@drawable/xhsemoji_4</item>
+        <item>@drawable/xhsemoji_5</item>
+        <item>@drawable/xhsemoji_6</item>
+        <item>@drawable/xhsemoji_7</item>
+        <item>@drawable/xhsemoji_8</item>
+        <item>@drawable/xhsemoji_9</item>
+        <item>@drawable/xhsemoji_10</item>
+        <item>@drawable/xhsemoji_11</item>
+        <item>@drawable/xhsemoji_12</item>
+        <item>@drawable/xhsemoji_13</item>
+        <item>@drawable/xhsemoji_14</item>
+        <item>@drawable/xhsemoji_15</item>
+        <item>@drawable/xhsemoji_16</item>
+        <item>@drawable/xhsemoji_17</item>
+        <item>@drawable/xhsemoji_18</item>
+        <item>@drawable/xhsemoji_19</item>
+        <item>@drawable/xhsemoji_20</item>
+        <item>@drawable/xhsemoji_21</item>
+        <item>@drawable/xy_emotion_redclub_baji</item>
+        <item>@drawable/xy_emotion_redclub_bishi</item>
+        <item>@drawable/xy_emotion_redclub_deyi</item>
+        <item>@drawable/xy_emotion_redclub_feiwen</item>
+        <item>@drawable/xy_emotion_redclub_fuqiang</item>
+        <item>@drawable/xy_emotion_redclub_haixiu</item>
+        <item>@drawable/xy_emotion_redclub_hanyan</item>
+        <item>@drawable/xy_emotion_redclub_jingkong</item>
+        <item>@drawable/xy_emotion_redclub_kure</item>
+        <item>@drawable/xy_emotion_redclub_mengmengda</item>
+        <item>@drawable/xy_emotion_redclub_sese</item>
+        <item>@drawable/xy_emotion_redclub_shengqi</item>
+        <item>@drawable/xy_emotion_redclub_tanqi</item>
+        <item>@drawable/xy_emotion_redclub_touxiao</item>
+        <item>@drawable/xy_emotion_redclub_xiaoku</item>
+        <item>@drawable/xy_emotion_redclub_zaijian</item>
+        <item>@drawable/xy_emotion_redclub_zan</item>
+        <item>@drawable/xy_emotion_redclub_zhuakuang</item>
+        <item>@drawable/xy_emo_keshui</item>
+        <item>@drawable/xy_emo_weiqu</item>
+        <item>@drawable/xy_emo_fuhei</item>
+        <item>@drawable/xy_emo_fanu</item>
+        <item>@drawable/xy_emo_kuku</item>
+        <item>@drawable/xy_emo_haipa</item>
+        <item>@drawable/xy_emo_shihua</item>
+        <item>@drawable/xy_emo_zhenjing</item>
+        <item>@drawable/xy_emo_zhuangku</item>
+        <item>@drawable/xy_emo_koubi</item>
+        <item>@drawable/xy_emo_shengqi</item>
+        <item>@drawable/xy_emo_wuyu</item>
+        <item>@drawable/xy_emo_taoyan</item>
+        <item>@drawable/xy_emo_buman</item>
+        <item>@drawable/xy_emo_shaonv</item>
+        <item>@drawable/xy_emo_xihuan</item>
+        <item>@drawable/xy_emo_deyi</item>
+        <item>@drawable/xy_emo_huoli</item>
+    </array>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white"
+    android:paddingTop="15.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textSize="@dimen/text_12"
+        android:textColor="@color/base_black"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:text="@string/shoppingGuide"
+        android:drawableLeft="@drawable/explore_label_ic"
+        android:drawablePadding="10.0dip" />
+
+    <TextView
+        android:textSize="@dimen/text_12"
+        android:textColor="@color/base_gray60"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_label_see_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15.0dip"
+        android:text="@string/seeMore"
+        android:includeFontPadding="false"
+        android:drawableRight="@drawable/arrow_icon_right"
+        android:drawablePadding="5.0dip"
+        android:layout_alignParentRight="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_label_name" />
+
+    <View
+        android:id="@+id/line"
+        android:background="@color/bg_hot_topic_line"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

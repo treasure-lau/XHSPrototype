@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout_mention_goods"
+    android:paddingBottom="10.0dip"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6.0dip"
+    android:layout_marginRight="6.0dip"
+    android:foreground="@drawable/bg_transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/img_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <com.xingin.xhs.widget.XYImageView
+            android:id="@+id/iv_img"
+            android:layout_width="128.0dip"
+            android:layout_height="128.0dip"
+            app:placeholderImage="@color/white"
+            app:failureImage="@color/white"
+            app:actualImageScaleType="centerCrop" />
+
+        <com.xingin.xhs.ui.shopping.GoodsCoverView
+            android:id="@+id/iv_img_cover"
+            android:layout_width="128.0dip"
+            android:layout_height="128.0dip"
+            android:src="@drawable/ic_soldout"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:textAppearance="@style/Text10Size.White"
+            android:textStyle="bold"
+            android:layout_gravity="bottom|center|left"
+            android:id="@+id/tv_promotion"
+            android:background="@drawable/bg_goods_promotions"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10.0dip"
+            android:lines="1" />
+    </FrameLayout>
+
+    <TextView
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/desc"
+        android:paddingLeft="10.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingBottom="5.0dip"
+        android:layout_width="128.0dip"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:lines="2"
+        android:layout_below="@id/img_rl"
+        android:layout_alignParentLeft="true"
+        android:lineSpacingExtra="3.0dip"
+        style="@style/TextSmall.Gray40" />
+
+    <TextView
+        android:textSize="@dimen/text_normal"
+        android:textColor="@color/base_shallow_red"
+        android:gravity="center_vertical"
+        android:id="@+id/price"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="2.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="20.0dip"
+        android:singleLine="true"
+        android:layout_below="@id/desc"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:textAppearance="@style/TextSmall.Gray80"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/origin_price"
+        android:paddingRight="40.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="20.0dip"
+        android:layout_marginLeft="3.0dip"
+        android:layout_marginTop="0.0dip"
+        android:layout_marginBottom="0.0dip"
+        android:singleLine="true"
+        android:layout_toRightOf="@id/price"
+        android:layout_alignBottom="@id/price" />
+
+    <TextView
+        android:textAppearance="@style/Text10Size.Gray80"
+        android:id="@+id/tv_extra_info"
+        android:paddingLeft="8.0dip"
+        android:visibility="gone"
+        android:layout_width="128.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:singleLine="true"
+        android:layout_below="@id/price" />
+</RelativeLayout>

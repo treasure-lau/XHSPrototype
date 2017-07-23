@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.xingin.xhs.view.ScaleLayout android:id="@+id/scaleLayout"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:scaleProvideX="375.0"
+            app:scaleProvideY="200.0"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <com.xingin.xhs.view.autoviewpager.CustomAutoViewPager
+                android:id="@+id/scroll_image"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <TextView
+                android:id="@+id/pager_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip"
+                android:text=""
+                android:shadowColor="#40000000"
+                android:shadowDx="5.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="1.0"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                style="@style/TextSmall.White" />
+        </com.xingin.xhs.view.ScaleLayout>
+
+        <TextView
+            android:layout_gravity="top"
+            android:id="@+id/discount_info_view"
+            android:background="@color/discount_transparent_black"
+            android:padding="8.0dip"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextSmall.White" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/desc_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:background="@color/smssdk_lv_item_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px" />
+
+        <TextView
+            android:id="@+id/tv_goods_desc"
+            android:background="@color/white"
+            android:padding="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextNormal" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/sort_bar_layout"
+        android:background="@drawable/bg_top_bottom_line"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/tv_price_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="默认排序"
+            android:drawableRight="@drawable/icon_filter_down_un_arrow"
+            android:drawablePadding="10.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/tv_categories_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20.0dip"
+            android:text="全部"
+            android:drawableRight="@drawable/icon_filter_down_un_arrow"
+            android:drawablePadding="10.0dip"
+            android:layout_toRightOf="@id/tv_price_filter"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:text="0"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

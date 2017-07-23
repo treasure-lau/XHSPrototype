@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.xingin.xhs.view.ScaleLayout android:id="@+id/iv_image"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        app:scaleProvideX="1.0"
+        app:scaleProvideY="1.0"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <com.xingin.xhs.view.ViewPagerItem
+            android:id="@+id/pager_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <TextView
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_middle"
+            android:layout_marginBottom="@dimen/margin_middle"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            style="@style/TextNormal.White" />
+    </com.xingin.xhs.view.ScaleLayout>
+
+    <com.xingin.xhs.view.TextViewFixTouchConsume
+        android:textColor="@color/base_gray40"
+        android:id="@+id/tv_content"
+        android:paddingLeft="@dimen/margin_little_middle"
+        android:paddingTop="@dimen/margin_nomal"
+        android:paddingRight="@dimen/margin_little_middle"
+        android:paddingBottom="@dimen/margin_big_litte"
+        android:visibility="gone"
+        android:layout_below="@+id/rl_image"
+        android:lineSpacingExtra="@dimen/text_linespacingextra"
+        style="@style/text_parent" />
+
+    <HorizontalScrollView
+        android:layout_gravity="center_vertical"
+        android:scrollbars="none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/note_tags"
+            android:paddingTop="@dimen/margin_middle"
+            android:paddingRight="16.0dip"
+            android:paddingBottom="@dimen/margin_middle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_nomal" />
+    </HorizontalScrollView>
+
+    <include
+        android:id="@+id/related_goods_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        layout="@layout/home_item_relative_goods" />
+
+    <TextView
+        android:textSize="@dimen/dimension_12"
+        android:textColor="@color/base_gray60"
+        android:id="@+id/text_like_top_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12.0dip"
+        android:layout_marginTop="14.0dip"
+        android:layout_marginBottom="5.0dip" />
+
+    <com.xingin.xhs.view.LikeUsersScrollImageView
+        android:id="@+id/lus_frends"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_little_middle"
+        android:layout_marginRight="@dimen/margin_little_middle" />
+</LinearLayout>

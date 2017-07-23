@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.xingin.xhs.widget.video.trim.CustomVideoView
+        android:id="@+id/video_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="150.0dip" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginRight="8.0dip"
+            android:src="@drawable/video_time_line_bg"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true" />
+
+        <RelativeLayout
+            android:id="@+id/timeLineContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/video_time_line_selector_width"
+            android:layout_marginRight="@dimen/video_time_line_selector_width"
+            android:layout_centerVertical="true">
+
+            <com.xingin.xhs.view.MaskFrameLayout
+                android:id="@+id/maskFrameLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/video_time_line_progress_bar_outer"
+                android:layout_marginBottom="@dimen/video_time_line_progress_bar_outer">
+
+                <com.xingin.xhs.widget.video.trim.TimeLineScrollView
+                    android:id="@+id/timeLineView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/video_time_line_selector_width"
+                    android:layout_marginTop="@dimen/video_time_line_border_height"
+                    android:layout_marginRight="@dimen/video_time_line_selector_width"
+                    android:layout_marginBottom="@dimen/video_time_line_border_height" />
+
+                <com.xingin.xhs.widget.video.trim.VideoTrimSelectView
+                    android:id="@+id/timeLineBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/timeLineView" />
+            </com.xingin.xhs.view.MaskFrameLayout>
+
+            <com.xingin.xhs.widget.video.trim.ProgressLine
+                android:id="@+id/progressLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/video_time_line_selector_width"
+                android:layout_marginRight="@dimen/video_time_line_selector_width" />
+        </RelativeLayout>
+
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/video_trim_text_hint_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:text="@string/select_video_segment_to_trim"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:layout_below="@id/timeLineContainer"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:textColor="@color/video_trim_text_hint_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2.0dip"
+                android:text="@string/video_trim_select_time" />
+
+            <TextView
+                android:textColor="@color/video_trim_time_color"
+                android:id="@+id/textTimeSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--:--" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

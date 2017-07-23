@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:id="@+id/related_goods_layout"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimension_10"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:paddingLeft="16.0dip"
+            android:paddingTop="15.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/related_goods"
+            android:drawableLeft="@drawable/explore_label_ic"
+            android:drawablePadding="10.0dip"
+            style="@style/TextSmall" />
+
+        <TextView
+            android:layout_gravity="right"
+            android:id="@+id/tv_more_goods"
+            android:paddingTop="15.0dip"
+            android:paddingRight="12.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/moreGood"
+            android:drawableRight="@drawable/ic_more_goods_arrow"
+            android:drawablePadding="6.0dip"
+            style="@style/text_comment_like_num" />
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:paddingLeft="@dimen/dimension_15"
+        android:paddingRight="@dimen/dimension_15"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimension_10"
+        android:layout_marginBottom="@dimen/dimension_15" />
+</LinearLayout>

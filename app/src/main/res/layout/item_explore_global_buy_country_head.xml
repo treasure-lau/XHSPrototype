@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15.0dip"
+    android:layout_marginTop="25.0dip"
+    android:layout_marginRight="15.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/base_black"
+        android:id="@+id/item_global_buy_header_country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="日本" />
+
+    <TextView
+        android:textColor="@color/base_gray60"
+        android:id="@+id/item_global_buy_header_city_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:layout_toRightOf="@id/item_global_buy_header_country_name"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/item_global_buy_header_iv_view_more"
+        android:layout_width="5.0dip"
+        android:layout_height="8.0dip"
+        android:layout_marginLeft="5.0dip"
+        android:src="@drawable/right_arrow"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:textColor="@color/base_gray60"
+        android:id="@+id/item_global_buy_header_tv_view_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_more_country"
+        android:layout_toLeftOf="@id/item_global_buy_header_iv_view_more" />
+</RelativeLayout>

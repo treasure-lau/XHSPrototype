@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/scaleLayout"
+    android:layout_width="100.0dip"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/dimension_10"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <com.xingin.xhs.widget.XYImageView
+        android:id="@+id/iv_icon"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:layout_width="100.0dip"
+        android:layout_height="100.0dip"
+        fresco:placeholderImage="@color/background"
+        fresco:actualImageScaleType="fitCenter"
+        fresco:roundedCornerRadius="@dimen/base_radius_round_image" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="@dimen/dimension_5"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:textSize="@dimen/text_micro"
+            android:textColor="@color/base_black"
+            android:ellipsize="end"
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Dior润唇膏"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimension_5">
+
+            <TextView
+                android:textSize="@dimen/text_normal"
+                android:textColor="@color/base_shallow_red"
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/tv_origin_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimension_5"
+                style="@style/TextSmall.Gray60" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

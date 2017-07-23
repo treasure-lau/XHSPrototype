@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/scaleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.xingin.xhs.view.autoviewpager.loop.LooperViewPager
+            android:id="@+id/view_pager"
+            android:fadingEdge="none"
+            android:layout_width="fill_parent"
+            android:layout_height="200.0dip" />
+
+        <TextView
+            android:layout_gravity="end|bottom|center"
+            android:id="@+id/pager_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10.0dip"
+            android:text=""
+            style="@style/TextNormal.White" />
+    </FrameLayout>
+
+    <com.xingin.xhs.widget.DividerView
+        android:id="@+id/banner_bottom_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

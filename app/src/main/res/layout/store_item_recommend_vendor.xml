@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:id="@+id/scaleLayout"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/dimension_20"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimension_10"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20.0dip"
+        android:layout_marginLeft="@dimen/dimension_15"
+        android:layout_marginTop="@dimen/dimension_15"
+        android:layout_marginRight="@dimen/dimension_15"
+        android:layout_marginBottom="@dimen/dimension_10">
+
+        <TextView
+            android:textSize="@dimen/text_micro"
+            android:textColor="@color/base_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recommend_vendors"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/icon_delete"
+            android:padding="@dimen/dimension_5"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_delete_right"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimension_15"
+        android:layout_marginTop="@dimen/dimension_15" />
+</LinearLayout>

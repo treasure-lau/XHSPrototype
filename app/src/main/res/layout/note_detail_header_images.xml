@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/header_images"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.xingin.xhs.widget.XhsTransViewPager
+        android:id="@+id/pager_image"
+        android:clipChildren="false"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip" />
+
+    <TextView
+        android:layout_gravity="bottom|center|right"
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_middle"
+        android:layout_marginBottom="@dimen/margin_middle"
+        style="@style/TextNormal.White" />
+</FrameLayout>

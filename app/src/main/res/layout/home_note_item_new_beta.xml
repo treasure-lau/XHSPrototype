@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/layout_note"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bg_all_line"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:foreground="@drawable/bg_transparent"
+        android:divider="@drawable/divider_horizon_line"
+        android:showDividers="middle">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.xingin.xhs.widget.XYImageView
+                android:id="@+id/iv_image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_gravity="center|right|top"
+                android:id="@+id/iv_type"
+                android:visibility="gone"
+                android:layout_width="18.0dip"
+                android:layout_height="18.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:scaleType="centerCrop" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/recommend_layout"
+                    android:paddingLeft="10.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip">
+
+                    <com.xingin.xhs.widget.XYImageView
+                        android:id="@+id/iv_recommend_type"
+                        android:layout_width="12.0dip"
+                        android:layout_height="12.0dip"
+                        android:layout_marginRight="5.0dip" />
+
+                    <TextView
+                        android:ellipsize="middle"
+                        android:gravity="center_vertical"
+                        android:id="@+id/tv_extra"
+                        android:paddingRight="@dimen/dimension_5"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:layout_weight="1.0"
+                        style="@style/Text10Size.Gray60" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@+id/layout_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimension_10">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:ellipsize="end"
+                        android:gravity="left"
+                        android:id="@+id/tv_title"
+                        android:paddingLeft="@dimen/dimension_10"
+                        android:paddingRight="@dimen/dimension_5"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:layout_weight="1.0"
+                        android:lineSpacingExtra="@dimen/note_linespacingextra"
+                        style="@style/TextSmall" />
+                </LinearLayout>
+
+                <TextView
+                    android:textColor="@color/base_gray40"
+                    android:ellipsize="end"
+                    android:id="@+id/tv_desc"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimension_5"
+                    android:maxLines="2"
+                    android:lineSpacingExtra="@dimen/note_linespacingextra"
+                    style="@style/TextSmall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimension_10"
+                android:paddingTop="@dimen/dimension_5"
+                android:paddingRight="@dimen/dimension_5"
+                android:paddingBottom="@dimen/dimension_10"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip">
+
+                <com.xingin.xhs.widget.AvatarImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="22.0dip"
+                    android:layout_height="22.0dip" />
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:id="@+id/layout_user"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:id="@+id/tv_nickname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0dip"
+                        android:maxLines="1"
+                        android:layout_weight="1.0"
+                        style="@style/Text10Size.Normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:id="@+id/layout_like_num"
+                    android:background="@drawable/bg_transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24.0dip">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/iv_like_num"
+                        android:layout_width="14.0dip"
+                        android:layout_height="14.0dip"
+                        android:layout_marginLeft="4.0dip" />
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/tv_like_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="5.0dip"
+                        android:singleLine="true"
+                        style="@style/TextSmall.Gray60" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/note_illegal_show"
+        android:background="#4c000000"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:textSize="@dimen/text_normal"
+            android:textColor="@color/white"
+            android:id="@+id/note_illegal_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.xingin.xhs.view.rv.LoadMoreRecycleView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="0.0dip" />
+
+    <ImageView
+        android:id="@+id/back_to_top"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginBottom="40.0dip"
+        android:src="@drawable/icon_back_to_top"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/none_data_layout"
+        android:background="@color/background"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/iv_to_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100.0dip"
+            android:src="@drawable/xyvg_placeholder_tag_goods" />
+
+        <TextView
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/base_gray40"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_empty_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15.0dip"
+            android:text="@string/tag_empty_goods_msg" />
+    </LinearLayout>
+</RelativeLayout>

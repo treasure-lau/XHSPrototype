@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/base_bg_gray"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/ic_header"
+        layout="@layout/ic_header" />
+
+    <ScrollView
+        android:id="@+id/sv_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:textSize="18.0dip"
+                android:id="@+id/et_host"
+                android:paddingTop="10.0dip"
+                android:paddingBottom="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入地址，不要加http://" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_diy_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自定义切换" />
+
+                <Button
+                    android:id="@+id/btn_diy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自定义切换不退出登陆" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_origin_host"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="切到正式" />
+
+                <Button
+                    android:id="@+id/btn_pre_host"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="切到预发布(c)" />
+
+                <Button
+                    android:id="@+id/btn_dev_host"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="切到测试(b)" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/current_host"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_go"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到:" />
+
+                <EditText
+                    android:id="@+id/et_go"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_always_show_guide"
+                android:background="@drawable/common_white_to_gray"
+                android:padding="16.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:text="@string/always_show_guide"
+                style="@style/TextNormal" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/track_debug"
+                android:background="@drawable/common_white_to_gray"
+                android:padding="16.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:text="打点点测试环境(Debug,Fir,or 开启本选项)"
+                style="@style/TextNormal" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/https"
+                android:background="@drawable/common_white_to_gray"
+                android:padding="16.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:text="https"
+                style="@style/TextNormal" />
+
+            <Button
+                android:textColor="@color/white"
+                android:id="@+id/remove_config"
+                android:background="@color/base_red"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="30.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:text="清除配置" />
+
+            <TextView
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="HomeFeed调试" />
+
+            <EditText
+                android:id="@+id/et_home_debug"
+                android:paddingTop="20.0dip"
+                android:paddingBottom="20.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入debug信息" />
+
+            <EditText
+                android:id="@+id/tv_info"
+                android:padding="@dimen/margin_big"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/copy_userid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="拷贝UserId" />
+
+                <Button
+                    android:id="@+id/copy_regtoken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="拷贝推送token" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

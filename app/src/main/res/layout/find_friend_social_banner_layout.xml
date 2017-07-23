@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/social_layout_1"
+        android:background="@drawable/common_white_to_gray"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip">
+
+        <ImageView
+            android:id="@+id/social_iv_1"
+            android:src="@drawable/ic_addfriend_weibo"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            style="@style/user_recommend_iv" />
+
+        <TextView
+            android:textSize="16.0sp"
+            android:text="@string/weibo_friend"
+            android:layout_toRightOf="@id/social_iv_1"
+            android:layout_centerVertical="true"
+            style="@style/profile_func_name" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/social_count_tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20.0dip"
+            android:text="@string/none_import_friend"
+            android:drawableRight="@drawable/common_btn_more"
+            android:drawablePadding="10.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            style="@style/TextSmall.Gray60" />
+    </RelativeLayout>
+
+    <View
+        android:background="@color/base_gray90"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginLeft="@dimen/margin_little_middle" />
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/social_layout_2"
+        android:background="@drawable/common_white_to_gray"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/social_iv_2"
+            android:src="@drawable/ic_addfriend_phone"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            style="@style/user_recommend_iv" />
+
+        <TextView
+            android:textSize="16.0sp"
+            android:layout_marginRight="10.0dip"
+            android:text="@string/phone_friend"
+            android:layout_toRightOf="@id/social_iv_2"
+            android:layout_centerVertical="true"
+            style="@style/profile_func_name" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/social_count_tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20.0dip"
+            android:text="@string/none_import_friend"
+            android:drawableRight="@drawable/common_btn_more"
+            android:drawablePadding="10.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            style="@style/TextSmall.Gray60" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/social_layout_3"
+        android:background="@drawable/common_white_to_gray"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12.0dip">
+
+        <View
+            android:background="@color/base_gray90"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="@dimen/margin_little_middle" />
+
+        <ImageView
+            android:id="@+id/social_iv_3"
+            android:src="@drawable/ic_wechat"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            style="@style/user_recommend_iv" />
+
+        <TextView
+            android:textSize="16.0sp"
+            android:layout_marginRight="10.0dip"
+            android:text="@string/wechat_friend"
+            android:layout_toRightOf="@id/social_iv_3"
+            android:layout_centerVertical="true"
+            style="@style/profile_func_name" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/social_count_tv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20.0dip"
+            android:text="@string/invite_desc"
+            android:drawableRight="@drawable/common_btn_more"
+            android:drawablePadding="10.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            style="@style/TextSmall.Gray60" />
+    </RelativeLayout>
+</LinearLayout>
