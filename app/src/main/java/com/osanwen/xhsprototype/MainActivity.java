@@ -6,6 +6,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,12 +18,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.osanwen.xhsprototype.library.vlayout.DelegateAdapter;
+import com.osanwen.xhsprototype.library.vlayout.VirtualLayoutManager;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     public static Intent createIntent(Context context) {
         return new Intent(context, MainActivity.class);
     }
+
+    private SwipeRefreshLayout mSwipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +48,30 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        initView();
+    }
+
+    private void initView() {
+        mSwipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.main_refresh);
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.base_red);
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                mSwipeRefreshLayout.setRefreshing(false);
+            }
+        });
+
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.main_list);
+        VirtualLayoutManager layoutManager = new VirtualLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
+        recyclerView.setRecycledViewPool(viewPool);
+        viewPool.setMaxRecycledViews(0, 10);
+
+        DelegateAdapter delegateAdapter = new DelegateAdapter(layoutManager);
+        recyclerView.setAdapter(delegateAdapter);
     }
 
     @Override
