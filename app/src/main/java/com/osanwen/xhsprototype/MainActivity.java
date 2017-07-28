@@ -20,6 +20,10 @@ import android.view.MenuItem;
 
 import com.osanwen.xhsprototype.library.vlayout.DelegateAdapter;
 import com.osanwen.xhsprototype.library.vlayout.VirtualLayoutManager;
+import com.osanwen.xhsprototype.widget.MainItemTitleView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +33,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private SwipeRefreshLayout mSwipeRefreshLayout;
+    private DelegateAdapter mDelegateAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,19 +55,17 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         initView();
+        initListener();
+        initData();
     }
 
     private void initView() {
         mSwipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.main_refresh);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.base_red);
-        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                mSwipeRefreshLayout.setRefreshing(false);
-            }
-        });
+
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.main_list);
+
         VirtualLayoutManager layoutManager = new VirtualLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
@@ -70,8 +73,24 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setRecycledViewPool(viewPool);
         viewPool.setMaxRecycledViews(0, 10);
 
-        DelegateAdapter delegateAdapter = new DelegateAdapter(layoutManager);
-        recyclerView.setAdapter(delegateAdapter);
+        mDelegateAdapter = new DelegateAdapter(layoutManager);
+        recyclerView.setAdapter(mDelegateAdapter);
+    }
+
+    private void initListener() {
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                mSwipeRefreshLayout.setRefreshing(false);
+            }
+        });
+    }
+
+    private void initData() {
+
+        List<DelegateAdapter.Adapter> adapters = new ArrayList<>();
+        adapters.add(DelegateAdapter.simpleAdapter(new MainItemTitleView(this)));
+        mDelegateAdapter.addAdapters(adapters);
     }
 
     @Override
