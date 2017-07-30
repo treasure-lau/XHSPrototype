@@ -69,6 +69,8 @@ public class LinearLayoutHelper extends BaseLayoutHelper {
         this.mDividerHeight = dividerHeight;
     }
 
+
+
     /**
      * In {@link LinearLayoutHelper}, each iteration only consume one item,
      * so it can let parent LayoutManager to decide whether the next item is in the range of this helper

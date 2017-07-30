@@ -63,7 +63,7 @@
 
                 <ImageView
                     android:layout_gravity="bottom|center"
-                    android:id="@+id/image_2"
+                    android:id="@+id/image_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="21.0dip"
@@ -76,7 +76,7 @@
 
                 <TextView
                     android:layout_gravity="bottom|center"
-                    android:id="@+id/text_1"
+                    android:id="@+id/text_2"
                     android:background="@null"
                     android:layout_width="fill_parent"
                     android:layout_height="16.0dip"
@@ -99,7 +99,7 @@
 
                 <TextView
                     android:layout_gravity="bottom|center"
-                    android:id="@+id/text_1"
+                    android:id="@+id/text_3"
                     android:background="@null"
                     android:layout_width="fill_parent"
                     android:layout_height="16.0dip"
@@ -109,7 +109,7 @@
 
                 <ImageView
                     android:layout_gravity="bottom|center"
-                    android:id="@+id/image_2"
+                    android:id="@+id/image_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="21.0dip"
@@ -122,7 +122,7 @@
 
                 <TextView
                     android:layout_gravity="bottom|center"
-                    android:id="@+id/text_1"
+                    android:id="@+id/text_4"
                     android:background="@null"
                     android:layout_width="fill_parent"
                     android:layout_height="16.0dip"
@@ -132,7 +132,7 @@
 
                 <ImageView
                     android:layout_gravity="bottom|center"
-                    android:id="@+id/image_2"
+                    android:id="@+id/image_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="21.0dip"
@@ -145,7 +145,7 @@
 
                 <TextView
                     android:layout_gravity="bottom|center"
-                    android:id="@+id/text_1"
+                    android:id="@+id/text_6"
                     android:background="@null"
                     android:layout_width="fill_parent"
                     android:layout_height="16.0dip"
@@ -155,7 +155,7 @@
 
                 <ImageView
                     android:layout_gravity="bottom|center"
-                    android:id="@+id/image_2"
+                    android:id="@+id/image_6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="21.0dip"

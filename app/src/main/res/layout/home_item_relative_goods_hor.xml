@@ -30,7 +30,7 @@
     </FrameLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview"
+        android:id="@+id/hot_video_recyclerview"
         android:paddingTop="10.0dip"
         android:paddingBottom="10.0dip"
         android:fadingEdge="none"

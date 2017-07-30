@@ -15,7 +15,7 @@
         layout="@layout/ic_header" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview"
+        android:id="@+id/hot_video_recyclerview"
         android:background="@color/background"
         android:clipToPadding="false"
         android:layout_width="fill_parent"

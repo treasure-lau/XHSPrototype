@@ -18,8 +18,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.osanwen.xhsprototype.adapter.HotNoteAdapter;
+import com.osanwen.xhsprototype.adapter.HotTopicAdapter;
+import com.osanwen.xhsprototype.adapter.base.BaseQuickAdapter;
 import com.osanwen.xhsprototype.library.vlayout.DelegateAdapter;
 import com.osanwen.xhsprototype.library.vlayout.VirtualLayoutManager;
+import com.osanwen.xhsprototype.util.TempData;
+import com.osanwen.xhsprototype.widget.MainItemHotVideoView;
+import com.osanwen.xhsprototype.widget.MainItemPagerView;
 import com.osanwen.xhsprototype.widget.MainItemTitleView;
 
 import java.util.ArrayList;
@@ -34,6 +40,7 @@ public class MainActivity extends AppCompatActivity
 
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private DelegateAdapter mDelegateAdapter;
+    private RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +55,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -64,17 +71,17 @@ public class MainActivity extends AppCompatActivity
         mSwipeRefreshLayout.setColorSchemeResources(R.color.base_red);
 
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.main_list);
+        mRecyclerView = (RecyclerView) findViewById(R.id.main_list);
 
         VirtualLayoutManager layoutManager = new VirtualLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+        mRecyclerView.setLayoutManager(layoutManager);
 
         RecyclerView.RecycledViewPool viewPool = new RecyclerView.RecycledViewPool();
-        recyclerView.setRecycledViewPool(viewPool);
+        mRecyclerView.setRecycledViewPool(viewPool);
         viewPool.setMaxRecycledViews(0, 10);
 
         mDelegateAdapter = new DelegateAdapter(layoutManager);
-        recyclerView.setAdapter(mDelegateAdapter);
+        mRecyclerView.setAdapter(mDelegateAdapter);
     }
 
     private void initListener() {
@@ -84,12 +91,47 @@ public class MainActivity extends AppCompatActivity
                 mSwipeRefreshLayout.setRefreshing(false);
             }
         });
+        findViewById(R.id.ic_header).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(SearchActivity.createIntent(MainActivity.this));
+            }
+        });
     }
 
     private void initData() {
 
         List<DelegateAdapter.Adapter> adapters = new ArrayList<>();
-        adapters.add(DelegateAdapter.simpleAdapter(new MainItemTitleView(this)));
+
+        MainItemPagerView pagerView = new MainItemPagerView(this);
+        pagerView.setData(TempData.getPager());
+        adapters.add(DelegateAdapter.simpleAdapter(pagerView));
+
+        MainItemTitleView topicView = new MainItemTitleView(this);
+        topicView.setData(R.string.topicGuide);
+        adapters.add(DelegateAdapter.simpleAdapter(topicView));
+        adapters.add(new HotTopicAdapter(TempData.getTopic()));
+
+        MainItemTitleView videoView = new MainItemTitleView(this);
+        videoView.setData(R.string.hot_video);
+        adapters.add(DelegateAdapter.simpleAdapter(videoView));
+        MainItemHotVideoView hotVideoView = new MainItemHotVideoView(this);
+        hotVideoView.setData(TempData.getVideo());
+        adapters.add(DelegateAdapter.simpleAdapter(hotVideoView));
+
+        MainItemTitleView noteView = new MainItemTitleView(this);
+        noteView.setData(R.string.multi_notes);
+        adapters.add(DelegateAdapter.simpleAdapter(noteView));
+        final HotNoteAdapter noteAdapter = new HotNoteAdapter(TempData.getNote());
+        noteAdapter.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
+            @Override
+            public void onLoadMoreRequested() {
+                noteAdapter.addData(TempData.getNote());
+                noteAdapter.loadMoreComplete();
+            }
+        }, mRecyclerView);
+        adapters.add(noteAdapter);
+
         mDelegateAdapter.addAdapters(adapters);
     }
 

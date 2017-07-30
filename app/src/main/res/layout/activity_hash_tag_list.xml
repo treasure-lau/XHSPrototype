@@ -10,7 +10,7 @@
         layout="@layout/ic_header" />
 
     <com.xingin.xhs.view.rv.LoadMoreRecycleView
-        android:id="@+id/recyclerview"
+        android:id="@+id/hot_video_recyclerview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
 </LinearLayout>
