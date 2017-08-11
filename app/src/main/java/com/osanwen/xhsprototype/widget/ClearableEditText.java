@@ -43,17 +43,18 @@ public class ClearableEditText extends FrameLayout {
             @Override
             public void afterTextChanged(Editable s) {
                 String value = s.toString();
-                List<TempData> dataList = new ArrayList<TempData>();
                 if (TextUtils.isEmpty(value)) {
                     imageView.setVisibility(View.GONE);
+                    if (mListener != null) {
+                        mListener.empty();
+                    }
                 } else {
                     if (imageView.getVisibility() == View.GONE) {
                         imageView.setVisibility(View.VISIBLE);
                     }
-                    dataList.addAll(TempData.getSearchResult());
-                }
-                if (mListener != null) {
-                    mListener.setData(dataList);
+                    if (mListener != null) {
+                        mListener.setValue(value);
+                    }
                 }
             }
         });
@@ -66,13 +67,14 @@ public class ClearableEditText extends FrameLayout {
         });
     }
 
-    private SearchResultListener mListener;
+    private TextChangedListener mListener;
 
-    public void setListener(SearchResultListener mListener) {
+    public void setListener(TextChangedListener mListener) {
         this.mListener = mListener;
     }
 
-    public interface SearchResultListener {
-        void setData(List<TempData> dataList);
+    public interface TextChangedListener {
+        void empty();
+        void setValue(String keyword);
     }
 }

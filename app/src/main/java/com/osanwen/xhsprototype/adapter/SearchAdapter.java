@@ -15,10 +15,10 @@ import java.util.List;
  * Created by liusaibao on 30/07/2017.
  */
 
-public class SearchResultAdapter extends BaseQuickAdapter<TempData, BaseViewHolder> {
+public class SearchAdapter extends BaseQuickAdapter<TempData, BaseViewHolder> {
 
-    public SearchResultAdapter(@Nullable List<TempData> data) {
-        super(R.layout.item_search_result, data);
+    public SearchAdapter(@Nullable List<TempData> data) {
+        super(R.layout.item_search, data);
     }
 
     @Override
@@ -29,5 +29,10 @@ public class SearchResultAdapter extends BaseQuickAdapter<TempData, BaseViewHold
     @Override
     protected void convert(BaseViewHolder helper, TempData item) {
         helper.setText(R.id.title_tv, item.text1);
+    }
+
+    public void clear() {
+        mData.clear();
+        notifyDataSetChanged();
     }
 }

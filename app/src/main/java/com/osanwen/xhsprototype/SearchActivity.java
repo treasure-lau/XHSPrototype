@@ -11,12 +11,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.osanwen.xhsprototype.adapter.SearchResultAdapter;
+import com.osanwen.xhsprototype.adapter.SearchAdapter;
+import com.osanwen.xhsprototype.adapter.base.BaseQuickAdapter;
 import com.osanwen.xhsprototype.util.TempData;
 import com.osanwen.xhsprototype.widget.ClearableEditText;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 搜索
@@ -38,15 +38,26 @@ public class SearchActivity extends AppCompatActivity {
 
     private void initView() {
         ClearableEditText editText = (ClearableEditText)findViewById(R.id.et_text);
-        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.search_result_recyclerview);
+        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.search_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
-        final SearchResultAdapter adapter = new SearchResultAdapter(new ArrayList<TempData>());
-        recyclerView.setAdapter(adapter);
-        editText.setListener(new ClearableEditText.SearchResultListener() {
+        final SearchAdapter adapter = new SearchAdapter(new ArrayList<TempData>());
+        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
-            public void setData(List<TempData> dataList) {
-                adapter.replaceData(dataList);
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                startActivity(SearchResultActivity.createIntent(SearchActivity.this));
+            }
+        });
+        recyclerView.setAdapter(adapter);
+        editText.setListener(new ClearableEditText.TextChangedListener() {
+            @Override
+            public void empty() {
+                adapter.clear();
+            }
+
+            @Override
+            public void setValue(String keyword) {
+                adapter.replaceData(TempData.getSearchResult());
             }
         });
         findViewById(R.id.btn_cancel).setOnClickListener(new View.OnClickListener() {

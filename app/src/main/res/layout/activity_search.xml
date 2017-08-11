@@ -40,7 +40,7 @@
         android:layout_height="0.6dip" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/search_result_recyclerview"
+        android:id="@+id/search_recyclerview"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>
