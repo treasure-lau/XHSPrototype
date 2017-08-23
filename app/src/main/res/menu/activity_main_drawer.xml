@@ -6,10 +6,12 @@
             <item
                 android:id="@+id/nav_my_notebook"
                 android:icon="@drawable/ic_menu_gallery"
+                android:visible="false"
                 android:title="@string/myprofile_text_book" />
             <item
                 android:id="@+id/nav_my_star"
                 android:icon="@drawable/ic_menu_gallery"
+                android:visible="false"
                 android:title="@string/myprofile_text_star" />
             <item
                 android:id="@+id/nav_account_info"
@@ -18,6 +20,7 @@
             <item
                 android:id="@+id/nav_account_bind"
                 android:icon="@drawable/ic_menu_gallery"
+                android:visible="false"
                 android:title="@string/setting_account_bind" />
             <item
                 android:id="@+id/nav_modify_password"
@@ -31,6 +34,7 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_gallery"
+                android:visible="false"
                 android:title="@string/share_subject" />
             <item
                 android:id="@+id/nav_about"

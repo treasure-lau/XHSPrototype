@@ -11,7 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -73,11 +73,20 @@
                 style="@style/TextNormal.White" />
         </LinearLayout>
 
-    </LinearLayout>
+    </LinearLayout>-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:src="@drawable/icon_welcome_captain" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="18812345678"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
