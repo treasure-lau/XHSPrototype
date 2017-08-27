@@ -1,4 +1,4 @@
-package com.osanwen.xhsprototype;
+package com.osanwen.xhsprototype.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.osanwen.xhsprototype.R;
 import com.osanwen.xhsprototype.adapter.SearchAdapter;
 import com.osanwen.xhsprototype.adapter.base.BaseQuickAdapter;
 import com.osanwen.xhsprototype.util.TempData;

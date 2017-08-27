@@ -1,11 +1,9 @@
-package com.osanwen.xhsprototype;
+package com.osanwen.xhsprototype.activity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -18,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.osanwen.xhsprototype.R;
 import com.osanwen.xhsprototype.adapter.HotNoteAdapter;
 import com.osanwen.xhsprototype.adapter.HotTopicAdapter;
 import com.osanwen.xhsprototype.adapter.base.BaseQuickAdapter;
@@ -31,6 +30,9 @@ import com.osanwen.xhsprototype.widget.MainItemTitleView;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 主页面
+ */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -161,6 +163,7 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_add) {
+            startActivity(ChosePushTypeActivity.createIntent(this));
             return true;
         }
 

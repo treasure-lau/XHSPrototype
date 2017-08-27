@@ -1,4 +1,4 @@
-package com.osanwen.xhsprototype;
+package com.osanwen.xhsprototype.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,7 +7,10 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.osanwen.xhsprototype.R;
+
 /**
+ * 注册
  * Created by liusaibao on 23/07/2017.
  */
 

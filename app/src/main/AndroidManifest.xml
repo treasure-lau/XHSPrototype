@@ -9,11 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".SplashActivity"
+            android:name=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
             <intent-filter>
@@ -23,9 +19,22 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".SearchActivity"
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+
+        </activity>
+        <activity android:name=".activity.SearchActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".SearchResultActivity" />
+        <activity android:name=".activity.SearchResultActivity" />
+        <activity android:name=".activity.ChosePushTypeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.PushNoteActivity"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name=".activity.PushVideoActivity" />
     </application>
 
 </manifest>
