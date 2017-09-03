@@ -35,6 +35,9 @@
         <activity android:name=".activity.PushNoteActivity"
             android:windowSoftInputMode="stateVisible|adjustPan"/>
         <activity android:name=".activity.PushVideoActivity" />
+        <activity android:name=".activity.NoteDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.UserInfoActivity" />
     </application>
 
 </manifest>

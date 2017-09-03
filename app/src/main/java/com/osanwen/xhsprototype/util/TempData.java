@@ -3,6 +3,7 @@ package com.osanwen.xhsprototype.util;
 import com.osanwen.xhsprototype.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -72,5 +73,10 @@ public class TempData {
             dataList.add(data);
         }
         return dataList;
+    }
+
+    public static List<TempData> getData(int count) {
+        TempData[] datas = new TempData[count];
+        return Arrays.asList(datas);
     }
 }
