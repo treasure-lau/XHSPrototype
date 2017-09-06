@@ -14,6 +14,29 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
+        <!-- 语音/文字切换-->
+        <ImageView
+            android:id="@+id/btn_voice_or_text"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/btn_voice_or_text" />
+
+        <!--语音输入-->
+        <Button
+            android:id="@+id/btn_voice"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toLeftOf="@+id/rl_multi_and_send"
+            android:layout_toRightOf="@+id/btn_voice_or_text"
+            android:background="@drawable/btn_voice"
+            android:text="@string/btn_text_speak"
+            android:textColor="#727272"
+            android:visibility="gone" />
+
         <RelativeLayout
             android:orientation="horizontal"
             android:id="@+id/rl_input"
@@ -26,7 +49,7 @@
             android:layout_toLeftOf="@+id/rl_multi_and_send"
             android:layout_centerVertical="true">
 
-            <sj.keyboard.widget.EmoticonsEditText
+            <com.osanwen.xhsprototype.library.keyboard.widget.EmoticonsEditText
                 android:textSize="16.0sp"
                 android:id="@+id/et_chat"
                 android:background="@null"
@@ -81,7 +104,7 @@
         </RelativeLayout>
     </RelativeLayout>
 
-    <sj.keyboard.widget.FuncLayout
+    <com.osanwen.xhsprototype.library.keyboard.widget.FuncLayout
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:id="@+id/ly_kvml"

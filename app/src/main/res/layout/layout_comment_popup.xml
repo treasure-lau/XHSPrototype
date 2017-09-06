@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.osanwen.xhsprototype.widget.SoftKeyboardSizeWatchLayout android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/add_comment_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include
+            android:id="@+id/top_spitline"
+            layout="@layout/ic_spitview" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/ly_top"
+            android:background="@color/white"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_spileline"
+            android:layout_alignParentBottom="true">
+
+            <com.osanwen.xhsprototype.library.spannable.RichEditTextPro
+                android:textSize="@dimen/text_normal"
+                android:textColorHint="@color/base_white_gray"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/et_content"
+                android:background="@null"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingTop="@dimen/margin_nomal"
+                android:paddingRight="@dimen/margin_middle"
+                android:paddingBottom="@dimen/margin_nomal"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="100.0dip"
+                android:layout_weight="3.0" />
+
+            <View
+                android:background="@color/base_gray90"
+                android:layout_width="0.5dip"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="15.0dip"
+                android:layout_marginBottom="10.0dip" />
+
+            <LinearLayout
+                android:gravity="right"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="42.0dip"
+                android:layout_marginBottom="5.0dip">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/iv_keyboard_and_emoji"
+                    android:background="@drawable/bg_transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_middle"
+                    android:src="@drawable/xyvg_inputbar_emotion" />
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/iv_keyboard_and_at"
+                    android:background="@drawable/bg_transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_middle"
+                    android:src="@drawable/ic_comment_hash" />
+
+                <TextView
+                    android:textColor="#ffffffff"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/push"
+                    android:background="@drawable/bg_send_comment_enable"
+                    android:paddingLeft="15.0dip"
+                    android:paddingTop="7.0dip"
+                    android:paddingRight="15.0dip"
+                    android:paddingBottom="7.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_nomal"
+                    android:text="@string/discovery_head_right_btn_push" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_spileline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lv_keyboard_and_emoji">
+
+            <include layout="@layout/ic_spitview" />
+        </LinearLayout>
+
+        <sj.keyboard.EmoticonsKeyBoardLayout
+            android:id="@+id/lv_keyboard_and_emoji"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bottom_spileline"
+            android:layout_alignParentBottom="true" />
+    </LinearLayout>
+</com.osanwen.xhsprototype.widget.SoftKeyboardSizeWatchLayout>

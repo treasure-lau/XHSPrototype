@@ -25,6 +25,7 @@ public class ChosePushTypeActivity extends AppCompatActivity implements View.OnC
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chose_push_type);
+        findViewById(R.id.close).setOnClickListener(this);
         findViewById(R.id.push_note).setOnClickListener(this);
         findViewById(R.id.push_video).setOnClickListener(this);
     }
@@ -32,6 +33,9 @@ public class ChosePushTypeActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.close:
+                finish();
+                break;
             case R.id.push_note:
                 startActivity(PushNoteActivity.createIntent(this));
                 break;

@@ -7,14 +7,14 @@
 
     <include layout="@layout/ic_spitview_horizontal" />
 
-    <sj.keyboard.widget.EmoticonsFuncView
+    <com.osanwen.xhsprototype.library.keyboard.widget.EmoticonsFuncView
         android:orientation="vertical"
         android:id="@+id/view_epv"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_above="@+id/view_eiv" />
 
-    <sj.keyboard.widget.EmoticonsIndicatorView
+    <com.osanwen.xhsprototype.library.keyboard.widget.EmoticonsIndicatorView
         android:gravity="center"
         android:orientation="horizontal"
         android:id="@+id/view_eiv"
@@ -30,7 +30,7 @@
         android:layout_above="@+id/view_etv"
         layout="@layout/ic_spitview_horizontal" />
 
-    <sj.keyboard.widget.EmoticonsToolBarView
+    <com.osanwen.xhsprototype.library.keyboard.widget.EmoticonsToolBarView
         android:orientation="vertical"
         android:id="@+id/view_etv"
         android:layout_width="fill_parent"
