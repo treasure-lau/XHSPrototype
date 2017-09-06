@@ -6,5 +6,5 @@
         android:orderInCategory="100"
         android:icon="@drawable/note_icon_more_white"
         app:showAsAction="always"
-        android:title="@string/add" />
+        android:title="@string/more" />
 </menu>

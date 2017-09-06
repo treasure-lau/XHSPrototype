@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.osanwen.xhsprototype.R;
 
@@ -55,6 +56,10 @@ public class NoteDetailActivity extends BaseAppCompatActivity {
                 }
             }
         });
+        LinearLayout commentLL = (LinearLayout)findViewById(R.id.comment_content);
+        commentLL.addView(getLayoutInflater().inflate(R.layout.item_note_detail_comment, commentLL, false));
+        commentLL.addView(getLayoutInflater().inflate(R.layout.item_note_detail_comment, commentLL, false));
+        commentLL.addView(getLayoutInflater().inflate(R.layout.item_note_detail_comment, commentLL, false));
     }
 
     @Override

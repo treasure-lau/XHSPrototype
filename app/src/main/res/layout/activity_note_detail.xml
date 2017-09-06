@@ -189,7 +189,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/margin_nomal"
-                    android:layout_toLeftOf="@id/layout_like_num"
+                    android:layout_toLeftOf="@+id/layout_like_num"
                     android:layout_alignTop="@id/tv_time_text">
 
                     <ImageView
@@ -269,7 +269,8 @@
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/arrow_icon_right"
                     android:drawablePadding="5.0dip"
-                    android:layout_alignParentRight="true" />
+                    android:layout_alignParentRight="true"
+                    android:text="共20条评论"/>
 
                 <View
                     android:id="@+id/bottom_line"
@@ -280,6 +281,56 @@
                     android:layout_marginTop="15.0dip"
                     android:layout_below="@id/tv_title_total_comment" />
             </RelativeLayout>
+
+            <RelativeLayout android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/common_bar_height"
+                android:paddingLeft="@dimen/dimension_15"
+                android:paddingRight="@dimen/dimension_15">
+
+                <ImageView
+                    android:id="@+id/iv_myavatar"
+                    android:layout_width="@dimen/image_avatar"
+                    android:layout_height="@dimen/image_avatar"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dimension_10"
+                    android:src="@drawable/common_bg_avatar_loadfail"/>
+
+                <TextView
+                    android:textSize="@dimen/text_micro"
+                    android:textColor="@color/base_gray40"
+                    android:gravity="center_vertical"
+                    android:id="@+id/tv_comment"
+                    android:background="@drawable/bg_second_comment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dimension_35"
+                    android:text="@string/discovery_detail_commnet_def4"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/dimension_15"
+                    android:layout_toRightOf="@id/iv_myavatar"
+                    android:imeOptions="actionSend" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/comment_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimension_10" />
+
+            <View
+                android:id="@+id/split_line"
+                android:background="@color/base_gray90"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/see_all_comment"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                style="@style/TextNormal.Gray60"
+                android:text="查看全部20条评论"/>
 
         </LinearLayout>
 
