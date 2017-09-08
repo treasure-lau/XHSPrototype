@@ -1,15 +1,20 @@
 package com.osanwen.xhsprototype.activity;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.BottomSheetBehavior;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -60,6 +65,19 @@ public class NoteDetailActivity extends BaseAppCompatActivity {
         commentLL.addView(getLayoutInflater().inflate(R.layout.item_note_detail_comment, commentLL, false));
         commentLL.addView(getLayoutInflater().inflate(R.layout.item_note_detail_comment, commentLL, false));
         commentLL.addView(getLayoutInflater().inflate(R.layout.item_note_detail_comment, commentLL, false));
+
+        findViewById(R.id.tv_comment).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BottomSheetDialog mBottomSheetDialog = new BottomSheetDialog(NoteDetailActivity.this);
+                View sheetView = getLayoutInflater().inflate(R.layout.layout_comment_popup, null);
+                ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                mBottomSheetDialog.setContentView(sheetView, params);
+                mBottomSheetDialog.show();
+                BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.from(sheetView);
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+            }
+        });
     }
 
     @Override
