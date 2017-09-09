@@ -21,7 +21,7 @@ import java.util.List;
  * Created by liusaibao on 27/08/2017.
  */
 
-public class PushNoteActivity extends AppCompatActivity {
+public class PushNoteActivity extends BaseAppCompatActivity {
 
     public static Intent createIntent(Context context) {
         return new Intent(context, PushNoteActivity.class);
@@ -30,6 +30,7 @@ public class PushNoteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.push_note);
         setContentView(R.layout.activity_push_note);
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));

@@ -13,7 +13,7 @@ import com.osanwen.xhsprototype.R;
  * Created by liusaibao on 27/08/2017.
  */
 
-public class PushVideoActivity extends AppCompatActivity {
+public class PushVideoActivity extends BaseAppCompatActivity {
 
     public static Intent createIntent(Context context) {
         return new Intent(context, PushVideoActivity.class);
@@ -22,6 +22,7 @@ public class PushVideoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.push_video);
         setContentView(R.layout.activity_push_video);
     }
 }
