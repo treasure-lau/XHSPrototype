@@ -3,8 +3,7 @@
     android:background="@color/background"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
         android:orientation="vertical"
@@ -26,7 +25,8 @@
             android:drawableLeft="@drawable/ic_red_chat"
             android:drawableRight="@drawable/icon_arrow"
             android:drawablePadding="8.0dip"
-            style="@style/TextNormal.Gray40" />
+            style="@style/TextNormal.Gray40"
+            android:visibility="gone"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycleView"

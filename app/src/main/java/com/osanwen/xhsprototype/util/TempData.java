@@ -79,4 +79,18 @@ public class TempData {
         TempData[] datas = new TempData[count];
         return Arrays.asList(datas);
     }
+
+    public static List<TempData> getShareData() {
+        Integer[] drawableResIds = {R.drawable.share_icon_weixin, R.drawable.share_icon_moment, R.drawable.share_icon_qq, R.drawable.xyvg_share_icon_link};
+        String[] values = {"微信好友", "朋友圈", "QQ好友", "复制链接"};
+        List<TempData> dataList = new ArrayList<>();
+        int len = values.length;
+        for (int i = 0; i < len; i++) {
+            TempData data = new TempData();
+            data.drawableResId = drawableResIds[i];
+            data.text1 = values[i];
+            dataList.add(data);
+        }
+        return dataList;
+    }
 }

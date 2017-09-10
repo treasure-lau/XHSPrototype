@@ -12,11 +12,11 @@
         android:layout_marginLeft="10.0dip"
         android:layout_marginRight="5.0dip">
 
-        <com.xingin.xhs.widget.AvatarImageView
+        <ImageView
             android:id="@+id/second_comment_iv_user_icon"
             android:layout_width="24.0dip"
             android:layout_height="24.0dip"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/common_bg_avatar_loadfail" />
 
         <RelativeLayout
             android:layout_gravity="center_vertical"
@@ -32,21 +32,22 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:layout_centerVertical="true"
+                android:text="Optimum"
                 style="@style/TextSmall.Gray40" />
 
             <TextView
                 android:textSize="12.0sp"
                 android:ellipsize="end"
                 android:id="@+id/second_comment_tv_target_person"
-                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5.0dip"
                 android:maxLines="1"
                 android:layout_toRightOf="@id/second_comment_tv_reply_person"
-                android:layout_centerVertical="true" />
+                android:layout_centerVertical="true"
+                android:text="> 越来越优秀的自己"/>
 
-            <com.xingin.xhs.widget.XYImageView
+            <ImageView
                 android:id="@+id/second_comment_iv_user_rank"
                 android:visibility="invisible"
                 android:layout_width="16.0dip"
@@ -68,6 +69,7 @@
             android:id="@+id/second_comment_tv_comment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="什么牌子的？"
             style="@style/TextSmall" />
 
         <TextView
@@ -110,14 +112,15 @@
                     android:layout_width="11.0dip"
                     android:layout_height="12.0dip"
                     android:layout_marginLeft="@dimen/dimension_5"
-                    android:layout_marginRight="@dimen/dimension_5" />
+                    android:layout_marginRight="@dimen/dimension_5"
+                    android:src="@drawable/ic_comment_friend_like"/>
 
                 <TextView
                     android:layout_gravity="center_vertical"
                     android:id="@+id/second_comment_tv_praise_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100K"
+                    android:text="100"
                     style="@style/text_comment_like_num" />
             </LinearLayout>
 

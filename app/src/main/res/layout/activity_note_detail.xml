@@ -46,6 +46,7 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dimension_40"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
@@ -270,7 +271,7 @@
                     android:drawableRight="@drawable/arrow_icon_right"
                     android:drawablePadding="5.0dip"
                     android:layout_alignParentRight="true"
-                    android:text="共20条评论"/>
+                    android:text="共10条评论"/>
 
                 <View
                     android:id="@+id/bottom_line"
@@ -330,10 +331,20 @@
                 android:layout_width="fill_parent"
                 android:layout_height="44.0dip"
                 style="@style/TextNormal.Gray60"
-                android:text="查看全部20条评论"/>
+                android:text="查看全部10条评论"/>
 
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimension_40"
+        android:layout_gravity="bottom">
+
+        <include layout="@layout/note_detail_bottom" />
+
+    </FrameLayout>
 
 </android.support.design.widget.CoordinatorLayout>

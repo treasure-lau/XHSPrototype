@@ -4,13 +4,13 @@
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.xingin.xhs.widget.AvatarImageView
+    <ImageView
         android:id="@+id/comment_iv_user_icon"
         android:layout_width="32.0dip"
         android:layout_height="32.0dip"
         android:layout_marginLeft="15.0dip"
         android:layout_marginTop="10.0dip"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/common_bg_avatar_loadfail" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -34,7 +34,7 @@
                 android:layout_alignParentTop="true"
                 style="@style/TextNormal.Gray40" />
 
-            <com.xingin.xhs.widget.XYImageView
+            <ImageView
                 android:id="@+id/comment_iv_user_rank"
                 android:visibility="invisible"
                 android:layout_width="16.0dip"
@@ -54,6 +54,7 @@
                 android:id="@+id/comment_tv_comment"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:text="中央空调是自己装的吗"
                 style="@style/TextNormal" />
 
             <TextView
@@ -95,7 +96,8 @@
                         android:layout_width="12.0dip"
                         android:layout_height="12.0dip"
                         android:layout_marginLeft="6.0dip"
-                        android:layout_marginRight="6.0dip" />
+                        android:layout_marginRight="6.0dip"
+                        android:src="@drawable/ic_comment_friend_like"/>
 
                     <TextView
                         android:layout_gravity="center_vertical"
@@ -132,10 +134,9 @@
                 </LinearLayout>
             </RelativeLayout>
 
-            <com.xingin.xhs.view.NoteCommentFoldView
+            <com.osanwen.xhsprototype.widget.NoteCommentFoldView
                 android:id="@+id/comment_cfv_second_comment"
                 android:background="@drawable/bg_second_comment"
-                android:visibility="gone"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>

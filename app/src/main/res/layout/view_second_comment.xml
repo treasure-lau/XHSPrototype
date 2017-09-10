@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dimension_5"
+        android:textSize="@dimen/text_micro"
+        android:text="Smile_Kings(作者): 这个可能每个地方都不太一样哦，我请的教练是200一节课"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_micro"
+        android:text="共7条回复"
+        android:textColor="@color/comment_tip_expand_color"
+        android:drawablePadding="@dimen/dimension_5"
+        android:drawableRight="@drawable/ic_comment_right_arrow"/>
+
+</LinearLayout>

@@ -25,14 +25,7 @@
         </activity>
         <activity android:name=".activity.SearchActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activity.SearchResultActivity" />
-        <activity android:name=".activity.ChosePushTypeActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activity.PushNoteActivity"
-            android:windowSoftInputMode="stateVisible|adjustPan"/>
-        <activity android:name=".activity.PushVideoActivity" />
-        <activity android:name=".activity.NoteDetailActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".activity.SearchResultActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +34,19 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".activity.ChosePushTypeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.PushNoteActivity"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name=".activity.PushVideoActivity" />
+        <activity android:name=".activity.NoteDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+
+        </activity>
         <activity android:name=".activity.UserInfoActivity" />
+        <activity android:name=".activity.CommentListActivity" />
     </application>
 
 </manifest>
