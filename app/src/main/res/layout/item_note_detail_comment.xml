@@ -13,7 +13,7 @@
         android:id="@+id/iv_avatar"
         android:layout_width="@dimen/image_avatar"
         android:layout_height="@dimen/image_avatar"
-        android:src="@drawable/common_bg_avatar_loadfail" />
+        android:src="@drawable/user_default_ic" />
 
     <LinearLayout
         android:orientation="vertical"

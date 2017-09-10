@@ -45,7 +45,7 @@
 
 
         </activity>
-        <activity android:name=".activity.UserInfoActivity" />
+        <activity android:name=".activity.UserDetailActivity" />
         <activity android:name=".activity.CommentListActivity" />
     </application>
 

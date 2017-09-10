@@ -16,7 +16,7 @@
             android:id="@+id/second_comment_iv_user_icon"
             android:layout_width="24.0dip"
             android:layout_height="24.0dip"
-            android:src="@drawable/common_bg_avatar_loadfail" />
+            android:src="@drawable/user_default_ic" />
 
         <RelativeLayout
             android:layout_gravity="center_vertical"

@@ -69,7 +69,7 @@
                     android:layout_width="@dimen/image_avatar"
                     android:layout_height="@dimen/image_avatar"
                     android:layout_marginLeft="@dimen/dimension_15"
-                    android:src="@drawable/common_bg_avatar_loadfail"/>
+                    android:src="@drawable/user_default_ic"/>
 
                 <LinearLayout
                     android:layout_gravity="center_vertical"
@@ -295,7 +295,7 @@
                     android:layout_height="@dimen/image_avatar"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/dimension_10"
-                    android:src="@drawable/common_bg_avatar_loadfail"/>
+                    android:src="@drawable/user_default_ic"/>
 
                 <TextView
                     android:textSize="@dimen/text_micro"

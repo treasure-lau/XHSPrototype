@@ -3,16 +3,16 @@ package com.osanwen.xhsprototype.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import com.osanwen.xhsprototype.R;
+import com.osanwen.xhsprototype.activity.UserDetailActivity;
 import com.osanwen.xhsprototype.adapter.SearchUserAdapter;
+import com.osanwen.xhsprototype.adapter.base.BaseQuickAdapter;
 import com.osanwen.xhsprototype.util.TempData;
 
 /**
@@ -40,6 +40,12 @@ public class SearchUserFragment extends Fragment {
 
         SearchUserAdapter adapter = new SearchUserAdapter();
         adapter.addData(TempData.getData(10));
+        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                startActivity(UserDetailActivity.createIntent(getContext()));
+            }
+        });
         mRecyclerView.setAdapter(adapter);
     }
 }

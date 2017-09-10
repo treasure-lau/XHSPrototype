@@ -36,7 +36,7 @@
                 android:layout_width="@dimen/commentbar_icon"
                 android:layout_height="@dimen/commentbar_icon"
                 android:layout_marginLeft="@dimen/margin_little_middle"
-                android:src="@drawable/common_bg_avatar_loadfail"/>
+                android:src="@drawable/user_default_ic"/>
 
             <TextView
                 android:textSize="@dimen/text_normal"
