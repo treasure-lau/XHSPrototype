@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -14,7 +17,12 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.osanwen.xhsprototype.R;
+import com.osanwen.xhsprototype.adapter.TabFragmentAdapter;
+import com.osanwen.xhsprototype.fragment.SearchNoteFragment;
 import com.osanwen.xhsprototype.widget.ShareDialogFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 用户信息
@@ -27,6 +35,9 @@ public class UserDetailActivity extends BaseAppCompatActivity {
         return new Intent(context, UserDetailActivity.class);
     }
 
+    private ViewPager mViewPager;
+    private TabLayout mTabLayout;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +47,7 @@ public class UserDetailActivity extends BaseAppCompatActivity {
         addBackEvent();
         setTitle("");
 
+        final RelativeLayout mRelativeLayout = (RelativeLayout)findViewById(R.id.mine_info_layout);
         SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.swipe_layout);
         mSwipeRefreshLayout.setEnabled(false);
 
@@ -53,13 +65,32 @@ public class UserDetailActivity extends BaseAppCompatActivity {
                 }
                 if (scrollRange + verticalOffset == 0) {
                     collapsingToolbar.setTitle("lyb2518");
+                    mRelativeLayout.setVisibility(View.INVISIBLE);
                     isShow = true;
                 } else if(isShow) {
                     collapsingToolbar.setTitle("");//carefull there should a space between double quote otherwise it wont work
+                    mRelativeLayout.setVisibility(View.VISIBLE);
                     isShow = false;
                 }
             }
         });
+        mViewPager = (ViewPager)findViewById(R.id.viewpager);
+
+        mTabLayout = (TabLayout)findViewById(R.id.tab_layout);
+        List<String> tabList = new ArrayList<>();
+        tabList.add("笔记 · 10");
+        tabList.add("专辑 · 10");
+        mTabLayout.setTabMode(TabLayout.MODE_FIXED);//设置tab模式，当前为系统默认模式
+        mTabLayout.addTab(mTabLayout.newTab().setText(tabList.get(0)));//添加tab选项卡
+        mTabLayout.addTab(mTabLayout.newTab().setText(tabList.get(1)));
+
+        List<Fragment> fragmentList = new ArrayList<>();
+        fragmentList.add(new SearchNoteFragment());
+        fragmentList.add(new SearchNoteFragment());
+
+        TabFragmentAdapter fragmentAdapter = new TabFragmentAdapter(getSupportFragmentManager(), fragmentList, tabList);
+        mViewPager.setAdapter(fragmentAdapter);//给ViewPager设置适配器
+        mTabLayout.setupWithViewPager(mViewPager);//将TabLayout和ViewPager关联起来。
     }
 
     @Override
