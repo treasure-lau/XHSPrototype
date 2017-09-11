@@ -97,7 +97,7 @@ public class NoteDetailActivity extends BaseAppCompatActivity implements View.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.more, menu);
+        getMenuInflater().inflate(R.menu.menu_note_more, menu);
         return true;
     }
 
@@ -111,7 +111,7 @@ public class NoteDetailActivity extends BaseAppCompatActivity implements View.On
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_more) {
             ShareDialogFragment dialog = new ShareDialogFragment();
-            dialog.show(getSupportFragmentManager(), "share dialog");
+            dialog.show(getSupportFragmentManager(), "more dialog");
             return true;
         }
 

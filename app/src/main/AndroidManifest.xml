@@ -45,7 +45,8 @@
 
 
         </activity>
-        <activity android:name=".activity.UserDetailActivity" />
+        <activity android:name=".activity.UserDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activity.CommentListActivity" />
     </application>
 
