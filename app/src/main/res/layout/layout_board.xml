@@ -38,7 +38,7 @@
                 android:layout_marginLeft="16.0dip"
                 android:layout_marginTop="16.0dip"
                 android:layout_marginRight="16.0dip"
-                android:text="dfdf:dfdf" />
+                android:text="个人专辑" />
         </FrameLayout>
 
         <LinearLayout
@@ -55,7 +55,8 @@
                 android:id="@+id/note_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10.0dip" />
+                android:layout_marginRight="10.0dip"
+                android:text="笔记·15"/>
 
             <TextView
                 android:textAppearance="@style/Text10Size.Gray80"
@@ -63,7 +64,7 @@
                 android:id="@+id/fan_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="瘦身瘦" />
+                android:text="粉丝·0" />
         </LinearLayout>
 
         <LinearLayout
@@ -72,16 +73,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16.0dip">
 
-            <com.xingin.xhs.widget.XYImageView
+            <ImageView
                 android:id="@+id/iv_one_big"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16.0dip"
                 android:layout_marginRight="8.0dip"
                 android:layout_weight="1.0"
-                app:viewAspectRatio="1.0"
-                app:placeholderImage="@color/background"
-                app:failureImage="@color/background" />
+                android:background=""/>
 
             <com.xingin.xhs.widget.XYImageView
                 android:id="@+id/iv_two"
