@@ -19,6 +19,7 @@ import android.widget.RelativeLayout;
 import com.osanwen.xhsprototype.R;
 import com.osanwen.xhsprototype.adapter.TabFragmentAdapter;
 import com.osanwen.xhsprototype.fragment.SearchNoteFragment;
+import com.osanwen.xhsprototype.fragment.SubjectListFragment;
 import com.osanwen.xhsprototype.widget.ShareDialogFragment;
 
 import java.util.ArrayList;
@@ -86,7 +87,7 @@ public class UserDetailActivity extends BaseAppCompatActivity {
 
         List<Fragment> fragmentList = new ArrayList<>();
         fragmentList.add(new SearchNoteFragment());
-        fragmentList.add(new SearchNoteFragment());
+        fragmentList.add(new SubjectListFragment());
 
         TabFragmentAdapter fragmentAdapter = new TabFragmentAdapter(getSupportFragmentManager(), fragmentList, tabList);
         mViewPager.setAdapter(fragmentAdapter);//给ViewPager设置适配器
@@ -101,7 +102,7 @@ public class UserDetailActivity extends BaseAppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_user_share, menu);
+        getMenuInflater().inflate(R.menu.menu_share, menu);
         return true;
     }
 
