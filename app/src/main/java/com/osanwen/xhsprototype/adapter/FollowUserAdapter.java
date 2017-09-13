@@ -11,14 +11,14 @@ import com.osanwen.xhsprototype.util.TempData;
 import java.util.List;
 
 /**
- * 专题列表
+ * 关注用户
  * Created by liusaibao on 12/09/2017.
  */
 
-public class SubjectListAdapter extends BaseQuickAdapter<TempData, BaseViewHolder> {
+public class FollowUserAdapter extends BaseQuickAdapter<TempData, BaseViewHolder> {
 
-    public SubjectListAdapter(@Nullable List<TempData> data) {
-        super(R.layout.layout_board, data);
+    public FollowUserAdapter(@Nullable List<TempData> data) {
+        super(R.layout.listitem_follow, data);
     }
 
     @Override

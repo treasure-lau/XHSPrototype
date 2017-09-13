@@ -15,20 +15,22 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <com.xingin.xhs.widget.AvatarImageView
+        <ImageView
             android:id="@+id/iv_avatar"
             android:layout_width="@dimen/image_avatar"
             android:layout_height="@dimen/image_avatar"
             android:layout_marginLeft="@dimen/margin_middle"
             android:layout_marginRight="@dimen/margin_middle"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:src="@drawable/user_default_ic"/>
 
-        <RelativeLayout
+        <!--<RelativeLayout
             android:id="@+id/rl_avatar"
             android:layout_width="50.0dip"
             android:layout_height="@dimen/image_avatar"
             android:layout_alignLeft="@id/iv_avatar"
-            android:layout_alignTop="@id/iv_avatar">
+            android:layout_alignTop="@id/iv_avatar"
+            android:visibility="gone">
 
             <com.xingin.xhs.view.BadgeView
                 android:textSize="10.0sp"
@@ -39,7 +41,7 @@
                 android:text=""
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true" />
-        </RelativeLayout>
+        </RelativeLayout>-->
 
         <LinearLayout
             android:gravity="center_vertical"
@@ -56,7 +58,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                style="@style/TextNormal" />
+                style="@style/TextNormal"
+                android:text="Brianna"/>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -67,23 +70,23 @@
                     android:textSize="@dimen/text_normal"
                     android:textColor="@color/base_white_gray"
                     android:id="@+id/tv_discovery"
-                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="@dimen/margin_nomal"
                     android:singleLine="true"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    android:text="8个笔记"/>
 
                 <TextView
                     android:textSize="@dimen/text_normal"
                     android:textColor="@color/base_white_gray"
                     android:id="@+id/tv_fans"
-                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
                     android:layout_toRightOf="@id/tv_discovery"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    android:text="33个粉丝"/>
             </RelativeLayout>
         </LinearLayout>
 
@@ -100,7 +103,8 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_nomal"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:text="@string/attentioned"/>
     </RelativeLayout>
 
     <include

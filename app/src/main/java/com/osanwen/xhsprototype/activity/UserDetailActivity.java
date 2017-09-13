@@ -19,7 +19,7 @@ import android.widget.RelativeLayout;
 import com.osanwen.xhsprototype.R;
 import com.osanwen.xhsprototype.adapter.TabFragmentAdapter;
 import com.osanwen.xhsprototype.fragment.SearchNoteFragment;
-import com.osanwen.xhsprototype.fragment.SubjectListFragment;
+import com.osanwen.xhsprototype.fragment.AlbumListFragment;
 import com.osanwen.xhsprototype.widget.ShareDialogFragment;
 
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ import java.util.List;
  * Created by liusaibao on 03/09/2017.
  */
 
-public class UserDetailActivity extends BaseAppCompatActivity {
+public class UserDetailActivity extends BaseAppCompatActivity implements View.OnClickListener {
 
     public static Intent createIntent(Context context) {
         return new Intent(context, UserDetailActivity.class);
@@ -47,6 +47,10 @@ public class UserDetailActivity extends BaseAppCompatActivity {
         setSupportActionBar(toolbar);
         addBackEvent();
         setTitle("");
+
+        findViewById(R.id.iv_user_ic).setOnClickListener(this);
+        findViewById(R.id.attent_count_layout).setOnClickListener(this);
+        findViewById(R.id.fans_count_layout).setOnClickListener(this);
 
         final RelativeLayout mRelativeLayout = (RelativeLayout)findViewById(R.id.mine_info_layout);
         SwipeRefreshLayout mSwipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.swipe_layout);
@@ -87,11 +91,24 @@ public class UserDetailActivity extends BaseAppCompatActivity {
 
         List<Fragment> fragmentList = new ArrayList<>();
         fragmentList.add(new SearchNoteFragment());
-        fragmentList.add(new SubjectListFragment());
+        fragmentList.add(new AlbumListFragment());
 
         TabFragmentAdapter fragmentAdapter = new TabFragmentAdapter(getSupportFragmentManager(), fragmentList, tabList);
         mViewPager.setAdapter(fragmentAdapter);//给ViewPager设置适配器
         mTabLayout.setupWithViewPager(mViewPager);//将TabLayout和ViewPager关联起来。
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.iv_user_ic:
+                break;
+            case R.id.attent_count_layout:
+                startActivity(FollowActivity.createIntent(this));
+                break;
+            case R.id.fans_count_layout:
+                break;
+        }
     }
 
     @Override

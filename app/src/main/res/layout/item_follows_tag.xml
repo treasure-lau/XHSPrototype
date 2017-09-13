@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:gravity="top"
-    android:layout_width="wrap_content"
+<RelativeLayout
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="2.0dip"
-    android:layout_alignParentTop="true"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.xingin.xhs.widget.XYImageView
+    <com.osanwen.xhsprototype.widget.SquareImageView
         android:id="@+id/img_icon"
-        android:layout_width="74.0dip"
-        android:layout_height="74.0dip"
-        android:layout_marginTop="2.0dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        app:placeholderImage="@color/base_bg_gray"
-        app:failureImage="@color/base_bg_gray"
-        app:roundedCornerRadius="6.0dip"
-        app:roundingBorderWidth="0.5px"
-        app:roundingBorderColor="@color/base_gray60" />
+        android:background="@drawable/bg_follow_tag" />
 
     <TextView
         android:gravity="center"
@@ -45,5 +37,6 @@
         android:layout_marginRight="6.0dip"
         android:src="@drawable/ic_select_n"
         android:layout_alignTop="@id/img_icon"
-        android:layout_alignRight="@id/img_icon" />
+        android:layout_alignRight="@id/img_icon"
+        android:visibility="gone"/>
 </RelativeLayout>

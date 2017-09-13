@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,10 +25,10 @@ import java.util.List;
  * Created by liusaibao on 03/09/2017.
  */
 
-public class SubjectDetailActivity extends BaseAppCompatActivity {
+public class AlbumDetailActivity extends BaseAppCompatActivity {
 
     public static Intent createIntent(Context context) {
-        return new Intent(context, SubjectDetailActivity.class);
+        return new Intent(context, AlbumDetailActivity.class);
     }
 
     private RecyclerView mRecyclerView;
@@ -38,9 +37,9 @@ public class SubjectDetailActivity extends BaseAppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_subject_detail);
+        setContentView(R.layout.activity_album_detail);
         setTitle(R.string.album);
-        mRecyclerView = (RecyclerView) findViewById(R.id.rv_subject_detail);
+        mRecyclerView = (RecyclerView) findViewById(R.id.rv_album_detail);
         VirtualLayoutManager layoutManager = new VirtualLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
 
@@ -55,7 +54,7 @@ public class SubjectDetailActivity extends BaseAppCompatActivity {
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                startActivity(NoteDetailActivity.createIntent(SubjectDetailActivity.this));
+                startActivity(NoteDetailActivity.createIntent(AlbumDetailActivity.this));
             }
         });
         adapter.addData(TempData.getData(10));

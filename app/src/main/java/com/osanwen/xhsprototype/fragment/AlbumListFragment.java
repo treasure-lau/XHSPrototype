@@ -10,9 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.osanwen.xhsprototype.R;
-import com.osanwen.xhsprototype.activity.SubjectDetailActivity;
+import com.osanwen.xhsprototype.activity.AlbumDetailActivity;
 import com.osanwen.xhsprototype.adapter.base.BaseQuickAdapter;
-import com.osanwen.xhsprototype.adapter.SubjectListAdapter;
+import com.osanwen.xhsprototype.adapter.AlbumListAdapter;
 import com.osanwen.xhsprototype.util.TempData;
 
 /**
@@ -20,15 +20,15 @@ import com.osanwen.xhsprototype.util.TempData;
  * Created by liusaibao on 12/09/2017.
  */
 
-public class SubjectListFragment extends Fragment {
+public class AlbumListFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_subject_list, container, false);
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.rv_subject_list);
+        View view = inflater.inflate(R.layout.fragment_album_list, container, false);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.rv_album_list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         return view;
     }
@@ -36,11 +36,11 @@ public class SubjectListFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        SubjectListAdapter adapter = new SubjectListAdapter(TempData.getData(10));
+        AlbumListAdapter adapter = new AlbumListAdapter(TempData.getData(10));
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                startActivity(SubjectDetailActivity.createIntent(getContext()));
+                startActivity(AlbumDetailActivity.createIntent(getContext()));
             }
         });
         mRecyclerView.setAdapter(adapter);
