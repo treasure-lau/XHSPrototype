@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.osanwen.xhsprototype.R;
+import com.osanwen.xhsprototype.activity.FollowTagEditActivity;
 import com.osanwen.xhsprototype.activity.UserDetailActivity;
 import com.osanwen.xhsprototype.adapter.FollowTagAdapter;
 import com.osanwen.xhsprototype.adapter.FollowUserAdapter;
@@ -32,6 +33,12 @@ public class FollowTagFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_follow_tag, container, false);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.rv_follow_tag);
         mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        view.findViewById(R.id.btn_edit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(FollowTagEditActivity.createIntent(getContext()));
+            }
+        });
         return view;
     }
 

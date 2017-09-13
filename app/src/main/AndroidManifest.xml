@@ -54,6 +54,7 @@
         <activity android:name=".activity.CommentListActivity" />
         <activity android:name=".activity.AlbumDetailActivity" />
         <activity android:name=".activity.FollowActivity" />
+        <activity android:name=".activity.FollowTagEditActivity" />
     </application>
 
 </manifest>

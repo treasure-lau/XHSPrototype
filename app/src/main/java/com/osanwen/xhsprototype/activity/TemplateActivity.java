@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
  * Created by liusaibao on 03/09/2017.
  */
 
-public class TemplateActivity extends AppCompatActivity {
+public class TemplateActivity extends BaseAppCompatActivity {
 
     public static Intent createIntent(Context context) {
         return new Intent(context, TemplateActivity.class);
