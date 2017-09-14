@@ -10,7 +10,6 @@
         android:orientation="vertical"
         android:id="@+id/avatar_act_layout"
         android:padding="10.0dip"
-        android:visibility="gone"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
@@ -36,10 +35,11 @@
         android:layout_height="fill_parent"
         android:layout_above="@id/avatar_act_layout">
 
-        <com.xingin.xhs.widget.XYImageView
+        <ImageView
             android:layout_gravity="center"
             android:id="@+id/iv_avatar"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_default_ic_large"/>
     </FrameLayout>
 </RelativeLayout>

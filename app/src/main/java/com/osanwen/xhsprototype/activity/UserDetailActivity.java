@@ -102,6 +102,7 @@ public class UserDetailActivity extends BaseAppCompatActivity implements View.On
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.iv_user_ic:
+                startActivity(AvatarPreviewActivity.createIntent(this));
                 break;
             case R.id.attent_count_layout:
                 startActivity(FollowActivity.createIntent(this));
