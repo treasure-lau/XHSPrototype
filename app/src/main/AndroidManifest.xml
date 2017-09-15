@@ -58,7 +58,10 @@
         <activity android:name=".activity.AvatarPreviewActivity"
             android:theme="@style/AppTheme.NoActionBar.Fullscreen"/>
         <activity android:name=".activity.AlbumEditActivity" />
-        <activity android:name=".activity.TagDetailActivity" />
+        <activity android:name=".activity.TagDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.TagIntroActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

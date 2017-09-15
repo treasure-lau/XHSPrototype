@@ -22,7 +22,7 @@
             android:layout_height="wrap_content">
 
             <android.support.design.widget.CollapsingToolbarLayout
-                android:id="@+id/collapsingtoolbar"
+                android:id="@+id/collapsing_toolbar"
                 android:fitsSystemWindows="true"
                 android:clipChildren="false"
                 android:layout_width="fill_parent"
@@ -99,27 +99,12 @@
             </LinearLayout>
         </android.support.design.widget.AppBarLayout>
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/container"
+        <fragment
+            android:id="@+id/fragment_tag_note"
+            android:name="com.osanwen.xhsprototype.fragment.SearchNoteFragment"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-        <TextView
-            android:textAppearance="@style/TextMedium.White"
-            android:gravity="center_vertical"
-            android:id="@+id/view_participate"
-            android:background="@drawable/bg_round_red_big"
-            android:paddingLeft="40.0dip"
-            android:paddingRight="40.0dip"
-            android:layout_width="wrap_content"
-            android:layout_height="42.0dip"
-            android:layout_marginBottom="16.0dip"
-            android:text="@string/tag_post_note_now"
-            android:drawableLeft="@drawable/index_icon_camera"
-            android:drawablePadding="6.0dip"
-            app:layout_behavior="com.xingin.xhs.widget.BottomScrollBehavior"
-            app:layout_anchor="@id/container"
-            app:layout_anchorGravity="bottom|center" />
     </android.support.design.widget.CoordinatorLayout>
 </android.support.v4.widget.SwipeRefreshLayout>
