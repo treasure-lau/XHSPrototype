@@ -36,10 +36,11 @@
             android:gravity="center"
             android:layout_gravity="center_vertical"
             android:id="@+id/tv_follow"
-            android:background="@drawable/btn_follow_selector"
+            android:background="@drawable/btn_follow_selected"
             android:layout_width="70.0dip"
             android:layout_height="25.0dip"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:text="@string/attention"/>
     </RelativeLayout>
 
     <View

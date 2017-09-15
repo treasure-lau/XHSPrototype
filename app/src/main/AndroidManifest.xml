@@ -57,6 +57,8 @@
         <activity android:name=".activity.EditTextActivity" />
         <activity android:name=".activity.AvatarPreviewActivity"
             android:theme="@style/AppTheme.NoActionBar.Fullscreen"/>
+        <activity android:name=".activity.AlbumEditActivity" />
+        <activity android:name=".activity.TagDetailActivity" />
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.osanwen.xhsprototype.R;
 import com.osanwen.xhsprototype.activity.FollowTagEditActivity;
+import com.osanwen.xhsprototype.activity.TagDetailActivity;
 import com.osanwen.xhsprototype.activity.UserDetailActivity;
 import com.osanwen.xhsprototype.adapter.FollowTagAdapter;
 import com.osanwen.xhsprototype.adapter.FollowUserAdapter;
@@ -49,7 +50,7 @@ public class FollowTagFragment extends Fragment {
         adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-
+                startActivity(TagDetailActivity.createIntent(getContext()));
             }
         });
         mRecyclerView.setAdapter(adapter);

@@ -19,12 +19,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <com.xingin.xhs.widget.XYImageView
+        <ImageView
             android:id="@+id/iv_image"
             android:background="@color/white"
             android:fitsSystemWindows="true"
             android:layout_width="@dimen/tag_header_icon_size"
-            android:layout_height="@dimen/tag_header_icon_size" />
+            android:layout_height="@dimen/tag_header_icon_size"
+            android:src="@drawable/default_image"/>
 
         <LinearLayout
             android:gravity="center_vertical"
@@ -47,7 +48,8 @@
                 android:maxEms="16"
                 android:singleLine="true"
                 android:drawableLeft="@drawable/hashtag_black"
-                android:drawablePadding="2.0dip" />
+                android:drawablePadding="2.0dip"
+                android:text="减肥也要好好吃饭"/>
 
             <TextView
                 android:textSize="12.0sp"
@@ -55,7 +57,8 @@
                 android:id="@+id/tv_total_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimension_10" />
+                android:layout_marginTop="@dimen/dimension_10"
+                android:text="笔记 · 1933"/>
         </LinearLayout>
 
         <ImageView
@@ -85,9 +88,10 @@
             android:layout_height="wrap_content"
             android:maxLines="2"
             android:lineSpacingExtra="3.0dip"
-            style="@style/TextSmall.White" />
+            style="@style/TextSmall.White"
+            android:text="你一定每天都在减肥减肥减肥的道路上不断前进。不过就算减肥，也要好好吃饭呀！减肥减脂期，你都吃进什么呢？你的减肥期饮食小秘密又是什么呢？"/>
 
-        <com.xingin.xhs.widget.AvatarImageView
+        <ImageView
             android:id="@+id/iv_avatar"
             android:layout_width="16.0dip"
             android:layout_height="16.0dip"

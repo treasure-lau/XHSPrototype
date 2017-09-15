@@ -1,237 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:background="@color/background_99write"
-    android:scrollbars="none"
+<android.support.v4.widget.SwipeRefreshLayout android:id="@+id/swipe_layout"
+    android:background="@color/background"
+    android:addStatesFromChildren="true"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
+    <android.support.design.widget.CoordinatorLayout
+        android:fitsSystemWindows="true"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
-        <ImageView
-            android:id="@+id/close"
-            android:padding="20.0dip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/tag_detail_close" />
+        <android.support.design.widget.AppBarLayout
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:id="@+id/app_bar"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:clipChildren="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:id="@+id/show_content"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_marginTop="4.0dip"
-            android:layout_centerInParent="true">
-
-            <TextView
-                android:textStyle="bold"
-                android:id="@+id/tag_detail_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="46.0dip"
-                android:layout_below="@id/image"
-                android:layout_centerHorizontal="true"
-                style="@style/TextMedium" />
-
-            <LinearLayout
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:id="@+id/fans_num"
-                android:paddingTop="20.0dip"
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsingtoolbar"
+                android:fitsSystemWindows="true"
+                android:clipChildren="false"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tag_detail_name">
+                app:layout_scrollFlags="exitUntilCollapsed|scroll|snap"
+                app:contentScrim="@color/transparent"
+                app:statusBarScrim="@color/transparent">
 
-                <TextView
-                    android:id="@+id/note"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/tag_detail_line"
-                    android:drawablePadding="15.0dip"
-                    style="@style/TextSmall.Gray40" />
-
-                <TextView
-                    android:id="@+id/goods_total"
-                    android:paddingLeft="20.0dip"
-                    android:visibility="gone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableRight="@drawable/tag_detail_line"
-                    android:drawablePadding="15.0dip"
-                    style="@style/TextSmall.Gray40" />
-
-                <TextView
-                    android:id="@+id/fans"
-                    android:paddingLeft="20.0dip"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/TextSmall.Gray40" />
-            </LinearLayout>
-
-            <FrameLayout
-                android:id="@+id/pager_sum"
-                android:background="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
-                android:layout_below="@id/fans_num">
-
-                <android.support.v4.view.ViewPager
-                    android:layout_gravity="center"
-                    android:id="@+id/pager"
+                <FrameLayout
+                    android:id="@+id/layout_header"
+                    android:paddingTop="15.0dip"
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent" />
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="?actionBarSize"
+                    app:layout_scrollFlags="enterAlwaysCollapsed|scroll">
 
-                <TextView
-                    android:layout_gravity="bottom|center|right"
-                    android:id="@+id/page_num"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15.0dip"
-                    style="@style/TextNormal.White" />
-            </FrameLayout>
+                    <include layout="@layout/activity_tag_base_layout_header" />
+                </FrameLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/actionBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="?actionBarSize"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    app:layout_collapseMode="pin">
+
+                    <include layout="@layout/tag_tool_bar" />
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.CollapsingToolbarLayout>
 
             <LinearLayout
+                android:layout_gravity="bottom"
                 android:orientation="vertical"
-                android:id="@+id/text"
+                android:background="@color/white"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25.0dip"
-                android:layout_marginTop="20.0dip"
-                android:layout_marginRight="25.0dip"
-                android:layout_below="@id/pager_sum">
+                android:divider="@drawable/divider_horizon_line"
+                android:showDividers="end|middle"
+                android:visibility="gone">
 
-                <TextView
-                    android:layout_gravity="center_horizontal"
-                    android:id="@+id/detail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/TextSmall" />
-
-                <TextView
-                    android:gravity="center"
-                    android:layout_gravity="center_horizontal"
-                    android:id="@+id/poi_link"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20.0dip"
-                    style="@style/TextSmall.Gray40" />
-
-                <TextView
-                    android:textSize="@dimen/dimension_12"
-                    android:gravity="center"
-                    android:layout_gravity="center_horizontal"
-                    android:id="@+id/poi_addres"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10.0dip"
-                    style="@style/TextSmall.Gray60" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:id="@+id/social_contact"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/text"
-                android:layout_centerHorizontal="true">
-
-                <ImageView
-                    android:id="@+id/split"
-                    android:background="@drawable/tag_detail_split"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20.0dip"
-                    android:layout_below="@id/poi_addres" />
-
-                <TextView
-                    android:layout_gravity="center_horizontal"
-                    android:id="@+id/findme"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30.0dip"
-                    android:text="@string/tag_detail_find_me"
-                    style="@style/TextSmall" />
-
-                <LinearLayout
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_horizontal"
+                <FrameLayout
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20.0dip"
-                    android:layout_marginBottom="40.0dip">
+                    android:background="@color/white"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
 
                     <LinearLayout
-                        android:layout_gravity="center_horizontal"
-                        android:orientation="vertical"
-                        android:id="@+id/findme1"
-                        android:visibility="gone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <com.xingin.xhs.widget.AvatarImageView
-                            android:id="@+id/findme_img1"
-                            android:layout_width="48.0dip"
-                            android:layout_height="48.0dip" />
+                        android:layout_width="fill_parent"
+                        android:layout_height="45.0dip"
+                        android:layout_marginLeft="10.0dip">
 
                         <TextView
-                            android:layout_gravity="center_horizontal"
-                            android:id="@+id/findme_text1"
+                            android:gravity="center|left"
+                            android:layout_gravity="left"
+                            android:id="@+id/tv_filter"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10.0dip"
-                            style="@style/TextSmall.Gray40" />
+                            android:layout_height="fill_parent"
+                            android:text="综合排序"
+                            android:drawableRight="@drawable/icon_filter_down_un_arrow"
+                            android:drawablePadding="10.0dip"
+                            style="@style/TextNormal" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_gravity="center_horizontal"
-                        android:orientation="vertical"
-                        android:id="@+id/findme2"
-                        android:visibility="gone"
+                    <android.support.design.widget.TabLayout
+                        android:layout_gravity="bottom|center|right"
+                        android:id="@+id/tablayout"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="30.0dip">
-
-                        <com.xingin.xhs.widget.AvatarImageView
-                            android:id="@+id/findme_img2"
-                            android:layout_width="48.0dip"
-                            android:layout_height="48.0dip" />
-
-                        <TextView
-                            android:layout_gravity="center_horizontal"
-                            android:id="@+id/findme_text2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10.0dip"
-                            style="@style/TextSmall.Gray40" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_gravity="center_horizontal"
-                        android:orientation="vertical"
-                        android:id="@+id/findme3"
-                        android:visibility="gone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="30.0dip">
-
-                        <com.xingin.xhs.widget.AvatarImageView
-                            android:id="@+id/findme_img3"
-                            android:layout_width="48.0dip"
-                            android:layout_height="48.0dip" />
-
-                        <TextView
-                            android:layout_gravity="center_horizontal"
-                            android:id="@+id/findme_text3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10.0dip"
-                            style="@style/TextSmall.Gray40" />
-                    </LinearLayout>
-                </LinearLayout>
+                        android:layout_height="45.0dip"
+                        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                        app:tabTextColor="@color/base_gray60"
+                        app:tabSelectedTextColor="@color/base_red" />
+                </FrameLayout>
             </LinearLayout>
-        </RelativeLayout>
-    </RelativeLayout>
-</ScrollView>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <TextView
+            android:textAppearance="@style/TextMedium.White"
+            android:gravity="center_vertical"
+            android:id="@+id/view_participate"
+            android:background="@drawable/bg_round_red_big"
+            android:paddingLeft="40.0dip"
+            android:paddingRight="40.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="42.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:text="@string/tag_post_note_now"
+            android:drawableLeft="@drawable/index_icon_camera"
+            android:drawablePadding="6.0dip"
+            app:layout_behavior="com.xingin.xhs.widget.BottomScrollBehavior"
+            app:layout_anchor="@id/container"
+            app:layout_anchorGravity="bottom|center" />
+    </android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

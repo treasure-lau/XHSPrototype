@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/column_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/base_black"
+                android:id="@+id/t_title"
+                android:padding="14.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="@string/wish_tip_title"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:textSize="14.0sp"
+                android:textColor="@color/base_black"
+                android:textColorHint="@color/base_white_gray"
+                android:id="@+id/et_title"
+                android:background="@null"
+                android:padding="14.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12.0dip"
+                android:hint="@string/wish_title_hint"
+                android:layout_toRightOf="@id/t_title"
+                android:layout_alignBottom="@id/t_title" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:id="@+id/rl_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/base_black"
+                android:id="@+id/t_desc"
+                android:padding="14.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="@string/wish_tip_describe"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:textSize="14.0sp"
+                android:textColor="@color/base_black"
+                android:textColorHint="@color/base_white_gray"
+                android:gravity="top"
+                android:id="@+id/et_desc"
+                android:background="@null"
+                android:padding="14.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12.0dip"
+                android:hint="@string/wish_describe_hint"
+                android:lines="3"
+                android:layout_toRightOf="@id/t_desc"
+                android:layout_alignTop="@id/t_desc" />
+
+            <View
+                android:background="#ffe3e3e3"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginLeft="20.0dip"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/rl_privacy"
+        android:background="@drawable/column_bg"
+        android:padding="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/wish_tip_private"
+        style="@style/TextNormal" />
+
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/base_red"
+        android:gravity="center"
+        android:id="@+id/tv_delete"
+        android:background="@drawable/column_bg"
+        android:padding="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/btn_delete_wish_list" />
+</LinearLayout>
