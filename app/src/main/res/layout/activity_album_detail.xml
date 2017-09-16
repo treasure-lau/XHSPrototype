@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
@@ -9,4 +9,47 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-</LinearLayout>
+    <RelativeLayout
+        android:layout_gravity="bottom"
+        android:id="@+id/edit_layout"
+        android:background="@drawable/bg_top_bottom_line"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:visibility="gone">
+
+        <TextView
+            android:textAppearance="@style/TextSmall.Gray40"
+            android:gravity="center_vertical"
+            android:id="@+id/select_item"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="16.0dip"
+            android:text="已选中0条笔记"/>
+
+        <TextView
+            android:textAppearance="@style/TextNormal.White"
+            android:gravity="center"
+            android:id="@+id/btn_delete_ok"
+            android:background="@color/base_red"
+            android:layout_width="88.0dip"
+            android:layout_height="fill_parent"
+            android:text="@string/common_delete_btn"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:textAppearance="@style/TextNormal.Gray40"
+            android:gravity="center"
+            android:id="@+id/btn_delete_to_other"
+            android:layout_width="140.0dip"
+            android:layout_height="fill_parent"
+            android:text="@string/delete_to_other_board"
+            android:layout_toLeftOf="@id/btn_delete_ok" />
+
+        <View
+            android:background="@color/base_gray90"
+            android:layout_width="0.6dip"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/btn_delete_to_other" />
+    </RelativeLayout>
+
+</FrameLayout>

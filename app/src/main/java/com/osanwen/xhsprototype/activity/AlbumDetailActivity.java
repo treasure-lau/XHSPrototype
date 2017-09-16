@@ -8,9 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.osanwen.xhsprototype.R;
-import com.osanwen.xhsprototype.adapter.SearchNoteAdapter;
+import com.osanwen.xhsprototype.adapter.AlbumNoteAdapter;
 import com.osanwen.xhsprototype.adapter.base.BaseQuickAdapter;
 import com.osanwen.xhsprototype.library.vlayout.DelegateAdapter;
 import com.osanwen.xhsprototype.library.vlayout.VirtualLayoutManager;
@@ -25,7 +27,7 @@ import java.util.List;
  * Created by liusaibao on 03/09/2017.
  */
 
-public class AlbumDetailActivity extends BaseAppCompatActivity {
+public class AlbumDetailActivity extends BaseAppCompatActivity implements View.OnClickListener {
 
     public static Intent createIntent(Context context) {
         return new Intent(context, AlbumDetailActivity.class);
@@ -33,12 +35,21 @@ public class AlbumDetailActivity extends BaseAppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private DelegateAdapter mDelegateAdapter;
+    private AlbumNoteAdapter mAdapter;
+
+    private RelativeLayout mRelativeLayout;
+    private TextView followTv;
+
+    private MenuItem shareItem;
+    private MenuItem manageItem;
+    private MenuItem finishItem;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album_detail);
         setTitle(R.string.album);
+        mRelativeLayout = (RelativeLayout) findViewById(R.id.edit_layout);
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_album_detail);
         VirtualLayoutManager layoutManager = new VirtualLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
@@ -50,24 +61,35 @@ public class AlbumDetailActivity extends BaseAppCompatActivity {
         mDelegateAdapter = new DelegateAdapter(layoutManager);
         mRecyclerView.setAdapter(mDelegateAdapter);
 
-        SearchNoteAdapter adapter = new SearchNoteAdapter();
-        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+        mAdapter = new AlbumNoteAdapter();
+        mAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 startActivity(NoteDetailActivity.createIntent(AlbumDetailActivity.this));
             }
         });
-        adapter.addData(TempData.getData(10));
+        mAdapter.addData(TempData.getData(10));
+        View view = getLayoutInflater().inflate(R.layout.board_info_layout, mRecyclerView, false);
+        followTv = (TextView) view.findViewById(R.id.btn_follow);
+        followTv.setOnClickListener(this);
+        followTv.setBackgroundResource(R.drawable.btn_follow_selected);
+        followTv.setText(R.string.title_edit_wish_list);
+        followTv.setTextAppearance(this, R.style.TextSmall_Red);
+        followTv.setVisibility(View.GONE);
         List<DelegateAdapter.Adapter> adapters = new ArrayList<>();
-        adapters.add(DelegateAdapter.simpleAdapter(getLayoutInflater().inflate(R.layout.board_info_layout, mRecyclerView, false)));
-        adapters.add(adapter);
+        adapters.add(DelegateAdapter.simpleAdapter(view));
+        adapters.add(mAdapter);
         mDelegateAdapter.setAdapters(adapters);
+        findViewById(R.id.btn_delete_to_other).setOnClickListener(this);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_share, menu);
+        getMenuInflater().inflate(R.menu.menu_album_detail, menu);
+        shareItem = menu.findItem(R.id.action_share);
+        manageItem = menu.findItem(R.id.action_manage);
+        finishItem = menu.findItem(R.id.action_finish);
         return true;
     }
 
@@ -84,7 +106,37 @@ public class AlbumDetailActivity extends BaseAppCompatActivity {
             dialog.show(getSupportFragmentManager(), "user share dialog");
             return true;
         }
+        if (id == R.id.action_manage) {
+            finishItem.setVisible(true);
+            shareItem.setVisible(false);
+            manageItem.setVisible(false);
+            mRelativeLayout.setVisibility(View.VISIBLE);
+            mAdapter.setEdit(true);
+            followTv.setVisibility(View.VISIBLE);
+            return true;
+        }
+        if (id == R.id.action_finish) {
+            finishItem.setVisible(false);
+            shareItem.setVisible(true);
+            manageItem.setVisible(true);
+            mRelativeLayout.setVisibility(View.GONE);
+            mAdapter.setEdit(false);
+            followTv.setVisibility(View.GONE);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_delete_to_other:
+                startActivity(MoveAlbumActivity.createIntent(this));
+                break;
+            case R.id.btn_follow:
+                startActivity(AlbumEditActivity.createIntent(this));
+                break;
+        }
     }
 }

@@ -62,6 +62,8 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activity.TagIntroActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.MoveAlbumActivity"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen"/>
     </application>
 
 </manifest>

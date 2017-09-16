@@ -39,7 +39,7 @@
                 android:layout_marginLeft="8.0dip"
                 android:layout_marginBottom="8.0dip"
                 android:layout_alignParentLeft="true"
-                android:src="@drawable/default_image"/>
+                android:src="@drawable/user_default_ic"/>
 
             <TextView
                 android:gravity="center_vertical"
