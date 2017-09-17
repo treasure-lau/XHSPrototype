@@ -27,19 +27,6 @@ public class TempData {
         return dataList;
     }
 
-    public static List<TempData> getTopic() {
-        Integer[] drawableResIds = {R.drawable.default_image, R.drawable.default_image, R.drawable.default_image};
-        List<TempData> dataList = new ArrayList<>();
-        for (Integer drawableResId : drawableResIds) {
-            TempData data = new TempData();
-            data.drawableResId = drawableResId;
-            data.text1 = "家具";
-            data.text2 = "114人参与";
-            dataList.add(data);
-        }
-        return dataList;
-    }
-
     public static List<TempData> getVideo() {
         Integer[] drawableResIds = {R.drawable.default_image, R.drawable.default_image, R.drawable.default_image};
         List<TempData> dataList = new ArrayList<>();

@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.osanwen.xhsprototype.R;
+import com.osanwen.xhsprototype.activity.NoteDetailActivity;
 import com.osanwen.xhsprototype.adapter.ImagePagerAdapter;
 import com.osanwen.xhsprototype.util.TempData;
 
@@ -35,7 +36,14 @@ public class MainItemPagerView extends RelativeLayout {
     }
 
     public void setData(List<TempData> dataList) {
-        mViewPager.setAdapter(new ImagePagerAdapter(dataList));
+        ImagePagerAdapter adapter = new ImagePagerAdapter(dataList);
+        adapter.setListener(new ImagePagerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(TempData data) {
+                getContext().startActivity(NoteDetailActivity.createIntent(getContext()));
+            }
+        });
+        mViewPager.setAdapter(adapter);
         mTextView.setText("1/3");
     }
 }

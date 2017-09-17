@@ -110,11 +110,30 @@ public class MainActivity extends AppCompatActivity
         adapters.add(DelegateAdapter.simpleAdapter(pagerView));
 
         MainItemTitleView topicView = new MainItemTitleView(this);
+        topicView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(HotTopicActivity.createIntent(MainActivity.this));
+            }
+        });
         topicView.setData(R.string.topicGuide);
+        HotTopicAdapter hotTopicAdapter = new HotTopicAdapter(TempData.getData(3));
+        hotTopicAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                startActivity(TagDetailActivity.createIntent(MainActivity.this));
+            }
+        });
         adapters.add(DelegateAdapter.simpleAdapter(topicView));
-        adapters.add(new HotTopicAdapter(TempData.getTopic()));
+        adapters.add(hotTopicAdapter);
 
         MainItemTitleView videoView = new MainItemTitleView(this);
+        videoView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(HotVideoActivity.createIntent(MainActivity.this));
+            }
+        });
         videoView.setData(R.string.hot_video);
         adapters.add(DelegateAdapter.simpleAdapter(videoView));
         MainItemHotVideoView hotVideoView = new MainItemHotVideoView(this);
@@ -132,6 +151,12 @@ public class MainActivity extends AppCompatActivity
                 noteAdapter.loadMoreComplete();
             }
         }, mRecyclerView);
+        noteAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                startActivity(NoteDetailActivity.createIntent(MainActivity.this));
+            }
+        });
         adapters.add(noteAdapter);
 
         mDelegateAdapter.addAdapters(adapters);

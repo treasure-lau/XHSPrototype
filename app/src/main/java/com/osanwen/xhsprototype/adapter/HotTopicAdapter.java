@@ -30,8 +30,8 @@ public class HotTopicAdapter extends BaseQuickAdapter<TempData, BaseViewHolder> 
 
     @Override
     protected void convert(BaseViewHolder helper, TempData item) {
-        helper.setImageResource(R.id.iv_topic_ic, item.drawableResId);
-        helper.setText(R.id.tv_topic_name, item.text1);
-        helper.setText(R.id.tv_topic_follow_count, item.text2);
+//        helper.setImageResource(R.id.iv_topic_ic, item.drawableResId);
+//        helper.setText(R.id.tv_topic_name, item.text1);
+//        helper.setText(R.id.tv_topic_follow_count, item.text2);
     }
 }

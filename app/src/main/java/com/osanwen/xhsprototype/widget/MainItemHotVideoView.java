@@ -4,10 +4,13 @@ import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.osanwen.xhsprototype.R;
+import com.osanwen.xhsprototype.activity.NoteDetailActivity;
 import com.osanwen.xhsprototype.adapter.HotVideoAdapter;
+import com.osanwen.xhsprototype.adapter.base.BaseQuickAdapter;
 import com.osanwen.xhsprototype.util.TempData;
 
 import java.util.List;
@@ -30,6 +33,13 @@ public class MainItemHotVideoView extends RelativeLayout {
     }
 
     public void setData(List<TempData> dataList) {
-        mRecyclerView.setAdapter(new HotVideoAdapter(dataList));
+        HotVideoAdapter hotVideoAdapter = new HotVideoAdapter(dataList);
+        hotVideoAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                getContext().startActivity(NoteDetailActivity.createIntent(getContext()));
+            }
+        });
+        mRecyclerView.setAdapter(hotVideoAdapter);
     }
 }

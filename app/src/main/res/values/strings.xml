@@ -1570,4 +1570,5 @@ progress: %d%%"</string>
     <string name="push_note">发布笔记</string>
     <string name="push_video">发布视频</string>
     <string name="share">分享</string>
+    <string name="ta_fans">TA的粉丝</string>
 </resources>

@@ -4,30 +4,24 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.View;
 
 import com.osanwen.xhsprototype.R;
 
 /**
- * 头像预览
+ * 粉丝页面
  * Created by liusaibao on 03/09/2017.
  */
 
-public class AvatarPreviewActivity extends BaseAppCompatActivity {
+public class FansActivity extends BaseAppCompatActivity {
 
     public static Intent createIntent(Context context) {
-        return new Intent(context, AvatarPreviewActivity.class);
+        return new Intent(context, FansActivity.class);
     }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_avatar_preview);
-        findViewById(R.id.btn_avatar_cancel).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        setContentView(R.layout.activity_fans);
+        setTitle(R.string.ta_fans);
     }
 }

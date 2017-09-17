@@ -12,7 +12,11 @@
             android:name=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".activity.LoginActivity" />
@@ -43,11 +47,7 @@
         <activity android:name=".activity.UserDetailActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".activity.CommentListActivity" />
@@ -64,6 +64,9 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activity.MoveAlbumActivity"
             android:theme="@style/AppTheme.NoActionBar.Fullscreen"/>
+        <activity android:name=".activity.FansActivity" />
+        <activity android:name=".activity.HotTopicActivity" />
+        <activity android:name=".activity.HotVideoActivity" />
     </application>
 
 </manifest>

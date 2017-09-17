@@ -108,6 +108,7 @@ public class UserDetailActivity extends BaseAppCompatActivity implements View.On
                 startActivity(FollowActivity.createIntent(this));
                 break;
             case R.id.fans_count_layout:
+                startActivity(FansActivity.createIntent(this));
                 break;
         }
     }

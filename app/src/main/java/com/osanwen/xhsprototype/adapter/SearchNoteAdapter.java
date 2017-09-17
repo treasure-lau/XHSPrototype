@@ -21,7 +21,7 @@ public class SearchNoteAdapter extends BaseQuickAdapter<TempData, BaseViewHolder
 
 
     public SearchNoteAdapter() {
-        super(R.layout.item_search_note, new ArrayList<TempData>());
+        super(R.layout.item_search_note_new, new ArrayList<TempData>());
     }
 
     @Override
