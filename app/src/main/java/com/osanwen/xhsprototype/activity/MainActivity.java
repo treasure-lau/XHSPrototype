@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private DelegateAdapter mDelegateAdapter;
     private RecyclerView mRecyclerView;
+    private DrawerLayout drawer;
+    private NavigationView mNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +87,8 @@ public class MainActivity extends AppCompatActivity
 
         mDelegateAdapter = new DelegateAdapter(layoutManager);
         mRecyclerView.setAdapter(mDelegateAdapter);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mNavigationView = (NavigationView)findViewById(R.id.nav_view);
     }
 
     private void initListener() {
@@ -97,6 +102,13 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 startActivity(SearchActivity.createIntent(MainActivity.this));
+            }
+        });
+        mNavigationView.getHeaderView(0).findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(UserDetailActivity.createIntent(MainActivity.this));
+                drawer.closeDrawer(GravityCompat.START);
             }
         });
     }
@@ -195,27 +207,26 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
-//        int id = item.getItemId();
-//
-//        if (id == R.id.nav_camera) {
-//            // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_manage) {
-//
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
+        int id = item.getItemId();
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (id == R.id.nav_account_info) {
+            startActivity(ProfileEditActivity.createIntent(this));
+        } else if (id == R.id.nav_account_bind) {
+            startActivity(BindActivity.createIntent(this));
+        } else if (id == R.id.nav_modify_password) {
+            startActivity(ModifyPasswordActivity.createIntent(this));
+        } else if (id == R.id.nav_about) {
+            startActivity(AboutActivity.createIntent(this));
+        } else if (id == R.id.nav_feedback) {
+            // todo 跳转页面
+        } else if (id == R.id.nav_logout) {
+            startActivity(LoginActivity.createIntent(this));
+            finish();
+        }
+
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

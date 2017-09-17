@@ -14,7 +14,7 @@ import com.osanwen.xhsprototype.R;
  * Created by liusaibao on 23/07/2017.
  */
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
+public class RegisterActivity extends BaseAppCompatActivity implements View.OnClickListener {
 
     public static Intent createIntent(Context context) {
         return new Intent(context, RegisterActivity.class);
@@ -24,6 +24,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        setTitle(R.string.title_register);
         findViewById(R.id.btn_register).setOnClickListener(this);
     }
 

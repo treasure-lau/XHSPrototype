@@ -12,19 +12,23 @@
             android:name=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
+
+
+        </activity>
+        <activity android:name=".activity.LoginActivity">
+
+
+
+        </activity>
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar.Fullscreen">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-        <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.RegisterActivity" />
-        <activity android:name=".activity.SplashActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-
 
         </activity>
         <activity android:name=".activity.SearchActivity"
@@ -63,10 +67,18 @@
         <activity android:name=".activity.TagIntroActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activity.MoveAlbumActivity"
-            android:theme="@style/AppTheme.NoActionBar.Fullscreen"/>
+            android:theme="@style/DialogActivity2"/>
         <activity android:name=".activity.FansActivity" />
         <activity android:name=".activity.HotTopicActivity" />
         <activity android:name=".activity.HotVideoActivity" />
+        <activity android:name=".activity.ProfileEditActivity" />
+        <activity android:name=".activity.NicknameEditActivity" />
+        <activity android:name=".activity.IdEditActivity" />
+        <activity android:name=".activity.SignEditActivity" />
+        <activity android:name=".activity.BindActivity" />
+        <activity android:name=".activity.AboutActivity" />
+        <activity android:name=".activity.ModifyPasswordActivity" />
+        <activity android:name=".activity.ForgetPasswordActivity" />
     </application>
 
 </manifest>

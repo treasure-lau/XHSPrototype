@@ -16,7 +16,7 @@
             android:id="@+id/iv_note_ic"
             android:layout_width="128.0dip"
             android:layout_height="96.0dip"
-            android:scaleType="fitXY"/>
+            android:src="@drawable/default_image"/>
 
         <ImageView
             android:id="@+id/iv_note_type"

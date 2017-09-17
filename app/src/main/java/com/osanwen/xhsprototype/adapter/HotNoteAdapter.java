@@ -29,6 +29,6 @@ public class HotNoteAdapter extends BaseQuickAdapter<TempData, BaseViewHolder> {
 
     @Override
     protected void convert(BaseViewHolder helper, TempData item) {
-        helper.setImageResource(R.id.iv_note_ic, item.drawableResId);
+//        helper.setImageResource(R.id.iv_note_ic, item.drawableResId);
     }
 }

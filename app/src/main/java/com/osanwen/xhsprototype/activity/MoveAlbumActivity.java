@@ -28,7 +28,6 @@ public class MoveAlbumActivity extends AppCompatActivity implements View.OnClick
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_move_album);
-        getWindow().setBackgroundDrawableResource(R.color.transparent);
         RecyclerView mRecyclerView = (RecyclerView)findViewById(R.id.listview_fav);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(new FavAlbumListAdapter(TempData.getData(2)));

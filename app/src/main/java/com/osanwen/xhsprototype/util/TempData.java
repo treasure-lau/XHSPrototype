@@ -80,4 +80,18 @@ public class TempData {
         }
         return dataList;
     }
+
+    public static List<TempData> getBindData() {
+        Integer[] drawableResIds = {R.drawable.ic_bind_phone, R.drawable.ic_bind_phone};
+        String[] values = {"手机号", "淘宝帐号"};
+        List<TempData> dataList = new ArrayList<>();
+        int len = values.length;
+        for (int i = 0; i < len; i++) {
+            TempData data = new TempData();
+            data.drawableResId = drawableResIds[i];
+            data.text1 = values[i];
+            dataList.add(data);
+        }
+        return dataList;
+    }
 }

@@ -4,16 +4,11 @@
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <include
-        android:id="@+id/ic_header"
-        layout="@layout/ic_header" />
-
     <RelativeLayout
         android:id="@+id/logo"
         android:background="@color/white"
         android:layout_width="fill_parent"
-        android:layout_height="150.0dip"
-        android:layout_below="@id/ic_header">
+        android:layout_height="150.0dip">
 
         <ImageView
             android:id="@+id/iv_logo"
@@ -102,6 +97,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/net_diagnosis"
+            android:visibility="gone"
             android:drawableRight="@drawable/icon_arrow"
             style="@style/TextNormal" />
 
@@ -117,5 +113,6 @@
         android:text="行吟信息科技 版权所有\nCopyright@2013-2016 Xingin. All Rights Reserved"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:visibility="gone"
         style="@style/TextNormal.Gray80" />
 </RelativeLayout>

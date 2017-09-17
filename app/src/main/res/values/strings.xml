@@ -60,6 +60,9 @@ progress: %d%%"</string>
     <string name="add_friend_finsh">完成</string>
     <string name="add_name">创建用户名</string>
     <string name="add_password">请输入密码</string>
+    <string name="add_original_password">请输入原密码</string>
+    <string name="add_new_password">请输入新密码</string>
+    <string name="add_re_new_password">请重新输入新密码</string>
     <string name="add_price_tag">添加价格标签</string>
     <string name="add_tag">添加标签</string>
     <string name="add_tag_tips">"点击添加标签会让帖子给更多人看到
